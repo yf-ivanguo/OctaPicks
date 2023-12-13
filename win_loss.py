@@ -6,6 +6,13 @@ class WinLoss():
     def __init__(self):
         pass
 
+    """
+    Creates the win/loss features for each fighter in the dataset
+
+    Usage:
+        win_loss = WinLoss()
+        win_loss_feats = win_loss.create_win_loss_feats(df)
+    """
     def create_win_loss_feats(self, df):
         col_names = self.create_col_names()
         target_df = df
@@ -13,6 +20,9 @@ class WinLoss():
         target_df[col_names] = target_df.swifter.progress_bar(True).apply(lambda row: self.compute_win_loss(target_df, row['fighter_a_id'], row['fighter_b_id'], row.name, col_names), axis=1)
         return target_df
 
+    """
+    Computes the win/loss features for a single example in the dataset
+    """
     def compute_win_loss(self, df, fighter_a_id, fighter_b_id, index, col_names):
         res = []
         fighter_a_prev_fights, fighter_a_prev_fights_last_year = self.get_fighter_fights(df, fighter_a_id, index)
@@ -71,7 +81,10 @@ class WinLoss():
             else:
                 res.append(0)
         return pd.Series(res)
-
+    
+    """
+    Filters the data by division
+    """
     def get_fighter_division(self, df):
         fighter_flyweight = df[df['division'] == 'Flyweight']
         fighter_bantamweight = df[df['division'] == 'Bantamweight']
@@ -85,6 +98,9 @@ class WinLoss():
         fighter_overall = df
         return fighter_flyweight, fighter_bantamweight, fighter_featherweight, fighter_lightweight, fighter_welterweight, fighter_middleweight, fighter_light_heavyweight, fighter_heavyweight, fighter_catchweight, fighter_overall
 
+    """
+    Filters the data by outcome method
+    """
     def get_fighter_outcome_methods(self, df):
         fighter_ko = df[(df['outcome_method'] == 'KO/TKO') | (df['outcome_method'] == 'TKO - Doctor\'s Stoppage')]
         fighter_sub = df[df['outcome_method'] == 'Submission']
@@ -92,11 +108,17 @@ class WinLoss():
         fighter_total = df
         return fighter_ko, fighter_sub, fighter_decision, fighter_total
 
+    """
+    Filters the data by outcome
+    """
     def get_fighter_outcomes(self, df, fighter_id):
         fighter_wins = df[df['winner_id'] == fighter_id]
         fighter_losses = df[df['winner_id'] != fighter_id]
         return fighter_wins, fighter_losses
 
+    """
+    Filters the data by a specific fighter
+    """
     def get_fighter_fights(self, df, fighter_id, index):
         year_ago = self.compute_year_ago(df)
         all_prev_fights = df.loc[:index-1]
@@ -110,6 +132,9 @@ class WinLoss():
             return prev_fights, prev_fights_last_year
         return pd.DataFrame(), pd.DataFrame()
     
+    """
+    Creates the column names for the win/loss features
+    """
     def create_col_names(self):
         col_names = []
         fighters = ['fighter-a', 'fighter-b']
@@ -127,6 +152,9 @@ class WinLoss():
                             col_names.append(col_name)
         return col_names
     
+    """
+    Gets the date a year ago from the current date
+    """
     def compute_year_ago(self, df):
         temp_year_ago_df = pd.to_datetime(df['date'])
         temp_year_ago_df = temp_year_ago_df - pd.DateOffset(years=1)
