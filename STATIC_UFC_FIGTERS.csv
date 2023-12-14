@@ -1,7 +1,7 @@
 Name,Height,Reach,Stance,DOB,ID,Hometown,Hometown_Elevation,Trains_Out_Of
 Tom Aaron,--,--,,"Jul 13, 1978",93fe7332d16c6ad9,"Troy, Missouri",166.5553741455078,Finney's MMA
 Danny Abbadi,"5' 11""",--,,"Jul 03, 1983",15df64c02b6b0fde,"Orlando, Florida",31.12412452697754,
-Nariman Abbasov,"5' 8""","66""",,"Feb 01, 1994",59a9d6dac61c2540,,,
+Nariman Abbasov,"5' 8""","66""",,"Feb 01, 1994",59a9d6dac61c2540,Ramana,,Azerbaijan Fight Club
 David Abbott,"6' 0""",--,,--,b361180739bed4b0,"Huntington Beach, California",11.58590698242188,
 Hamdy Abdelwahab,"6' 2""","72""",,"Jan 22, 1993",3329d692aea4dc28,"Queens, New York",18.09424209594727,Killer B Combat Sports Academy
 Shamil Abdurakhimov,"6' 3""","76""",,"Sep 02, 1981",2f5cbecbbe18bac4,"Makhachkala, Dagestan",-4.028912544250488,Peresvet FT
@@ -10,9 +10,9 @@ Daichi Abe,"5' 11""","71""",,"Nov 27, 1991",5140122c3eecd307,"Kashiwazaki, Niiga
 Papy Abedi,"5' 11""",--,,"Jun 30, 1978",c9f6385af6df66d7,Stockholm,19.22420120239258,Allstars Training Center
 Ricardo Abreu,"5' 11""",--,,"Apr 27, 1984",aa6e591c2a2cdecd,"Ribeirao Preto, Sao Paulo",521.3468627929688,Wand Fight Team
 Klidson Abreu,"6' 0""","74""",,"Dec 24, 1992",7279654c7674cd24,"Manaus, Amazonas",45.5338249206543,Evolucao Thai
-Cyborg Abreu,--,--,,"Dec 20, 1980",f689bd7bbd14b392,"Campo Grande, Mato Grosso do Sul",516.2339477539062,Fight Sports
+Cyborg Abreu,--,--,,"Dec 20, 1980",f689bd7bbd14b392,,,
 Daniel Acacio,"5' 8""",--,,"Dec 27, 1977",1c5879330d42255f,"Curitiba, Parana",898.2212524414062,Evolucao Thai
-John Adajar,"5' 9""","75""",,"Jun 22, 1991",989b85f6540c86b1,,,
+John Adajar,"5' 9""","75""",,"Jun 22, 1991",989b85f6540c86b1,Laguna,,Fairtex Pattaya
 Scott Adams,"6' 0""",--,,--,2620f3eb21c79614,"San Luis Obispo, California",69.1565933227539,The Pit
 Juan Adams,"6' 5""","80""",,"Jan 16, 1992",83b00f7597e5ac83,"Houston, Texas",14.5621976852417,Jackson-Wink MMA
 Anthony Adams,"6' 1""","76""",,"Jan 13, 1988",a77633a989013265,"Aurora, Colorado",1647.207153320312,Elevation Fight Team
@@ -22,11 +22,11 @@ Sam Adkins,"6' 3""",--,,"Apr 26, 1965",0e9869d712e81f8f,"Houston, Texas",14.5621
 Nick Agallar,"5' 8""",--,,"Jan 13, 1979",ebc5af72ad5a28cb,"Racine, Wisconsin",189.9757995605469,Agallar Combative Systems
 Mariya Agapova,"5' 6""","68""",,"Apr 07, 1997",a08ddd04eaffd81d,"Pavlodar, Pavlodar",132.9080505371094,American Top Team
 Marcelo Aguiar,"5' 10""",--,,--,44aa652b181bcf68,,,
-Fabio Aguiar,"6' 0""",--,,"Feb 10, 1988",501821d7fb7b95c1,"Recife, Pernambuco",2.164792776107788,Eduardo Team
+Fabio Aguiar,"6' 0""",--,,"Feb 10, 1988",501821d7fb7b95c1,"Recife, Pernambuco",1.752393007278442,Eduardo Team
 Edwin Aguilar,"5' 10""",--,,--,6cadc0a0ba7dc015,"Tijuana, Baja California",110.0424346923828,Tiger's Team
 Jessica Aguilar,"5' 3""","63""",,"May 08, 1982",8f382b3baa954d2a,"Houston, Texas",14.5621976852417,American Top Team
 Kevin Aguilar,"5' 7""","73""",,"Sep 07, 1988",cf946e03ba2e7666,"Longview, Texas",113.2525634765625,Longview MMA
-Jesus Aguilar,"5' 4""","62""",,"Mar 13, 1996",c051c2e12d692b8a,,,
+Jesus Aguilar,"5' 4""","62""",,"Mar 13, 1996",c051c2e12d692b8a,,,Pro Fighting Peru
 Christian Aguilera,"5' 9""","72""",,"Nov 25, 1991",ae071698e1a3ccd4,"Brea, California",108.4727783203125,Total MMA Studios
 Nick Aguirre,"5' 9""","74""",,"Jan 15, 1996",0978385b2bd9ef9b,"Oswego, Illinois",194.7483367919922,Valle Flow Striking
 Mike Aina,"5' 9""",--,,--,9e3dbb9c68ed5d1a,"Hilo, Hawaii",3.28571891784668,BJ Penn's MMA
@@ -38,7 +38,7 @@ Rostem Akman,"5' 10""","72""",,"Dec 19, 1991",1fc64507a0cb38cf,Stockholm,19.2242
 Razak Al-Hassan,"6' 2""",--,,"May 14, 1982",38b50fd1e1b5b656,"Milwaukee, Wisconsin",187.2257080078125,Roufusport
 Abdul-Kareem Al-Selwady,"5' 8""","69""",,"Apr 10, 1995",597499ac7a5aac62,"Baton Rouge, Louisiana",15.99550914764404,Fortis MMA
 Mostapha Al-Turk,"6' 2""","77""",,"Jul 14, 1973",1cf1310684a841f5,London,7.168957710266113,London Shootfighters
-Herdem Alacabek,"6' 2""","75""",,"Jun 07, 1991",7578cc6bd750206b,,,
+Herdem Alacabek,"6' 2""","75""",,"Jun 07, 1991",7578cc6bd750206b,,,Black House
 Javi Alanis,"5' 6""",--,,--,2144954270be834d,,,
 Alatengheili,"5' 5""","66""",,"Dec 14, 1991",1897b7b913736a7c,,,
 Amir Albazi,"5' 5""","68""",,"Oct 27, 1993",6d35bf94f7d30241,Baghdad,35.57046127319336,Xtreme Couture
@@ -75,7 +75,7 @@ Amir Aliakbari,"6' 3""",--,,"Jun 10, 1984",e17770faae3ca54c,"Shahriar, Tehran",1
 Sultan Aliev,"5' 11""","74""",,"Sep 17, 1984",e70de1859b7ee78e,"Derbent, Dagestan",-4.724057674407959,American Top Team
 Nurullo Aliev,"5' 10""","72""",,"Dec 08, 2000",ca28cdf526d6b6e9,Dushanbe,810.1680908203125,
 Ikram Aliskerov,"6' 0""","76""",,"Dec 07, 1992",b07aed698fba8624,"Makhachkala, Dagestan",-4.028912544250488,KHK MMA Team
-Leon Aliu,"6' 0""","74""",,"Jul 14, 1989",6db394bf6c3b017c,,,
+Leon Aliu,"6' 0""","74""",,"Jul 14, 1989",6db394bf6c3b017c,,,Iron Team Reggio Emilia
 John Allan,"6' 1""","75""",,"Feb 22, 1993",6ebe96a116e79e52,"Curitiba, Parana",898.2212524414062,Chute Boxe
 George Allen,"6' 2""",--,,"Jan 13, 1967",1e13936d708bcff7,British Columbia,1121.031127929688,
 Arnold Allen,"5' 8""","70""",,"Jan 22, 1994",040a74bb0a465c54,"Felixstowe, Suffolk",23.50832366943359,Tristar Gym
@@ -135,10 +135,10 @@ Viscardi Andrade,"5' 11""","75""",,"Mar 08, 1984",d221ee27afc7a60e,"Jales, Sao P
 Jermaine Andre,"5' 7""",--,,--,9bad58fa651d6196,"Collinville, Illinois",171.90673828125,
 Juan Andres Luna,"5' 7""","72""",,"Aug 20, 1995",1fd9f744105024a8,,,
 Fellipe Andrew,--,--,,"Oct 24, 1994",7977fb0fd9c5955d,,,
-Dylan Andrews,"6' 1""","74""",,"Nov 15, 1979",00debc804e2b1cd4,,,
+Dylan Andrews,"6' 1""","74""",,"Nov 15, 1979",00debc804e2b1cd4,,,Heartbreak Conditioning
 Reese Andy,"6' 0""",--,,"Mar 31, 1973",46e2ca71fd5089cb,"Auburn, Washington",25.8408203125,West Coast Fight Team
-Angga,"5' 7""","68""",,"Jan 13, 1989",d6a3e131ad4ba064,,,
-Julius Anglickas,"6' 3""",--,,"Jul 23, 1991",e20ad078a7d63361,,,
+Angga,"5' 7""","68""",,"Jan 13, 1989",d6a3e131ad4ba064,"Sukabumi, West Java",577.2111206054688,Onfire Indonesia
+Julius Anglickas,"6' 3""",--,,"Jul 23, 1991",e20ad078a7d63361,Plunge,,St. Charles MMA
 Collin Anglin,"5' 9""","71""",,"Feb 20, 1993",047a91d3d9c79b05,"South Lyon, Michigan",282.046630859375,Scorpion Fighting System
 Chad Anheliger,"5' 6""","64""",,"Dec 01, 1986",c7c39e2fb70248b3,"Consort, Alberta",745.6270751953125,Champion's Creed MMA
 Yoji Anjo,"5' 11""",--,,"Mar 28, 1967",e06fd1260ac865a7,"Suginami, Tokyo",45.12646102905273,Team Kingdom
@@ -168,12 +168,12 @@ Andrei Arlovski,"6' 3""","77""",,"Feb 04, 1979",3738e68d2261e60f,Minsk,211.84257
 Garrett Armfield,"5' 6""","70""",,"Oct 09, 1996",1effd880e1f1bb30,"Springfield, Missouri",398.2706909179688,Springfield Fight Club
 Joey Armstrong,--,--,,--,30ad2050273d016a,,,
 Austin Arnett,"6' 0""","72""",,"Oct 22, 1991",bf0e700106d00e55,"Clarkston, Washington",245.534423828125,Sikjitsu
-Ricardo Arona,"5' 11""",--,,"Jul 17, 1978",05fbfe628658c538,,,
+Ricardo Arona,"5' 11""",--,,"Jul 17, 1978",05fbfe628658c538,,,Brazilian Top Team
 Eli Aronov,"5' 10""","72""",,"Jun 06, 1996",a90c200c3fbb22c4,Arad,106,
 Chalid Arrab,"5' 11""",--,,"May 28, 1975",770b9d4813c25902,"Frechen, North Rhine-Westphalia",73.28877258300781,Golden Glory
 Akbarh Arreola,"5' 10""","71""",,"Jan 14, 1983",c136b2a8852da5bd,"Tijuana, Baja California",110.0424346923828,Entram Gym
 Matt Arroyo,"5' 10""","72""",,"Sep 01, 1982",de62052b2ede65ba,"Cobleskill, New York",280.7690124511719,Gracie Tampa South
-Antonio Arroyo,"6' 3""","73""",,"Jul 01, 1989",61fb8098ccf81c7f,"Belem, Para",1.740754961967468,Team Figueiredo
+Antonio Arroyo,"6' 3""","73""",,"Jul 01, 1989",61fb8098ccf81c7f,"Belem, Para",1.722213268280029,Team Figueiredo
 Gilles Arsene,"5' 9""",--,,--,2dea80c069847321,Paris,32.53561782836914,
 Veta Arteaga,"5' 7""",--,,--,91e3388e69060e69,"Boise, Idaho",822.4027099609375,Combat Fitness
 Cesar Arzamendia,"5' 11""",--,,"Jan 31, 1991",49f78022126bf4a4,"Asuncion, Capital District",56.19084930419922,Paraguay Combat Team
@@ -190,13 +190,13 @@ Ben Askren,"5' 11""","73""",,"Jul 18, 1984",0b31f87be71ebbb1,"Phoenix, Arizona",
 Ibo Aslan,"6' 3""","77""",,"Apr 23, 1996",6e8f1bcdda94ff45,Vienna,173.3871917724609,Gym 23
 Tom Aspinall,"6' 5""","78""",,"Apr 11, 1993",399afbabc02376b5,"Salford, Lancashire",43.84690475463867,Team Kaobon
 Bruno Assis,"6' 2""",--,,"May 23, 1992",ff222167cce02919,"Belo Horizonte, Minas Gerais",854.6533813476562,BH Rhinos
-Junior Assuncao,"5' 9""","72""",,"Jun 24, 1981",d0d7160824278840,,,
-Raphael Assuncao,"5' 5""","66""",,"Jul 19, 1982",2f13e4020cea5b38,"Recife, Pernambuco",2.164792776107788,Xtreme Couture
+Junior Assuncao,"5' 9""","72""",,"Jun 24, 1981",d0d7160824278840,,,Ascension MMA
+Raphael Assuncao,"5' 5""","66""",,"Jul 19, 1982",2f13e4020cea5b38,"Recife, Pernambuco",1.752393007278442,Xtreme Couture
 Bazigit Atajev,"6' 1""",--,,--,fd7acf42bd6e7e95,,,
 Rich Attonito,"5' 10""","72""",,"Jun 16, 1977",210935fd21670f6d,"Deerfield Beach, Florida",3.611646413803101,American Top Team
 Olivier Aubin-Mercier,"5' 9""","70""",,"Feb 23, 1989",55ee431411ccf07a,"Boucherville, Quebec",18.31579208374023,H2O MMA
 Pat Audinwood,"6' 0""",--,,"Apr 16, 1986",196ed28337adc630,"Cortland, New York",341.7506103515625,Team Bombsquad
-Jose Augusto,"6' 3""",--,,"Mar 28, 1992",4d3b08ab127c7585,,,
+Jose Augusto,"6' 3""",--,,"Mar 28, 1992",4d3b08ab127c7585,,,Team T3
 Marcus Aurelio,"5' 10""","74""",,"Aug 18, 1973",04643fd03d9159cc,"Fortaleza, Ceara",28.06310272216797,Elite Mixed Fighters
 David Avellan,"5' 9""",--,,--,956dcac65e7b34d6,Florida,29.71612358093262,
 Blas Avena,"6' 0""","74""",,"Jun 30, 1983",8753e125f4499816,"Las Vegas, Nevada",611.1598510742188,Machado Jiu Jitsu
@@ -209,7 +209,7 @@ Javy Ayala,"6' 1""",--,,"Aug 20, 1988",26387c19f32dda0f,"Porterville, California
 Jessin Ayari,"6' 0""","73""",,"May 31, 1992",6eaec40f724852f4,"Nuremberg, Bavaria",308.2693786621094,Hammers Team
 Abu Azaitar,"5' 9""","76""",,"Mar 10, 1986",46d0a888d87d91ac,Rabat,76.67070007324219,Team Azaitar
 Ottman Azaitar,"5' 8""","71""",,"Feb 20, 1990",ee18ff42063174df,Cologne,49.99673461914062,Jupps Fight Team
-Luiz Azeredo,"5' 9""",--,,"Jun 10, 1976",063649e21bc9d6d5,,,
+Luiz Azeredo,"5' 9""",--,,"Jun 10, 1976",063649e21bc9d6d5,,,Chute Boxe
 Luciano Azevedo,"6' 3""",--,,"Jun 25, 1981",9bcfb40dbcd50568,Rio de Janeiro,7.758727073669434,Renovacao Fight Team
 Hunter Azure,"5' 8""","69""",,"Mar 02, 1992",2af2f2e26c4c0402,"Poplar, Montana",606.5546875,Fight Ready
 Niklas Backstrom,"6' 1""",--,,"Aug 22, 1989",39cc64bf0a269db9,Stockholm,19.22420120239258,Allstars Training Center
@@ -234,12 +234,12 @@ Oluwale Bamgbose,"5' 11""","78""",,"Aug 04, 1987",04b39f4e8eb59d7c,"New York, Ne
 Stephen Banaszak,"6' 0""",--,,"Dec 07, 1990",4c4b44e3cf5815b3,"Bells, Texas",212.6194915771484,The Chop Shop
 Marcin Bandel,"5' 10""",--,,"Oct 10, 1989",5c2ce761399dc9c5,Lodz,207.5135345458984,Zenith Vera Fight Club
 Humberto Bandenay,"5' 11""","71""",,"Sep 04, 1994",2c2caf2f2bab9df5,Lima,136.0156860351562,DTC (Dogo Training Center)
-Tae Hyun Bang,"5' 9""","71""",,"Apr 15, 1983",9a2d3567abc02e34,Seoul,192.5899200439453,Korean Top Team
-Yohan Banks,--,--,,--,c50ea21fe9ef478d,,,
+Tae Hyun Bang,"5' 9""","71""",,"Apr 15, 1983",9a2d3567abc02e34,,,
+Yohan Banks,--,--,,--,c50ea21fe9ef478d,,,Undisputed Boxing
 Shauna Bannon,"5' 5""","65""",,"Oct 23, 1993",9c442aaf149ea982,Dublin,5.0190749168396,Holohan Martial Arts
 Antonio Banuelos,"5' 5""","63""",,"Sep 23, 1979",9ddfb3369a3b0394,"San Luis Obispo, California",69.1565933227539,The Pit
 Renan Barao,"5' 6""","70""",,"Jan 31, 1987",2c99576fefe53c7c,"Natal, Rio Grande do Norte",30.26502227783203,American Top Team
-Junior Barata,"5' 10""",--,,"Jan 25, 1982",06dced58ca24a6bd,,,
+Junior Barata,"5' 10""",--,,"Jan 25, 1982",06dced58ca24a6bd,,,RCT
 Maycee Barber,"5' 5""","65""",,"May 18, 1998",6a740daf1b279661,"Greeley, Colorado",1424.033447265625,Team Alpha Male
 Bryan Barberena,"6' 0""","72""",,"May 03, 1989",a331233f597090a5,"Minneapolis, Minnesota",254.7821655273438,Gym-O
 Dione Barbosa,"5' 6""","66""",,"May 08, 1992",27b388f0aab49780,,,
@@ -266,7 +266,7 @@ Alexandre Barros,"5' 9""",--,,"Nov 19, 1976",8fd1f27e86661ede,"Rio de Janeiro, R
 Ricardo Barros,"6' 1""",--,,"Mar 22, 1976",d26394fc0e8e880a,"Los Angeles, California",95.03136444091797,
 Francimar Barroso,"6' 1""","75""",,"Feb 28, 1980",b69f24c500d783e7,"Xapuri, Acre",173.7757873535156,Nova Uniao
 Pat Barry,"5' 11""","74""",,"Jul 07, 1979",658c3465581ae46b,"New Orleans, Louisiana",0.5250197052955627,Team Death Clutch
-Dean Barry,"5' 10""","72""",,"Jul 03, 1992",a6f3d15cb84334bb,,,
+Dean Barry,"5' 10""","72""",,"Jul 03, 1992",a6f3d15cb84334bb,,,Next Generation UK
 Enrique Barzola,"5' 7""","70""",,"Apr 28, 1989",be0b310a12eb80b4,"El Agustino, Lima",211.9502105712891,Pitbull Martial Arts Center
 Javid Basharat,"5' 9""","69""",,"Sep 07, 1995",bbab3baf66128ae2,London,7.168957710266113,Xtreme Couture
 Farid Basharat,"5' 8""","71""",,"Aug 02, 1997",a09ed60aa67a3f67,London,7.168957710266113,London Shootfighters
@@ -294,8 +294,8 @@ Mirsad Bektic,"5' 8""","70""",,"Feb 16, 1991",cbd3e590a85b18c5,"Lincoln, Nebrask
 Diana Belbita,"5' 7""","68""",,"Jun 26, 1996",d7e40dca3ae125be,Drobeta,78.45814514160156,House of Champions MMA
 Alan Belcher,"6' 2""","75""",,"Apr 24, 1984",4130a743d9d22163,"Biloxi, Mississippi",6.168967723846436,Roufusport
 Vitor Belfort,"6' 0""","74""",,"Apr 01, 1977",0ee783aa00e468f0,Rio de Janeiro,7.758727073669434,Kill Cliff FC
-Yousri Belgaroui,"6' 5""","79""",,"Jul 07, 1987",7674b836ce0698a0,,,
-Rodolfo Bellato,"6' 3""","77""",,"Feb 05, 1996",69898645d600abdb,"Sorocaba, Sao Paulo",616.5804443359375,Team Nogueira
+Yousri Belgaroui,"6' 5""","79""",,"Jul 07, 1987",7674b836ce0698a0,,,Teixeira MMA & Fitness
+Rodolfo Bellato,"6' 3""","77""",,"Feb 05, 1996",69898645d600abdb,"Sorocaba, Sao Paulo",616.5804443359375,Knockout Squad
 Danilo Belluardo,"6' 0""","74""",,"Jul 21, 1994",c3f6db17cea09ca7,Milan,122.1850814819336,Aurora MMA
 Joey Beltran,"6' 1""","75""",,"Dec 08, 1981",46baf0f57edfa4df,"San Diego, California",15.22877025604248,Blackline
 Marco Beltran,"5' 8""","69""",,"May 18, 1986",ec71a892fada28c7,Mexico City,2229.728759765625,Invictus MMA
@@ -313,7 +313,7 @@ Ryan Benoit,"5' 5""","68""",,"Aug 25, 1989",20999e27ddd94bda,"Dallas, Texas",137
 Pat Benson,"5' 9""",--,,--,a25f3dc0df974597,"St. Louis, Missouri",140.9539031982422,Finney's MMA
 Len Bentley,"5' 9""",--,,"Nov 30, 1982",592d23aed850e652,"Irving, Texas",147.3457489013672,Victory Athletics
 Steve Berger,"5' 11""",--,,"May 20, 1973",21b1132949f2a9b0,"St. Louis, Missouri",140.9539031982422,Berger MMA
-Kenneth Bergh,"6' 2""","74""",,"Jun 26, 1989",aa8189053b3a8994,,,
+Kenneth Bergh,"6' 2""","74""",,"Jun 26, 1989",aa8189053b3a8994,,,Frontline Academy
 Bret Bergmark,"5' 9""",--,,"Nov 24, 1973",2891c9f7b26b26fc,"Concord, California",22.78508949279785,Cesar Gracie Jiu-Jitsu
 Keith Berish,"6' 0""",--,,"Nov 14, 1985",e3779ef06e98f185,"Poughkeepsie, New York",61.60833358764648,Black & Blue MMA
 Dennis Bermudez,"5' 6""","66""",,"Dec 13, 1986",6f242453c91a5af0,"Saugerties, New York",46.26975250244141,Long Island MMA
@@ -396,7 +396,7 @@ Marcus Bossett,"6' 1""",--,,--,e8fb8e53bc2e29d6,"Los Angeles, California",95.031
 Chris Bostick,--,--,,--,239224bedeb2c7a4,"Mountain View, California",31.77577781677246,Fairtex Gym
 Poliana Botelho,"5' 8""","67""",,"Dec 15, 1988",5c126c6aac3ef364,"Muriae, Minas Gerais",203.1359252929688,Nova Uniao
 Francois Botha,"6' 2""",--,,"Sep 28, 1968",545d549d6bf87187,Witbank,1621.084838867188,Steve's Gym
-Gregory Bouchelaghem,"6' 2""",--,,--,59851163aaf1aed8,,,
+Gregory Bouchelaghem,"6' 2""",--,,--,59851163aaf1aed8,,,Snake Team
 Roy Boughton,"6' 0""",--,,--,2aaf0181432adf0b,"Concord, California",22.78508949279785,Cesar Gracie Fight Team
 Rich Bouphanouvong,"5' 7""",--,,--,611b9c068c9e2c44,,,
 Mike Bourke,"6' 0""",--,,--,dfdd0c5dd0d4bc23,"La Habra, California",88.93101501464844,
@@ -409,7 +409,7 @@ Roger Bowling,"5' 9""","68""",,"Dec 05, 1982",3b9f723e2720a238,"Cincinnati, Ohio
 Blake Bowman,"6' 2""",--,,--,a95a0504fd73bd3e,"Carrollton, Georgia",332.6612854003906,American Top Team
 Ashe Bowman,"5' 9""",--,,"Nov 17, 1976",8a0a35e7c74bebcc,"Reno, Nevada",1373.357177734375,Lion's Den
 Anvar Boynazarov,"5' 9""",--,,"Jan 10, 1989",4a191f4ea2fce7fc,Tashkent,443.5775451660156,Tiger Muay Thai
-Colley  Bradford,"5' 7""",--,,--,1433786ac76cf777,,,
+Colley  Bradford,"5' 7""",--,,--,1433786ac76cf777,"Seattle, Washington",47.50616073608398,Charles Combat Club
 Kyle Bradley,"5' 9""","71""",,"Aug 19, 1982",a6959da32f0e6b5d,"Denham Springs, Louisiana",12.98714065551758,Team Voodoo
 Paul Bradley,"5' 9""",--,,"Jun 13, 1983",c7011de4765d2497,"San Diego, California",15.22877025604248,Alliance MMA
 Sean Brady,"5' 10""","72""",,"Nov 23, 1992",45f7cb591c3ab00b,"Philadelphia, Pennsylvania",14.33572292327881,Renzo Gracie Philly
@@ -429,7 +429,7 @@ Chris Brennan,"5' 8""",--,,"Oct 12, 1971",b19fc66613dc75b9,"Mission Viejo, Calif
 Charlie Brenneman,"5' 10""","70""",,"Feb 09, 1981",98f6da59d765ec94,"Hollidaysburg, Pennsylvania",289.8868408203125,AMA Fight Club
 Robert Breslin,"5' 11""",--,,--,e319d6697d41f3cf,"Bakersfield, California",123.170051574707,Breslins Freestyle Fight Team
 Mack Brewer,--,--,,--,106a925d947a0de9,"Atwater, California",46.81946182250977,Atwater Fight Club
-Marcos Brigagao,"6' 3""","76""",,"Apr 01, 1996",11547e29f253fb89,"Tapejara, Parana",520.0802001953125,Parana Vale Tudo
+Marcos Brigagao,"6' 3""","76""",,"Apr 01, 1996",11547e29f253fb89,"Tapejara, Parana",520.0802001953125,D.O METHODOLOGY
 Jason Brilz,"5' 11""","71""",,"Jul 07, 1975",497ba5b12a4bfc47,"Omaha, Nebraska",316.9642944335938,Elite Performance
 Marcus Brimage,"5' 4""","71""",,"Apr 06, 1985",81801f57bd0a7c41,"Birmingham, Alabama",183.2211456298828,
 Aaron Brink,"6' 3""",--,,"Nov 12, 1974",cf1a88371c8cb690,"San Diego, California",15.22877025604248,
@@ -443,7 +443,7 @@ Mike Bronzoulis,"6' 0""",--,,"Jan 05, 1979",df3c39573d01f55b,"Houston, Texas",14
 Jonathan Brookins,"6' 0""","74""",,"Aug 13, 1985",b0a6124751a56bc4,"Orlando, Florida",31.12412452697754,Tristar Gym
 Will Brooks,"5' 10""","72""",,"Oct 08, 1986",b6e6c3b1dcaae0a1,"Schaumburg, Illinois",241.3940277099609,American Top Team
 Jarred Brooks,"5' 3""","62""",,"May 02, 1993",81d9df19e255b8b6,"Warsaw, Indiana",251.6612243652344,Mash Fight Team
-Rob Broughton,"6' 2""","74""",,"Mar 03, 1983",a7d687e6ecb30981,,,
+Rob Broughton,"6' 2""","74""",,"Mar 03, 1983",a7d687e6ecb30981,Liverpool,,Atherton Submission Wrestling
 Lee Brousseau,"6' 1""",--,,"Oct 04, 1974",0974d8d4053a7237,"Granite City, Illinois",128.2301635742188,The Hit Squad
 Matt Brown,"6' 0""","75""",,"Jan 10, 1981",31123249b0bbf52e,"Xenia, Ohio",284.6002197265625,Immortal Fight Team
 Mike Brown,"5' 6""","70""",,"Sep 08, 1975",e0b74df14f52cd15,,,
@@ -503,7 +503,7 @@ Murilo Bustamante,"6' 2""",--,,"Jul 30, 1966",85d905f7c4f5a1af,"Arpoador, Rio de
 Nick Bustamante,"5' 9""",--,,--,51b1ca2a4b064101,"Fresno, California",89.89004516601562,Dethrone Base Camp
 Eduardo Bustillos,"5' 8""",--,,"Jun 02, 1987",f273f1b8df04c8a1,"Saltillo, Coahuila",1541.941162109375,
 Jason Butcher,"6' 3""",--,,"Oct 23, 1984",30e39145fec48d25,"Huntington, West Virginia",172.4157409667969,Independent
-Todd Butler,"6' 1""",--,,--,3fed746acfd026dd,"Curwensville, Phildelphia",358.7061157226562,
+Todd Butler,"6' 1""",--,,--,3fed746acfd026dd,"Curwensville, Phildelphia",14.33572292327881,
 Goldman Butler,--,--,,--,e2d5072048b825b1,,,
 Ian Butler,"5' 8""",--,,--,6b8fd98eb52363d1,Missouri,302.7322692871094,
 Raphael Butler,"6' 3""",--,,"Jan 04, 1984",f941505e35fb1eae,"Rochester, Minnesota",339.7580871582031,
@@ -557,7 +557,7 @@ Dos Caras Jr.,"6' 4""",--,,"May 25, 1977",155a02a8b4311057,,,
 Bryan Caraway,"5' 8""","68""",,"Aug 04, 1984",5ef0088c1b19beeb,"Seattle, Washington",47.50616073608398,Xtreme Couture
 Remo Cardarelli,--,--,,--,e5512a6aed150d8f,"Milford, Massachusetts",79.40966033935547,BST MMA
 Phil Cardella,"5' 11""",--,,"Jul 09, 1976",f6a7b02c42e9fc5b,"Austin, Texas",149.0859680175781,
-Edgar Cardenas,--,--,,--,99a86b134dccc166,,,
+Edgar Cardenas,--,--,,--,99a86b134dccc166,,,Escondido Fight Club
 Chris Cariaso,"5' 3""","64""",,"May 27, 1981",b2e3aca4cd363477,"San Francisco, California",15.56241893768311,Fight and Fitness
 Ronald Carillo,--,--,,--,cbd022eaf2ac546a,"Pleasanton, California",107.011100769043,
 Rafael Carino,"6' 8""",--,,--,08a7080ff5904661,Rio De Janeiro,7.758727073669434,Nova Uniao
@@ -632,7 +632,7 @@ Michael Chiesa,"6' 1""","75""",,"Dec 07, 1987",c58f51dedb310998,"Spokane, Washin
 Giga Chikadze,"6' 0""","74""",,"Aug 25, 1988",9560ff14eb3129f7,Tbilisi,420.3540954589844,Kings MMA
 Khamzat Chimaev,"6' 2""","75""",,"May 01, 1994",767755fd74662dbf,Stockholm,19.22420120239258,Allstars Training Center
 Sako Chivitchian,"5' 11""",--,,"Mar 11, 1984",9f7787e56a6bc0f4,,,
-Mu Bae Choi,"6' 2""",--,,"Jun 27, 1970",371a1c91b24dec2b,,,
+Mu Bae Choi,"6' 2""",--,,"Jun 27, 1970",371a1c91b24dec2b,"Busan, Yeongnam",,Team Tackle
 Hong Man Choi,"7' 2""",--,,"Oct 30, 1980",2c104b7e59a72629,Jeju,65.21414947509766,
 Dooho Choi,"5' 10""","70""",,"Apr 10, 1991",e93b04e308913c2e,,,
 SeungWoo Choi,"6' 0""","74""",,"Nov 03, 1992",a68575214ecad140,,,
@@ -649,7 +649,7 @@ Cameron Church,"5' 11""","72""",,"Sep 27, 1990",f197ce0cbe69996d,California,145.
 Steven Ciaccio,"6' 0""",--,,--,eaebaa6801338ea1,"Irvine, California",11.57773780822754,
 Mike Ciesnolevicz,"6' 0""",--,,"Oct 28, 1979",51b0bb73a1da34bc,"Harrisburg, Pennsylvania",107.1255645751953,Miletich Martial Arts
 Hannah Cifers,"5' 1""","62""",,"Jun 26, 1992",2244d9a2b64b8c3b,"Wake Forest, North Carolina",119.3983688354492,Embrace Martial Arts
-Branko Cikatic,"6' 1""",--,,"Oct 03, 1954",4e5bbc4566049cbf,,,
+Branko Cikatic,"6' 1""",--,,"Oct 03, 1954",4e5bbc4566049cbf,Split,,Tiger Gym
 Nikolajus Cilkinas,--,--,,--,3f3550bf126a5721,,,
 Misha Cirkunov,"6' 3""","77""",,"Feb 27, 1987",67f272324a030d00,Riga,2.550454139709473,Xtreme Couture
 Johnny Cisneros,"5' 11""",--,,"Feb 05, 1980",42611508ba8c3298,"Laguna Niguel, California",91.75387573242188,Joker's MMA
@@ -702,7 +702,7 @@ TJ Cook,--,--,,"Sep 08, 1982",fa238ecfd048f7d8,,,
 Dewey Cooper,--,--,,--,5efaaf313b652dd7,,,
 Brett Cooper,"6' 0""",--,,"Jul 02, 1987",88ffe9745e218dd8,"Long Beach, California",9.218208312988281,Reign MMA
 Bill Cooper,--,--,,"May 05, 1984",78bd6940d093fd33,"Agoura Hills, California",278.633544921875,Paragon Brazilian Jiu-Jitsu
-Bobby Cooper,"6' 1""",--,,--,1b51895e5572cfda,,,
+Bobby Cooper,"6' 1""",--,,--,1b51895e5572cfda,"Knob Noster, Missouri",243.7237701416016,Glory MMA & Fitness
 Amanda Cooper,"5' 3""","64""",,"Oct 22, 1991",d4a31850a7457f1b,,,
 Kit Cope,"6' 0""",--,,"Mar 17, 1977",ce47f49e5c386a9c,"Las Vegas, Nevada",611.1598510742188,Twisted Genetiks
 Chris Cope,"6' 0""","72""",,"Mar 05, 1983",8c8c92a12621d7e0,"San Diego, California",15.22877025604248,The Arena
@@ -787,7 +787,7 @@ Gleidson Cutis,"5' 9""",--,,"Feb 07, 1989",44a94bbde42246e4,,,
 Sarah D'alelio,"5' 7""",--,,"Dec 13, 1980",ac45450f75d14f16,"Dublin, California",112.763053894043,Combat Sports Academy
 Marcos da Matta,"5' 4""",--,,"Mar 18, 1973",3b6d84343579fd33,"Coconut Creek, Florida",3.250432729721069,American Top Team
 Henrique da Silva,"6' 3""","76""",,"Sep 01, 1989",b0bd0c5425668b8f,"Limoeiro, Pernambuco",133.583984375,Roxo Striker
-Alex Da Silva,"5' 8""","73""",,"Feb 04, 1996",c3ded6f7155f9ea4,,,
+Alex Da Silva,"5' 8""","73""",,"Feb 04, 1996",c3ded6f7155f9ea4,,,Kalmar Fightzone
 Igor Da Silva,"5' 7""","69""",,"Apr 21, 2003",6ad8e4296f7522d9,"Juruti, Para",29.41562271118164,Chute Boxe Joao Emilio
 Henrique Da Silva Lopes,"6' 3""",--,,"Mar 08, 1985",1f8cd7634e8286ff,,,
 Daermisi Zhawupasi,"5' 8""","68""",,"Mar 13, 2000",fd52e5f9ab25c94c,Beijing,45.26335906982422,China Top Team
@@ -845,11 +845,11 @@ Jorge de Oliveira,"5' 8""",--,,"Jan 22, 1980",ddf3e0ea10ea6d8c,"Maracaju, Mato G
 Isabela de Padua,"5' 3""","64""",,"Sep 04, 1991",e0f959f65d0406b4,"Campinas, Sao Paulo",670.6317749023438,Team Nikolai MMA
 Gloria de Paula,"5' 5""","67""",,"Jun 10, 1995",5dd180c8b3196786,"Campinas, Sao Paulo",670.6317749023438,Fabiana Belai Academia
 Germaine de Randamie,"5' 9""","71""",,"Apr 24, 1984",1d239d571e342453,Utrecht,5.5,American Kickboxing Academy
-Crezio de Souza,--,--,,--,3746e21bb508391a,,,
+Crezio de Souza,--,--,,--,3746e21bb508391a,,,Carlson Gracie Jiu-Jitsu
 Carl Deaton,"5' 7""","69""",,"Nov 24, 1989",914a897455693650,"Minneapolis, Minnesota",254.7821655273438,American Top Team
 Tom DeBlass,"6' 0""",--,,"May 14, 1982",0bcfe2513cb3bc39,"Forked River, New Jersey",3.814505815505981,Ricardo Almeida Jiu-Jitsu
 Issac DeJesus,--,--,,--,0e2c2daf11b5d8f2,,,
-Rafael  Del Real,"5' 11""",--,,--,e82b2adcaeff71ec,,,
+Rafael  Del Real,"5' 11""",--,,--,e82b2adcaeff71ec,"Tulare, California",85.652587890625,Central CA Shotokan
 Shane del Rosario,"6' 4""",--,,"Sep 23, 1983",85980f5da429c0a6,"Irvine, California",11.57773780822754,Team Oyama
 Wallen Del Rosario,"5' 4""","67""",,"Mar 18, 1993",a62f85f6a6c19a4c,"Oas, Albay",117.6729049682617,Clube de Jiu-jitsu Filipinas
 Humberto DeLeon,--,--,,"Nov 12, 1989",bfaf4c87936b4fae,Texas,571.7687377929688,
@@ -940,7 +940,7 @@ Derek Downey,"6' 1""",--,,"Apr 27, 1980",b05086131c6f5dc5,"Orem, Utah",1453.8819
 John Doyle,"5' 11""",--,,"Nov 21, 1976",0509b954421bb327,"Philadelphia, Pennsylvania",14.33572292327881,Freelance
 Edson Drago,"6' 4""",--,,"Aug 29, 1977",f9c7fe2682af3802,,,
 Kyle Driscoll,"5' 11""","74""",,"Sep 23, 1994",e5e148d4363deff8,"Tulsa, Oklahoma",219.2913665771484,American Kickboxing Academy
-Chris Drumm,"5' 8""",--,,--,5fd834edd92c9e50,,,
+Chris Drumm,"5' 8""",--,,--,5fd834edd92c9e50,,,Team Wildman Vale Tudo
 Tomasz Drwal,"6' 1""","76""",,"Jan 22, 1982",679a9054e2815943,Krakow,212.4738159179688,Szkola Walki Drwala
 Robert Drysdale,"6' 3""",--,,"Oct 05, 1981",d2a9be6bf2de624c,"Las Vegas, Nevada",611.1598510742188,Drysdale Jiu-Jitsu
 Dricus Du Plessis,"6' 1""","76""",,"Jan 14, 1994",0d7b51c9d2649a6e,"Pretoria, Gauteng",1370.404052734375,Team CIT
@@ -983,7 +983,7 @@ Vincent Eazelle,"5' 11""",--,,"Dec 07, 1980",ec421d5de0aea624,"Springfield, Illi
 Ross Ebanez,"5' 9""",--,,"May 18, 1975",a5b0bd216d8ba84e,"Hilo, Hawaii",3.28571891784668,BJ Penn's MMA
 Brian Ebersole,"6' 0""","73""",,"Nov 27, 1980",32ba186f4b0e3267,"Bradley, Illinois",192.3742980957031,Tiger Muay Thai
 Roybert Echeverria,"5' 5""","67""",,"Aug 21, 1995",20b13e96668caaa4,Maturin,64.24949645996094,The Goat Shed Academy
-Mark Eddiva,"5' 8""","68""",,"Feb 16, 1986",40ff198adda94b9f,,,
+Mark Eddiva,"5' 8""","68""",,"Feb 16, 1986",40ff198adda94b9f,,,Lakay MMA
 Frankie Edgar,"5' 6""","68""",,"Oct 16, 1981",f2688492b9a525a3,"Toms River, New Jersey",6.497743606567383,Ricardo Almeida Jiu-Jitsu
 Abdul-Kerim Edilov,"6' 2""",--,,"Nov 25, 1991",37e03538c960bac6,"Grozny, Chechnya",126.5825881958008,Akhmat Fight Team
 Johnny Eduardo,"5' 7""","71""",,"Aug 03, 1978",528c24b99fbaab79,"Duque de Caxias, Rio de Janeiro",4.870048999786377,Nova Uniao
@@ -1028,7 +1028,7 @@ Alex Enlund,"5' 10""",--,,"May 27, 1987",d238217e0f8ea8e1,"South Shields, Tyne a
 Kenny Ento,"6' 2""",--,,--,daf9be103c1edbbd,"Visalia, California",100.2376937866211,Riot MMA
 Ian Entwistle,"5' 5""",--,,"Nov 19, 1986",d7adfcfdf7c6c1f8,Accrington,137.1133575439453,Apex MMA
 Andy Enz,"6' 3""","78""",,"Aug 15, 1991",993d385f5a475375,"Anchorage, Alaska",28.57769966125488,Gracie Barra Alaska
-Won Jin Eoh,"5' 7""",--,,--,bc7cf284c1c2f16e,,,
+Won Jin Eoh,"5' 7""",--,,--,bc7cf284c1c2f16e,,,CMA Korea
 Josh Epps,--,--,,"Aug 23, 1986",984b0c4c6e773a1c,"Granite City, Illinois",128.2301635742188,Finney's HIT Squad
 Steve Erceg,"5' 8""","68""",,"Jul 27, 1995",32ab52e5de93092d,"Myaree, Western Australia",21.18656349182129,Wilkes Martial Arts
 Tom Erikson,"6' 3""",--,,--,7b9a85e5ff31ef47,"Chicago Heights, Illinois",200.2910919189453,
@@ -1050,7 +1050,7 @@ Jodie Esquibel,"5' 1""","64""",,"May 07, 1986",411539901068522f,"Albuquerque, Ne
 Rafael Estevam,"5' 8""","69""",,"Aug 10, 1996",83455a9d17f57dae,"Macapa, Amapa",11.78280162811279,Nova Uniao
 Achilles Estremadura,"5' 10""","68""",,"Mar 11, 1992",41f3cfdab0b22236,"Vancouver, British Columbia",31.52272987365723,Ryan's MMA - Checkmat Vancouver
 Shaun Etchell,"5' 7""","68""",,"Aug 05, 1993",ea9bfe9c25037bba,"Launceston, Tasmania",6.396425247192383,Launceston Boxing & MMA Club
-Terry Etim,"6' 1""","73""",,"Jan 11, 1986",33011768c3c4dc9a,,,
+Terry Etim,"6' 1""","73""",,"Jan 11, 1986",33011768c3c4dc9a,Liverpool,,Team Kaobon
 Fred Ettish,"6' 0""",--,,--,8d5daf67983b65ba,"Bemiji, Minnesota",414.6243591308594,
 Scott Ettling,--,--,,--,74b5736f1df40be3,"Hillsboro, Illinois",193.7565002441406,
 Sijara Eubanks,"5' 4""","67""",,"Apr 27, 1985",4234f0097c83fa62,"Brick, New Jersey",5.840469360351562,Mark Henry Boxing
@@ -1143,7 +1143,7 @@ Cody Floyd,--,--,,"Jul 18, 1988",8164250600b7c91b,"Tupelo, Mississippi",84.05578
 Bobby Flynn,--,--,,--,c97fc5fbf7d32b8a,"Mashpee, Massachusetts",20.74205780029297,Pro-Elite Training Center
 Caros Fodor,"5' 9""","74""",,"Jan 07, 1984",01d2ed8c502e3828,"Kirkland, Washington",9.362271308898926,AMC Pankration
 Mal Foki,"5' 7""",--,,--,fa534853eb195270,"Mermaid Beach, Queensland",6.360459804534912,Freelance
-Matt Foki,"5' 7""",--,,--,5de61b03868035ff,,,
+Matt Foki,"5' 7""",--,,--,5de61b03868035ff,,,Tant's Gym
 AJ Fonseca,"5' 4""",--,,--,0adf1aacda5e26ac,,,
 Rob Font,"5' 8""","71""",,"Jun 25, 1987",05339613bf8e9808,"Boston, Massachusetts",10.45010185241699,New England Cartel
 Claudionor Fontinelle,"5' 5""",--,,--,7a82635ffa9b59fe,,,
@@ -1174,7 +1174,7 @@ Jason Freeman,"6' 2""",--,,"Sep 02, 1976",5870bd1eadf4f322,,,
 Willamy Freire,"5' 8""",--,,"Jul 28, 1987",f1f37d667bcd0d27,"Fortaleza, Ceara",28.06310272216797,Dragon Fight
 Patricio Freire,"5' 5""","65""",,"Jul 07, 1987",98a58c26c5b1ed17,"Natal, Rio Grande do Norte",30.26502227783203,Pitbull Brothers
 Patricky Freire,"5' 7""","71""",,"Jun 01, 1986",90e6dde9113830bd,"Natal, Rio Grande do Norte",30.26502227783203,Pitbull Brothers
-Jeremy  Freitag,"6' 1""",--,,--,a47e9ec288c91067,,,
+Jeremy  Freitag,"6' 1""",--,,--,a47e9ec288c91067,"Sacramento, California",8.19682502746582,Capital City Fighting Alliance
 Rafael Freitas,--,--,,--,14b9e0f2679a2205,"Umuarama, Parana",442.8329772949219,Viktor Gym
 Donavon Frelow,"5' 7""",--,,"Jan 20, 1985",9aa56f004b2bca07,"Las Vegas, Nevada",611.1598510742188,Syndicate MMA
 Josh Fremd,"6' 4""","76""",,"Jan 15, 1994",ca43de99b07b6b40,"Connellsville, Pennsylvania",280.1218566894531,Factory X
@@ -1250,7 +1250,7 @@ Willie Gates,"5' 8""","72""",,"Jan 21, 1987",6ded9184b2284645,"Fontana, Californ
 Melissa Gatto,"5' 5""","69""",,"May 02, 1996",a4a80dd7336ffd59,"Campinas, Sao Paulo",670.6317749023438,MSP
 Louis Gaudinot,"5' 3""","63""",,"Aug 28, 1984",b72a60a0cadff408,"Yonkers, New York",27.15680694580078,Team Tiger Schulmann
 Manuel Gaxhja,"5' 8""",--,,"Jul 23, 1997",618643d0d5c0631d,Amsterdam,2.238700389862061,Kops Gym
-Shamil Gaziev,"6' 4""","78""",,"Feb 10, 1990",6747ccd6d1acd266,,,
+Shamil Gaziev,"6' 4""","78""",,"Feb 10, 1990",6747ccd6d1acd266,,,Astrakhan Top Team
 Charlene Gellner,"5' 2""",--,,--,effd0b70e6749ab2,"Hayward, California",31.46000099182129,Bay Area Fight Academy
 Chad George,"5' 6""","68""",,"Apr 30, 1982",14e797332ea32cdb,"Los Angeles, California",95.03136444091797,California Mixed Martial Arts
 Paul Georgieff,"6' 2""",--,,"Sep 22, 1982",2f1700b3a4a09bc7,"St. Paul, Minnesota",228.5861053466797,
@@ -1366,7 +1366,7 @@ Neiman Gracie,"6' 0""",--,,--,12d855d12a624da2,"Rio de Janeiro, Rio de Janeiro",
 Kron Gracie,"5' 9""","70""",,"Jul 11, 1988",242d36d241b43c12,"Rio de Janeiro, Rio de Janeiro",7.758727073669434,Kron Gracie Jiu-Jitsu
 Bogdan Grad,"5' 8""","70""",,"Sep 28, 1995",fb37795db81f93f3,Graz,355.7011413574219,ETTL Bros Champions Gym
 Steven Graham,"6' 1""",--,,--,3e514f437c51ce0a,"Fayettsville, North Carolina",30.51150131225586,
-Scott Graham,"6' 4""",--,,--,6e4acc2c115215b5,,,
+Scott Graham,"6' 4""",--,,--,6e4acc2c115215b5,,,Urban Guerrilla Fight Team
 Miranda Granger,"5' 7""","68""",,"Apr 13, 1992",7559395ad833c074,"Everett, Washington",23.55912590026855,Charlie's Combat Club
 TJ Grant,"5' 10""","72""",,"Feb 26, 1984",a26198ba5093147e,,,
 Davey Grant,"5' 8""","69""",,"Dec 18, 1985",113df4fde64735c6,Bishop Auckland,105.8302841186523,Syndicate MMA
@@ -1377,7 +1377,7 @@ Michael Graves,"5' 10""","71""",,"Jan 08, 1991",3f1d23b01c552a13,"Coconut Creek,
 Shelton Graves,"6' 2""","76""",,"Oct 23, 1985",642862d6d63605cd,"Baltimore, Maryland",10.96663093566895,Top Flight MMA
 James Gray,"5' 9""",--,,"Oct 25, 1987",2db65fc038c0018e,,,
 Kevin Gray,"5' 4""","67""",,"May 03, 1985",bb0d290026d7681d,"Omaha, Nebraska",316.9642944335938,Premier Combat Center
-Sam Greco,"6' 2""",--,,"May 03, 1967",6d12031661db8ac8,,,
+Sam Greco,"6' 2""",--,,"May 03, 1967",6d12031661db8ac8,,,Team Greco
 Bobby Green,"5' 10""","71""",,"Sep 09, 1986",887961364be5ceb3,"Redlands, California",413.7634887695312,Pinnacle MMA
 Desmond Green,"5' 10""","73""",,"Oct 11, 1989",f046d724d2a84ac5,"Rochester, New York",159.2620086669922,Kill Cliff FC
 Gabe Green,"5' 10""","73""",,"May 02, 1993",5eb50529a8418b77,,,
@@ -1390,7 +1390,7 @@ Jordan Griffin,"5' 10""","73""",,"Feb 28, 1990",ebef46976554f975,"Milwaukee, Wis
 Chad Griggs,"6' 1""","73""",,"May 15, 1978",fdf18227faa596dd,"Tucson, Arizona",724.4033813476562,Apex MMA
 Charalampos Grigoriou,"5' 7""","67""",,"Mar 31, 1992",68b8ebdfce9dbb61,Paphos,70.3665542602539,Paphos Fight Club
 Chuck Grigsby,"6' 6""",--,,--,7fb4234670271505,"Des Moines, Iowa",248.3896484375,
-Rodrigo Gripp de Sousa,"5' 11""",--,,--,dde70a112e053a6c,,,
+Rodrigo Gripp de Sousa,"5' 11""",--,,--,dde70a112e053a6c,,,Nova Uniao
 Maxim Grishin,"6' 3""","78""",,"May 02, 1984",950d0ef5c17157c5,"Tambov, Tambov",137.6859588623047,Akhmat Fight Team
 Josh Grispi,"5' 11""","74""",,"Oct 14, 1988",60ba33c3f555a7a3,"Rockland, Massachusetts",47.68164443969727,South Shore Sport Fighting
 Garrett Gross,"5' 9""",--,,"Aug 08, 1988",6741218640534d8b,"Du Quoin, Illinois",141.8883209228516,Sabens Martial Arts
@@ -1415,7 +1415,7 @@ John Gunderson,"5' 9""","69""",,"Jan 05, 1979",a0c139b34f11421a,"Houston, Texas"
 John Gunther,"5' 9""","72""",,"Nov 24, 1985",3956bdc8ab2e54b3,"Lakeville, Ohio",293.7346496582031,Strong Style Fight Team
 Jorge Gurgel,"5' 7""","69""",,"Jan 25, 1977",04d5718ed2661e8c,"Cincinnati, Ohio",167.9817199707031,Team Jorge Gurgel
 Fabio Gurgel,"6' 0""",--,,--,8377c5572cb356f3,Rio de Janeiro,7.758727073669434,Alliance
-Bogdan Guskov,"6' 3""","76""",,"Sep 12, 1992",ef5dcb10d2bd4b0f,,,
+Bogdan Guskov,"6' 3""","76""",,"Sep 12, 1992",ef5dcb10d2bd4b0f,Dukent,,GOR MMA
 Gugun Gusman,"5' 7""","68""",,"Mar 03, 1990",e34e3b1fffa13a6a,"Bandung, West Java",696.3651733398438,Bandung Fighting Club
 Andre Gusmao,"6' 0""",--,,"May 19, 1977",cc300e9aa3063431,"Goiania, Goias",771.5121459960938,
 Alexander Gustafsson,"6' 5""","79""",,"Jan 15, 1987",3c6976f8182d9527,"Stockholm, Stockholm County",19.22420120239258,Allstars Training Center
@@ -1480,7 +1480,7 @@ Dale Hartt,"5' 10""","69""",,"Apr 04, 1979",058e4e08a1ad8aba,"Bangor, Maine",5.7
 Luke Hartwig,--,--,,--,34f3869747bf8fa9,,,
 Clay Harvison,"6' 1""","74""",,"Sep 25, 1980",83a477a7dba1ca58,"Marietta, Georgia",343.5420227050781,Madhouse Training
 Hidehiko Hasegawa,"5' 9""",--,,"Jul 13, 1978",2a2eeee20ef049cf,"Kakogawa, Hyogo",6.448339462280273,Academia Az
-Chris Haseman,"5' 11""",--,,"Jun 02, 1969",5bd533d50c8e7b8a,,,
+Chris Haseman,"5' 11""",--,,"Jun 02, 1969",5bd533d50c8e7b8a,,,Rings Australia
 Takayo Hashi,"5' 4""",--,,"Oct 02, 1977",ae4343d29c68e9d0,"Sumida, Tokyo",5.400509357452393,Wajutsu Keishukai AKZA
 Tomohiko Hashimoto,"6' 0""",--,,--,a890f9a791ed615d,Nara,64.36170959472656,D2T
 Justin Haskins,"5' 10""",--,,"Aug 30, 1979",77940e45bc86208e,"Palm Beach Gardens, Florida",4.631507396697998,Pellegrino MMA
@@ -1517,7 +1517,7 @@ Ron Henderson,"5' 10""",--,,--,498f0d066396ec59,,,
 Josh Hendricks,"6' 2""",--,,"Aug 28, 1976",7649c4c95b824488,"Mansfield, Ohio",378.2421264648438,Superior Health Club
 Johny Hendricks,"5' 9""","69""",,"Sep 12, 1983",0941df56f6ac954b,"Ada, Oklahoma",308.0355224609375,Team Takedown
 Cory Hendricks,"6' 3""",--,,"May 10, 1988",9ab9912e0f8fa6d6,"Las Vegas, Nevada",611.1598510742188,Syndicate MMA
-Luis Henrique,"6' 2""","74""",,"Aug 21, 1993",e5bda12faabfc850,,,
+Luis Henrique,"6' 2""","74""",,"Aug 21, 1993",e5bda12faabfc850,,,GF Team
 Jose Henrique,"6' 3""","79""",,"May 23, 2002",20a0e4cc5227c117,,,
 Diego Henrique da Silva,"6' 2""",--,,"Aug 22, 1986",1649770c649db6a5,"Braganca Paulista, Sao Paulo",849.2694702148438,Inside Muay Thai
 Danny Henry,"6' 0""","73""",,"Jul 17, 1988",f7d73e452b064bf2,Edinburgh,63.49433517456055,Higher Level Martial Arts
@@ -1739,7 +1739,7 @@ DaMarques Johnson,"6' 1""","75""",,"Jun 28, 1982",322a56923b396b4d,"Salt Lake Ci
 Devin Johnson,--,--,,--,22f4b6cb6b1bd7fd,California,145.0107269287109,
 Travis Johnson,--,--,,--,443835675e8fc6ca,"San Jose, California",24.67866325378418,American Kickboxing Academy
 Ricky Johnson,"5' 8""",--,,--,fa2fca260beeb9c0,"Greeley, Colorado",1424.033447265625,Infinite MMA
-Tony Johnson,"6' 2""","76""",,"May 02, 1983",3641a0d117e9bc6c,"Nashville, Tennessee",152.9315185546875,Nashville MMA
+Tony Johnson,"6' 2""","76""",,"May 02, 1983",3641a0d117e9bc6c,"San Jose, California",24.67866325378418,
 Lavar Johnson,"6' 4""","82""",,"Jun 11, 1977",e6c5908910cc26e4,"Madera, California",82.32746124267578,Pro Buhawe
 Demetrious Johnson,"5' 3""","66""",,"Aug 13, 1986",8a304bfd6bf04a57,"Kirkland, Washington",9.362271308898926,AMC Pankration
 Michael Johnson,"5' 10""","73""",,"Jun 04, 1986",511e82663651438d,"Springfield, Missouri",398.2706909179688,Kill Cliff FC
@@ -1747,7 +1747,7 @@ Deshaun Johnson,--,--,,--,bf97ad31eae89429,"Honolulu, Hawaii",7.766721248626709,
 Kajan Johnson,"5' 11""","75""",,"Apr 21, 1984",633a45d131192ffe,"Burns Lake, British Columbia",717.4490966796875,Tristar Gym
 Dashon Johnson,"5' 7""",--,,"Jan 25, 1988",36207c58e854cae5,"Escondido, California",196.0362701416016,Team Xplode MMA
 Timothy Johnson,"6' 3""","77""",,"Mar 13, 1985",cc900af167fbedfd,,,
-Tony Johnson,"6' 1""",--,,--,a45bab49951a45cd,"Nashville, Tennessee",152.9315185546875,Nashville MMA
+Tony Johnson,"6' 1""",--,,--,a45bab49951a45cd,"San Jose, California",24.67866325378418,
 Jordan Johnson,"6' 2""","79""",,"Nov 18, 1988",99bcdf5eac39898f,"San Diego, California",15.22877025604248,MMA Lab
 Taylor Johnson,"6' 0""","74""",,"Nov 09, 1990",552b09cbf13b6328,"Chula Vista, California",20.03131484985352,American Top Team Portland
 Chad Johnson,"6' 2""","80""",,"Jul 22, 1986",6ce9a012e4c6020c,,,
@@ -1757,15 +1757,15 @@ Brian Johnston,"6' 3""",--,,--,1c3f5e85b59ec710,"San Jose, California",24.678663
 Liana Jojua,"5' 4""","62""",,"Mar 22, 1995",eebc23626e38f5dc,Tbilisi,420.3540954589844,Syndicate MMA
 Daniel Jolly,"6' 1""","75""",,"Sep 03, 1984",eeabcd4dc6619129,"Austin, Texas",149.0859680175781,American Top Team
 Paul Jones,"5' 9""",--,,"Jun 16, 1963",f341f9551ba744e2,"Boys Ranch, Texas",971.865234375,
-Jon Jones,"6' 4""","84""",,"Jul 19, 1987",07f72a2a7591b409,,,
+Jon Jones,"6' 4""","84""",,"Jul 19, 1987",07f72a2a7591b409,"Rochester, New York",159.2620086669922,Jackson-Wink MMA
 Nathan Jones,"6' 11""",--,,"Aug 21, 1970",f54fb3b9c4228142,"Hobart, Tasmania",13.02181816101074,Ultimate Pro Wrestling
 Marcus Jones,"6' 6""",--,,"Aug 15, 1973",8fa2b06572365321,"Tampa, Florida",5.853272438049316,
 Carlton Jones,"6' 1""",--,,--,f117c3e8c1aa7b9e,"Tulare, California",85.652587890625,
-Jesse Jones,"5' 9""",--,,--,bc0f994de0521926,,,
+Jesse Jones,"5' 9""",--,,--,bc0f994de0521926,,,Team Extreme
 Tito Jones,"5' 8""",--,,"Jul 31, 1981",7b223a22a6c26868,"Panama City, Florida",7.707612991333008,Arizona Combat Sports
 Roy Jones,--,--,,"Oct 26, 1983",be8dfcf0442812b1,,,
 Justin Jones,"5' 11""",--,,"Sep 06, 1987",9b75954db8db2a08,"San Diego, California",15.22877025604248,Victory MMA
-Ben Jones,--,--,,--,329aff8e958a2997,,,
+Ben Jones,--,--,,--,329aff8e958a2997,,,CSW
 Victor Jones,--,--,,--,04f0471f221db717,"San Jose, California",24.67866325378418,American Kickboxing Academy
 Chris Jones,"5' 9""",--,,"Nov 16, 1981",509319d35664369e,"Dallas, Texas",137.5803375244141,Mohler MMA
 Roshaun Jones,"5' 8""",--,,--,8a9f54b9056b07f5,"Oklahoma City, Oklahoma",366,
@@ -1796,7 +1796,7 @@ Anshul Jubli,"6' 0""","69""",,"Jan 13, 1995",a72a2a769fa5a2be,Uttarakhand,2205.8
 Carli Judice,"5' 7""","68""",,"Mar 02, 1999",f1ab6f37492c630a,"Lafayette, Louisiana",11.10503482818604,Headkicks MMA
 Steve Judson,"5' 11""",--,,--,6ece1d2ab1bed31d,"Phoenix, Arizona",331.523681640625,
 Luke Jumeau,"5' 11""","72""",,"Feb 12, 1988",4c288a2b250bb576,"Hamilton, Waikato",37,Phuket Top Team
-Bu-Kyung Jung,"5' 7""",--,,"May 26, 1978",b35d1650c78c2948,,,
+Bu-Kyung Jung,"5' 7""",--,,"May 26, 1978",b35d1650c78c2948,Seoul,192.5899200439453,Team Yoon
 Chan Sung Jung,"5' 7""","72""",,"Mar 17, 1987",c451d67c09c55418,"Gyeongju, North Gyeongsang",56.04213333129883,Fight Ready
 Young Sam Jung,"5' 8""",--,,"Oct 27, 1985",13104eaed3ae96c3,"Gwanak, Seoul National Capital Area",83.89846801757812,Jiu-Jitsu World
 Da Woon Jung,"6' 4""","78""",,"Dec 07, 1993",74f9448b97bf8bec,Daegu,133.7799224853516,Korean Top Team
@@ -1806,12 +1806,12 @@ Cristiane Justino,"5' 8""","68""",,"Jul 09, 1985",634bb0de2eb043b4,"Curitiba, Pa
 Patrick Kaase,"5' 9""",--,,--,b180f05acb24d430,"Stockton, California",4.496190071105957,
 Emily Kagan,"5' 3""",--,,"Jul 14, 1981",c1ea9d56cd953586,"Albuquerque, New Mexico",1509.996826171875,Jackson-Wink MMA
 Oron Kahlon,"5' 8""","70""",,"Nov 04, 1984",00a35c92b03992b0,Ashdod,21.48550415039062,Kahlon MMA
-Kaiwen,"5' 9""","72""",,"Oct 16, 1995",0565706b1e7f7e7c,,,
+Kaiwen,"5' 9""","72""",,"Oct 16, 1995",0565706b1e7f7e7c,"Changsha, Hunan",57.47463607788086,Top Sky Mixed Martial Arts Club
 Sirwan Kakai,"5' 5""",--,,"Oct 03, 1989",2525a853486ee670,Gothenburg,2.633630990982056,GBG MMA
 Saidyokub Kakhramonov,"5' 8""","69""",,"Nov 14, 1995",50a28b9f8314e008,"Chicago, Illinois",183,Warriors Camp
 Geza Kalman,"6' 1""",--,,--,304fcd812f12c589,"Cambridge, Ontario",265.0741882324219,
 Bryson Kamaka,"5' 11""",--,,--,9336e86cfd4ceaa1,"Wai'anae, Hawaii",3.48006010055542,808 Fight Factory
-Kai Kamaka,"5' 7""","69""",,"Jan 05, 1995",eee0ef3e2b14816b,,,
+Kai Kamaka,"5' 7""","69""",,"Jan 05, 1995",eee0ef3e2b14816b,Hawaii,1078.60791015625,808 Fight Factory
 Shuya Kamikubo,"5' 5""","68""",,"Apr 12, 1993",a46fa1c7972548d0,"Yokohama, Kanagawa",12.80799961090088,Tri.H Studio
 Martin Kampmann,"6' 0""","72""",,"Apr 17, 1982",8b69839f3555a67b,Aarhus,22.99276924133301,Xtreme Couture
 Koya Kanda,"5' 9""","75""",,"Dec 20, 1995",b42d3a1469dab722,,,
@@ -1820,7 +1820,7 @@ Hiromitsu Kanehara,"5' 10""",--,,"Oct 05, 1970",eda579d906cf0ca2,"Owariasahi, Ai
 Masanori Kanehara,"5' 7""","67""",,"Nov 19, 1982",f3a078277b3b8ff4,"Musashimurayama, Tokyo",124.3385543823242,Reversal Gym Tachikawa Alpha
 Ken Kaneko,"6' 0""",--,,--,5345f86680378fc1,"Shinjuku, Tokyo",39.36003875732422,
 Denis Kang,"5' 11""","77""",,"Sep 17, 1977",3c241737a6069b9f,"Vancouver, British Columbia",31.52272987365723,American Top Team
-Kyung Ho Kang,"5' 9""","73""",,"Sep 09, 1987",a7897d200692ab64,,,
+Kyung Ho Kang,"5' 9""","73""",,"Sep 09, 1987",a7897d200692ab64,"Busan, Yeongnam",,Busan Team MAD
 Manel Kape,"5' 5""","68""",,"Nov 14, 1993",5d1b7e3dd9e11074,Luanda,6.73298168182373,AKA Thailand
 David Kaplan,"5' 7""",--,,"Nov 16, 1979",5669b828e7e11329,"Las Vegas, Nevada",611.1598510742188,Team Tompkins
 Kai Kara-France,"5' 4""","69""",,"Mar 26, 1993",853eb0dd5c0e2149,Auckland,17,City Kickboxing
@@ -1849,16 +1849,16 @@ Chris Kelades,"5' 7""","68""",,"Feb 21, 1981",56c9acc4e86046a2,"Cole Harbour, No
 Brian Kelleher,"5' 6""","66""",,"Aug 19, 1986",7be14eaed4c74856,"Selden, New York",26.34671974182129,Maxum BJJ
 Mayana Kellem,"5' 5""",--,,"Jul 07, 1981",c788481ae19e798d,,,
 Tony Kelley,"5' 9""","70""",,"Jan 21, 1987",1a08b01fdabb6ae2,"Shreveport, Louisiana",47.33526992797852,Team Alpha Male
-Paul Kelly,"5' 9""","70""",,"Sep 12, 1984",aac5ac38148f0528,,,
+Paul Kelly,"5' 9""","70""",,"Sep 12, 1984",aac5ac38148f0528,Liverpool,,Team Kaobon
 John Kelly,"5' 9""",--,,"Aug 02, 1978",ace83095105dd205,"Miami, Florida",0.5367298126220703,MMA Masters
 Daniel Kelly,"6' 0""","70""",,"Oct 31, 1977",bdcbb976816fd256,"Melbourne, Victoria",10.0703239440918,Resilience Training Centre
 Tim Kennedy,"5' 11""","74""",,"Sep 01, 1979",3c660c90d48fc80d,"Fort Bragg, North Carolina",66.85455322265625,Jackson-Wink MMA
 Steve Kennedy,"5' 11""",--,,"Mar 07, 1983",185fb0200a4605e6,"Perth, Western Australia",13.64652729034424,Kickass MMA
 Jeremy Kennedy,"5' 11""","71""",,"Sep 16, 1992",68f6e96c5fa6e044,"Surrey, British Columbia",81.72649383544922,Xtreme Couture
-Waylon Kennell,"6' 0""",--,,--,9b8a73b59be8d786,,,
+Waylon Kennell,"6' 0""",--,,--,9b8a73b59be8d786,,,The Arena
 Casey Kenney,"5' 7""","68""",,"Mar 20, 1991",e7bba7ce4d6c7b07,"Tuscon, Arizona",724.4033813476562,Rise Combat Sports
 Maimaitituoheti Keremuaili,"5' 6""","66""",,"Mar 18, 1991",772022b989534f0d,Tianjin,2.242972612380981,Haoyue Fight Gym
-Aurelijus Kerpe,--,--,,--,c1e4ae143cce7398,,,
+Aurelijus Kerpe,--,--,,--,c1e4ae143cce7398,,,Dainralfas Gym
 Mark Kerr,"6' 3""",--,,"Dec 21, 1968",a7b48e18ca27795d,"Phoenix, Arizona",331.523681640625,Team Kerr
 Will Kerr,"5' 10""","69""",,"Oct 21, 1982",ef61d9f5176b3200,"New London, Connecticut",16.98709106445312,Strike Zone MMA
 Ron Keslar,--,--,,--,b84f34b425dfd24b,"San Jose, California",24.67866325378418,American Kickboxing Academy
@@ -1870,15 +1870,15 @@ Alfred Khashakyan,"5' 8""","70""",,"Jul 17, 1988",3929efe0c0a83d07,"Glendale, Ca
 Aliaskhab Khizriev,"5' 9""","74""",,"Aug 24, 1990",7ab478c397cd68ef,"Rostov-on-Don, Rostov",6.558608055114746,Team Shikhshabekov
 WonBin Ki,"5' 11""","73""",,"Feb 11, 1991",aaeb55084b198a39,,,
 Pannie Kianzad,"5' 7""","66""",,"Dec 08, 1991",91dac5e69e28d5b5,"Helsingborg, Skane",13.19281196594238,Arte Suave Copenhagen
-Akira Kikuchi,"5' 8""",--,,"Jul 23, 1978",9c37681096c6f3a9,,,
+Akira Kikuchi,"5' 8""",--,,"Jul 23, 1978",9c37681096c6f3a9,Miyagi,2.663961887359619,Krazy Bee
 Katsunori Kikuno,"5' 8""","66""",,"Oct 31, 1981",44470bfd9483c7ad,Kagoshima,5.490913867950439,Team Kikuno
 Sanae Kikuta,"5' 9""",--,,"Sep 10, 1971",e4bde462b043d3e1,"Nerima, Tokyo",44.46466445922852,Grabaka
 Jacob Kilburn,"5' 9""","72""",,"Jun 28, 1995",637bd06c32219f0b,"Clarksville, Tennessee",145.2240447998047,Harris Holt Combat Sports
-Dong Hyun Kim,"6' 2""","76""",,"Nov 17, 1981",9bcf8603ceb25680,,,
-Jin Oh Kim,"5' 9""",--,,--,8d04923f2db59b7f,,,
-Dae Won Kim,"5' 11""",--,,--,354808cf38d9d73c,,,
+Dong Hyun Kim,"6' 2""","76""",,"Nov 17, 1981",9bcf8603ceb25680,"Busan, Yeongnam",,Busan Team MAD
+Jin Oh Kim,"5' 9""",--,,--,8d04923f2db59b7f,,,CMA Korea
+Dae Won Kim,"5' 11""",--,,--,354808cf38d9d73c,,,CMA Korea
 Jong Wang Kim,"6' 1""",--,,--,380e8b023290d091,Seoul,192.5899200439453,CMA Korea
-Jong Won Kim,"5' 7""",--,,--,9e0f28d1f639ad73,,,
+Jong Won Kim,"5' 7""",--,,--,9e0f28d1f639ad73,,,Team Yoon
 Min Soo Kim,"6' 1""",--,,"Jan 22, 1975",831b937811804dad,Seoul,192.5899200439453,Korean Top Team
 Jong Man Kim,"5' 7""",--,,"Mar 03, 1978",dba230fe33011201,Seoul,192.5899200439453,
 Ji Yeon Kim,"5' 7""","72""",,"Oct 18, 1989",a20f234df70f2182,Incheon,39.00241851806641,Syndicate MMA
@@ -1899,12 +1899,12 @@ Kamuela Kirk,"5' 10""","75""",,"Apr 13, 1994",c7d7fda69ec410d3,"Peoria, Arizona"
 Yurij Kiseliov,"5' 8""",--,,--,51d2aaaca56e5b40,,,
 Justine Kish,"5' 5""","64""",,"Apr 13, 1988",928ae2e5b5f7a9ec,"Cramerton, North Carolina",184.4506530761719,Black House
 Koji Kitao,"6' 7""",--,,"Oct 12, 1963",2a6f8136da1e52c0,"Tsu, Mie",4.351416110992432,New Japan Pro Wrestling
-Satoru Kitaoka,"5' 6""",--,,"Feb 04, 1980",e2ac5bb645f33088,"Nara, Nara",33.66275405883789,Lotus Setagaya
+Satoru Kitaoka,"5' 6""",--,,"Feb 04, 1980",e2ac5bb645f33088,"Nara, Nara",,Lotus Setagaya
 Top Noi Kiwram,"5' 5""","67""",,"Aug 15, 1992",e065b4a42a6c2c79,,,
 Ludovit Klein,"5' 7""","72""",,"Feb 22, 1995",5b86d491d63890c5,Nove Zamky,116.2447509765625,Spartakus Fight Gym
 Seth Kleinbeck,"6' 2""",--,,"Jul 25, 1973",8ad022dd81224f61,"Stuttgart, Arkansas",63.43963623046875,
 Stefan Klever,--,--,,--,bc3876891e155bb5,,,
-Felix Klinkhammer,"6' 0""",--,,--,8276f28f1ad087de,,,
+Felix Klinkhammer,"6' 0""",--,,--,8276f28f1ad087de,,,London Shootfighters
 Drakkar Klose,"5' 9""","70""",,"Mar 09, 1988",7cbf7c78d3b34218,"South Haven, Michigan",188.0449981689453,Fight Ready
 Michael Knaap,"6' 2""",--,,"Feb 27, 1984",02f0e04acf102ea9,Emmen,23.58740043640137,Golden Glory
 Kevin Knabjian,"5' 10""",--,,"Jul 05, 1984",1fac46d466abd5b8,"Chicago, Illinois",183,Gilbert Grappling
@@ -1915,7 +1915,7 @@ Isao Kobayashi,"5' 8""",--,,"Oct 28, 1988",a02652d063ef5baa,"Osaki, Miyagi",22.4
 Kelly Kobold,"5' 6""",--,,"Feb 25, 1983",c398235fcaf8d71d,,,
 Erik Koch,"5' 10""","71""",,"Oct 04, 1988",99bd87a300079ed9,"Cedar Rapids, Iowa",221.8151550292969,Roufusport
 Sokun Koh,"6' 1""",--,,--,6d8ef8706781c49e,"Ota, Tokyo",8.353009223937988,Wajutsu Keishukai
-Shingo Kohara,"5' 6""",--,,--,44c233770075cea1,,,
+Shingo Kohara,"5' 6""",--,,--,44c233770075cea1,,,Undisputed Boxing
 Brad Kohler,"5' 9""",--,,"May 26, 1964",13c4313ed0f744f3,"Bloomington, Minnesota",253.0403747558594,
 Charlie Kohler,"5' 9""",--,,"Jul 16, 1976",5717efc6f271cd52,"San Diego, California",15.22877025604248,San Diego Fight Club
 Tsuyoshi Kohsaka,"5' 11""",--,,"Mar 06, 1970",b76ed59283d3559c,,,
@@ -1966,7 +1966,7 @@ Lina Kvokov,"5' 9""",--,,--,843dd76c50cae0f6,,,
 Kaleo Kwan,"5' 7""",--,,"Aug 01, 1970",2545c7f47a65bca3,"Kailua, Hawaii",0,HIbred House
 Jarrod Kwitty,"5' 8""",--,,--,849d15ed7e3a0e97,"Torrance, California",26.27122497558594,Gracie Academy Torrance
 Mike Kyle,"6' 4""","77""",,"Mar 31, 1980",56b8b24f65f9f057,"San Jose, California",24.67866325378418,American Kickboxing Academy
-Achmed Labasanov,"6' 3""",--,,"Apr 24, 1978",b3fb8d2293e17a59,,,
+Achmed Labasanov,"6' 3""",--,,"Apr 24, 1978",b3fb8d2293e17a59,Tula,,Russian Top Team
 Josh LaBerge,"5' 10""",--,,--,5108b169b5fe1f86,"Fall River, Massachusetts",37.51924133300781,Lauzon MMA
 Jeremiah Labiano,"5' 10""",--,,--,4fe1d105af549845,"Hayward, California",31.46000099182129,Crispim BJJ Barra Brothers
 Daniel Lacerda,"5' 6""","70""",,"Jun 05, 1996",31bb0772f21cabd8,,,
@@ -2031,13 +2031,13 @@ James Lee,"5' 11""",--,,"Sep 22, 1973",863d06a7ef8bc98c,"Sylvan Lake, Michigan",
 David Lee,"5' 10""",--,,--,8caca5857ce0e30b,"London, Greater London",7.168957710266113,Team Crossface
 Jackie Lee,--,--,,--,4985113c0928aa62,,,
 Eun Soo Lee,"6' 1""",--,,"Mar 07, 1982",39c568f8c579913e,Seoul,192.5899200439453,Cube MMA
-Tae Hyun Lee,"6' 6""",--,,"Jan 17, 1975",de99da2c0d18d34a,,,
+Tae Hyun Lee,"6' 6""",--,,"Jan 17, 1975",de99da2c0d18d34a,,,Team Aegis
 Tommy Lee,"5' 7""",--,,"Jan 20, 1977",806975e1b4f47b27,"Mokeno, Illinois",215.5695343017578,Gilbert Grappling
 Matt Lee,"5' 11""",--,,--,d9e3743bae8d703d,"Leominster, Massachusetts",121.2379455566406,The Factory
 Imani Lee,--,--,,--,0802be3516ef8f66,"Burbank, California",184.2094573974609,Wolf's Den MMA
 Vaughan Lee,"5' 6""","66""",,"Oct 15, 1982",8bb6f4479685bbcc,"Birmingham, West Midlands",123.8405609130859,UTC Birmingham
 Kevin Lee,"5' 9""","77""",,"Sep 04, 1992",ee9ebceabfd16fa7,"Grand Rapids, Michigan",194.9165954589844,Tristar Gym
-Rocky Lee,"5' 9""",--,,"Apr 08, 1987",0d1c163b206e8c5f,,,
+Rocky Lee,"5' 9""",--,,"Apr 08, 1987",0d1c163b206e8c5f,,,Bali MMA
 Andrea Lee,"5' 6""","69""",,"Feb 11, 1989",05fa626cb33d15b8,"Shreveport, Louisiana",47.33526992797852,Karate Mafia
 JeongYeong Lee,"5' 10""","73""",,"Nov 13, 1995",d008d785f6347dc2,,,
 JungHyun Lee,"5' 5""","65""",,"Sep 10, 2002",b6033505c245e28b,,,
@@ -2049,11 +2049,11 @@ Claudia Leite,"5' 3""","64""",,"Nov 04, 1996",90550a08f0b02b6f,"Piraju, Sao Paul
 Thales Leites,"6' 1""","78""",,"Sep 06, 1981",cfb65863d5099327,"Niteroi, Rio de Janeiro",7.833485126495361,Nova Uniao
 Stefan Leko,"6' 2""",--,,"Jun 03, 1974",d56bb6dff2ae77eb,Duisburg,32.54433059692383,Golden Glory
 Gabe Lemley,"5' 8""",--,,--,fd4578cac86d75ca,Iowa,306.5713500976562,
-Amanda Lemos,"5' 4""","65""",,"May 22, 1987",3df5493bb279226f,"Belem, Para",1.740754961967468,Marajo Brothers Team
+Amanda Lemos,"5' 4""","65""",,"May 22, 1987",3df5493bb279226f,"Belem, Para",1.722213268280029,Marajo Brothers Team
 Giacomo Lemos,"6' 3""","75""",,"Jun 23, 1989",f37822d5b3e47517,"Porto Alegre, Rio Grande do Sul",10.40267753601074,RFA
 Christophe Leninger,"6' 0""",--,,--,7269329bd87eb479,,,
 Jesse Lennox,"5' 9""","72""",,"Mar 10, 1982",3ae10ac4df3df05c,"Cedar Rapids, Iowa",221.8151550292969,Miletich Martial Arts
-Jean Francois Lenogue,"6' 0""",--,,"Nov 29, 1972",e60201cfab7d656d,,,
+Jean Francois Lenogue,"6' 0""",--,,"Nov 29, 1972",e60201cfab7d656d,Paris,32.53561782836914,MMA Factory
 Nik Lentz,"5' 8""","68""",,"Aug 13, 1984",6fb1ba67bef41b37,"St. Paul, Minnesota",228.5861053466797,Kill Cliff FC
 Alberta Cerra Leon,"5' 8""",--,,--,6e02c318762f52f1,,,
 Victoria Leonardo,"5' 5""","64""",,"Feb 16, 1990",9dedfdd91070ddd8,"Shreveport, Louisiana",47.33526992797852,Elite Combat Academy
@@ -2061,7 +2061,7 @@ Anthony Leone,"5' 6""",--,,"May 27, 1987",86b9b51a81e9c339,"Center Moriches, New
 Chad Leonhardt,"6' 0""",--,,"Feb 19, 1980",657d0ed181f04215,"Shreveport, Louisiana",47.33526992797852,Gladiators Academy
 Kimo Leopoldo,"6' 3""",--,,"Jan 05, 1968",08ae5cd9aef7ddd3,"Huntington Beach, California",11.58590698242188,Freelance
 Michael Lerma,--,--,,--,f1fd8ec1023c89b3,"Waco, Texas",143.6479339599609,Ironhorse Boxing Club
-Lukasz Les,--,--,,"Nov 05, 1981",5a8e30ed38a5bc6f,,,
+Lukasz Les,--,--,,"Nov 05, 1981",5a8e30ed38a5bc6f,,,Wolfslair Academy
 Brock Lesnar,"6' 3""","81""",,"Jul 12, 1977",513c6f1715e547a8,"Webster, South Dakota",565.71826171875,Team Death Clutch
 Frank Lester,"5' 11""",--,,"Jun 10, 1984",edd8d5d8089a35f8,"Temecula, California",306.6764221191406,Jackson-Wink MMA
 Valerie Letourneau,"5' 7""","68""",,"Apr 29, 1983",46a2f24feb258ae0,"Montreal, Quebec",36.22978210449219,American Top Team
@@ -2172,7 +2172,7 @@ Clayton MacFarlane,--,--,,--,39831e62d12e7ad1,"Vista, California",100.1280670166
 Ilima Macfarlane,"5' 4""",--,,--,8cf90e41646491fd,,,
 Valesca Machado,"5' 4""","63""",,"May 06, 1996",a1a91dbf41a029c4,"Rio de Janeiro, Rio de Janeiro",7.758727073669434,War Machine
 Caio Machado,"6' 4""","78""",,"Jul 20, 1994",89839250eb25c9c1,"Olinda, Pernambuco",3.294691801071167,RD Champions
-Lyoto Machida,"6' 1""","74""",,"May 30, 1978",f7a7f7118d4b01b6,"Belem, Para",1.740754961967468,APAM
+Lyoto Machida,"6' 1""","74""",,"May 30, 1978",f7a7f7118d4b01b6,"Belem, Para",1.722213268280029,APAM
 War Machine,"5' 11""",--,,"Nov 30, 1981",cd7bafbeee1f29a0,"Las Vegas, Nevada",611.1598510742188,Und1sputed
 Anthony Macias,"5' 9""",--,,--,dedc3bb440d09554,"Oklahoma City, Oklahoma",366,USA Stars
 Pauline Macias,"5' 4""","64""",,"Jun 27, 1988",e88b83dea18f5d31,"Denver, Colorado",1596.667846679688,Factory X
@@ -2262,7 +2262,7 @@ Jack Marshman,"6' 0""","73""",,"Dec 19, 1989",045f25b3a4c08e81,"Abertillery, Gwe
 Terry Martin,"5' 8""","71""",,"Oct 10, 1980",6a92caba39b64752,"Chicago, Illinois",183,Iron Academy
 Eric Martin,--,--,,--,abbc4fc02e0d84b3,"Oklahoma City, Oklahoma",366,
 Justin Martin,"6' 0""",--,,--,3da19339ee7051d5,"Dallas, Texas",137.5803375244141,
-Dave Martin,"6' 0""",--,,--,92c96df8bdab5fea,,,
+Dave Martin,"6' 0""",--,,--,92c96df8bdab5fea,,,Undisputed Boxing
 Joe Martin,"5' 9""",--,,--,325550dab63fb25a,"Susanville, California",1278.737060546875,
 Anthony Rocco Martin,"6' 0""","73""",,"Dec 11, 1989",5331b25a60417ffb,"Palos Heights, Illinois",190.1166534423828,American Top Team
 Mallory Martin,"5' 4""","63""",,"Jan 29, 1994",19b7738321cfae42,"Denver, Colorado",1596.667846679688,Elevation Fight Team
@@ -2383,7 +2383,7 @@ Antonio Mendes,"6' 3""","77""",,"Apr 19, 1981",3795fca327cbcf23,"Fortaleza, Cear
 Chad Mendes,"5' 6""","66""",,"May 01, 1985",b5b684eac99ae0a3,"Hanford, California",72,Team Alpha Male
 Augusto Mendes,"5' 6""","65""",,"Mar 03, 1983",3d5b1ce6097dbb49,"Rio de Janeiro, Rio de Janeiro",7.758727073669434,Soul Fighters BJJ
 Eddie Mendez,"5' 10""",--,,"Jan 16, 1984",49e49b54e5901d0d,"Sun Valley, California",262.2250061035156,House of Champions
-Mateus Mendonca,"5' 6""","71""",,"Jan 17, 1999",48812daf291a4e23,"Pindare Mirim, Maranhao",20.89598083496094,Chute Boxe Diego Lima
+Mateus Mendonca,"5' 6""","71""",,"Jan 17, 1999",48812daf291a4e23,"Pindare-Mirim, Maranhao",20.89598083496094,Chute Boxe Diego Lima
 Luis Mendoza,--,--,,--,28200bc87367614f,"San Jose, California",24.67866325378418,
 Pietro Menga,"5' 7""","68""",,"Feb 15, 1988",869d68b5383131fd,"Manchester, Greater Manchester",58.92958831787109,MMA Academy Liverpool
 Alonzo Menifield,"6' 0""","76""",,"Oct 18, 1987",a495f599e787614f,"Dallas, Texas",137.5803375244141,Saekson Muay Thai
@@ -2452,12 +2452,12 @@ Roman Mitichyan,"5' 10""",--,,"Sep 04, 1978",2961be02cfb0d2c1,,,
 Matt Mitrione,"6' 3""","82""",,"Jul 15, 1978",ba280572acfba13f,"Indianapolis, Indiana",222.7775268554688,Kill Cliff FC
 Eiji Mitsuoka,"5' 7""",--,,"Jan 01, 1976",2b4faacc16d66898,"Handa, Aichi",4.248072147369385,Wajutsu Keishukai RJW
 Hiromitsu Miura,"5' 9""","71""",,"Sep 22, 1981",509697e08673d2e5,"Ukiha, Fukuoka",32.05637741088867,Samurai Sword
-Jonathan  Mix,"6' 0""",--,,"Nov 09, 1980",f64e4ecd214c6378,,,
+Jonathan  Mix,"6' 0""",--,,"Nov 09, 1980",f64e4ecd214c6378,"Las Vegas, Nevada",611.1598510742188,
 Tomoya Miyashita,"5' 7""",--,,--,c9885b1b7c7055a0,"Tomakomai, Hokkaido",8.521150588989258,Power of Dream
 Kazuyuki Miyata,"5' 8""",--,,--,af70d268e5352186,"Mito, Ibaraki",7.468214511871338,Brave
 Motoki Miyazawa,"5' 11""",--,,--,9649d75defe0dedb,"Shibuya, Tokyo",25.18387222290039,Wajutsu Keishukai Tokyo
 Takeya Mizugaki,"5' 7""","69""",,"Dec 16, 1983",48e093ea1f43a053,"Miura, Kanagawa",29.44097518920898,Hakkei Gym
-Mizuki,"5' 3""","65""",,"Aug 19, 1994",43a59ce3bb40449e,,,
+Mizuki,"5' 3""","65""",,"Aug 19, 1994",43a59ce3bb40449e,"Neyagawa, Osaka",8.924927711486816,
 Tatsuya Mizuno,"6' 1""",--,,"Jun 02, 1981",478c8706bdb92440,Ibaraki,6.664315700531006,Freelance
 Roxanne Modafferi,"5' 7""","69""",,"Sep 24, 1982",4498b382c65a7faa,"Las Vegas, Nevada",611.1598510742188,Syndicate MMA
 Bobby Moffett,"5' 10""","73""",,"Jun 01, 1990",d76ad9a08c4408ff,"Homewood, Illinois",190.1050872802734,MMA Lab
@@ -2572,7 +2572,7 @@ Yuji Nagata,"6' 0""",--,,"Apr 24, 1968",e49c2db95e572dc8,"Togane, Chiba",10.4524
 Greg Nagy,"6' 1""",--,,"Oct 18, 1983",342422bb6ced1e8d,"Tempe, Arizona",354.3387756347656,RITC Training Center
 Logan Nail,--,--,,"Jun 20, 1989",47e0b5833e6bc91a,"Sherman, Texas",224.0457763671875,Grip Game Jiu-Jitsu
 Muhammad Naimov,"5' 9""","70""",,"Aug 07, 1994",8d11d9c13e2ccdf7,,,
-Yukiya Naito,"6' 1""",--,,--,7be328bb3c2ea22e,Kagawa,146.44677734375,Wajutsu Keishukai A3
+Yukiya Naito,"6' 1""",--,,--,7be328bb3c2ea22e,Kagawa,,Wajutsu Keishukai A3
 Andrews Nakahara,"6' 1""",--,,"Mar 12, 1983",7a9ca95a92d7b64c,Mogi das Cruzes,744.0300903320312,Belfort Team
 Rin Nakai,"5' 1""",--,,"Oct 22, 1986",f9ae6914f604aa9f,"Matsuyama, Ehime",24.97391128540039,Shooto Dojo Shikoku
 Kazuhiro Nakamura,"5' 11""","70""",,"Jul 16, 1979",b034747dc1d15491,"Fukuyama, Hiroshima",4.461774826049805,Yoshida Dojo
@@ -2650,7 +2650,7 @@ Kyle Noblitt,"6' 2""",--,,"Dec 26, 1989",4acf03bdec2025d7,"Republic, Missouri",3
 Pedro Nobre,"5' 5""",--,,"Feb 13, 1986",e983c62faf677ab2,"Rio de Janeiro, Rio de Janeiro",7.758727073669434,Brazilian Top Team
 Jacob Noe,--,--,,--,9bff1b4c37ebbede,"Brighton, Tennessee",106.3709487915039,Memphis Judo & Jiu-Jitsu
 Antonio Rodrigo Nogueira,"6' 3""","77""",,"Jun 02, 1976",ee9d73f4fee9cbdd,"Vitoria da Conquista, Bahia",879.9873046875,Team Nogueira
-Rogerio Nogueira,"6' 2""","75""",,"Jun 02, 1976",73e09f837f3b5ecc,,,
+Rogerio Nogueira,"6' 2""","75""",,"Jun 02, 1976",73e09f837f3b5ecc,"Benevides, Para",25.82842826843262,
 Alexandre Franca Nogueira,"5' 7""",--,,"Jan 15, 1978",4c27ca8c8481f79a,"Rio de Janeiro, Rio de Janeiro",7.758727073669434,Pequeno Team
 Talita Nogueira,"5' 10""",--,,"Oct 13, 1985",a3d1d060f9af97fe,"Sao Caetano do Sul, Sao Paulo",749.7122192382812,Gracie Fusion
 Kyle Noke,"6' 1""","76""",,"Mar 18, 1980",7339d340aa2889cb,"Dubbo, New South Wales",264.4636840820312,Jackson-Wink MMA
@@ -2694,26 +2694,26 @@ Volkan Oezdemir,"6' 2""","75""",,"Sep 19, 1989",0845c81e37d3bcb3,Fribourg,587.43
 Naoya Ogawa,"6' 4""",--,,"Mar 31, 1968",4b2390cfaceb91d8,"Suginami, Tokyo",45.12646102905273,UFO
 Trey Ogden,"5' 11""","72""",,"Nov 14, 1989",cfc3e7bb44685289,"Kansas City, Missouri",273.5425720214844,Marathon MMA
 Andy Ogle,"5' 8""","69""",,"Feb 16, 1989",b6c4451cb13c9303,"Sunderland, Tyne and Wear",34.31985855102539,Team Kaobon
-Ho Taek Oh,--,--,,"Jul 20, 1993",5c020ee6ab450870,,,
+Ho Taek Oh,--,--,,"Jul 20, 1993",5c020ee6ab450870,,,Monster House
 Michiyoshi Ohara,"5' 10""",--,,--,6a8a06b542e1516d,"Matsumoto, Nagano",593.3657836914062,New Japan Pro Wrestling
 Koji Oishi,"5' 8""",--,,"May 31, 1977",01daf32100ed7517,"Kobe, Hyogo",10.28441524505615,PANCRASEism
 Takayuki Okada,"6' 1""",--,,--,32541eb5d12668b4,"Oga, Akita",5.162311553955078,
 Yushin Okami,"6' 2""","75""",,"Jul 21, 1981",acff437707625fc7,"Fujisawa, Kanagawa",12.4598560333252,EXFIGHT
 JJ Okanovich,"5' 11""","76""",,"Nov 04, 1990",aa40fe6038db56cb,,,
-Bolaji Oki,"5' 10""","73""",,"Nov 15, 1995",4bdedbdeedff7d1d,,,
+Bolaji Oki,"5' 10""","73""",,"Nov 15, 1995",4bdedbdeedff7d1d,,,Da Vinci Fighting
 Kazuki Okubo,"5' 11""",--,,--,33454ad90754cb49,"Tachikawa, Tokyo",93.08283233642578,U-File Camp
 Masakatsu Okuda,--,--,,--,02a65a55f25fb4f3,Fukuoka,8.130894660949707,Freelance
 Aleksei Oleinik,"6' 2""","80""",,"Jun 20, 1977",98c23cb6da5b3352,,,
-Michal Oleksiejczuk,"6' 0""","74""",,"Feb 22, 1995",0d65c432720accb9,,,
+Michal Oleksiejczuk,"6' 0""","74""",,"Feb 22, 1995",0d65c432720accb9,Barki,,Akademia Sportow Walki Wilanow
 Rafaello Oliveira,"5' 8""","71""",,"Jan 26, 1982",15b1b21cd743d652,"Whippany, New Jersey",84.27104949951172,AMA Fight Club
-Charles Oliveira,"5' 10""","74""",,"Oct 17, 1989",07225ba28ae309b6,"Joao Pessoa, Paraiba",31.58108329772949,Eduardo Team
+Charles Oliveira,"5' 10""","74""",,"Oct 17, 1989",07225ba28ae309b6,"Guaruja, Sao Paulo",4.821588039398193,Chute Boxe Diego Lima
 Jorge Oliveira,"6' 1""",--,,--,bec2746f033802c3,Rio de Janeiro,7.758727073669434,Black House
 Ednaldo Oliveira,"6' 5""",--,,"Feb 19, 1984",acd9513399a8b09b,"Salvador, Bahia",37.99760818481445,Champion Team
 Alex Oliveira,"5' 11""","76""",,"Feb 21, 1988",57b10fca4f9c9a7a,"Tres Rios, Rio de Janeiro",270.0022583007812,ATS Team Tres Rios
 Maria Oliveira,"5' 6""","69""",,"Dec 12, 1996",37d752ec41ed84bb,"Sao Joao de Meriti, Rio de Janeiro",11.46554088592529,Parana Vale Tudo
 Bruno Oliveira,"6' 4""","80""",,"May 02, 1984",1e85912c9bab7e2b,"Sao Paulo, Sao Paulo",761.88525390625,American Top Team
 Saimon Oliveira,"5' 4""","72""",,"Apr 21, 1991",72ea1984c52019b5,"Balneario Camboriu, Santa Catarina",4.715127468109131,Astra Fight Team
-Vinicius Oliveira,"5' 9""","70""",,"Nov 30, 1995",18d01f7f8338ae72,"Campo Grande, Mato Grosso do Sul",516.2339477539062,Chute Boxe
+Vinicius Oliveira,"5' 9""","70""",,"Nov 30, 1995",18d01f7f8338ae72,"Campo Grande, Mato Grosso do Sul",488.3685302734375,Chute Boxe
 Ravena Oliveira,"5' 5""","65""",,"Feb 20, 1997",4948e412fa6ab67d,"Miguel Calmon, Bahia",542.6382446289062,Life MMA
 Wendell Oliveira Marques,"5' 10""",--,,"Jun 01, 1983",32c03df3c9760069,,,
 Felipe Olivieri,"5' 9""",--,,"Apr 12, 1985",948880beac71f028,"Rio de Janeiro, Rio de Janeiro",7.758727073669434,Nova Uniao
@@ -2729,7 +2729,7 @@ Michihiro Omigawa,"5' 6""","68""",,"Dec 19, 1975",9f842be1a5337be6,Ibaraki,6.664
 David Onama,"5' 11""","74""",,"Jun 07, 1994",ffe9703408fb5964,"Kansas City, Missouri",273.5425720214844,Factory X
 Charlie Ontiveros,"6' 2""","74""",,"Jul 04, 1991",318572f6f74b760d,"Cleveland, Texas",48.3734016418457,W4R Training Center
 Chibwikem Onyenegecha,"6' 3""",--,,"Apr 18, 1994",887e09328cd63df1,"Richmond, California",13.22277736663818,The Forge MMA
-Myktybek Orolbai,"5' 10""","74""",,"Feb 10, 1998",bf2c8e01b07d3eb1,,,
+Myktybek Orolbai,"5' 10""","74""",,"Feb 10, 1998",bf2c8e01b07d3eb1,Osh,,Uluu Kyrgyz
 Sam Oropeza,"6' 2""",--,,--,6b8db407d49c6e4b,"Briarcliff, Pennsylvania",29.44187164306641,Philadelphia Fight Factory
 Brian Ortega,"5' 8""","69""",,"Feb 21, 1991",def8166ff24bd237,"Torrance, California",26.27122497558594,Black House
 Tito Ortiz,"6' 3""","74""",,"Jan 23, 1975",2f732dd9210d301f,"Huntington Beach, California",11.58590698242188,Team Punishment
@@ -2754,10 +2754,10 @@ Shungo Oyama,"5' 11""",--,,"Apr 11, 1974",47b7e4e60813b7b2,"Nasushiobara, Tochig
 Alptekin Ozkilic,"5' 5""","65""",,"Mar 27, 1986",e18a19001a3f7c7d,"Long Island, New York",25.4056510925293,Bellmore Kickboxing Academy
 Raquel Pa'aluhi,"5' 7""",--,,--,373be586f370d400,,,
 Nick Pace,"5' 7""","68""",,"Apr 17, 1987",8cb76103cd8a1562,"Staten Island, New York",31.72336196899414,Team Tiger Schulmann
-Larissa Pacheco,"5' 7""",--,,"Sep 07, 1994",16b89be2f5c16fba,"Belem, Para",1.740754961967468,Joao Bastos Team
+Larissa Pacheco,"5' 7""",--,,"Sep 07, 1994",16b89be2f5c16fba,"Belem, Para",1.722213268280029,Joao Bastos Team
 Angel Pacheco,"5' 8""","70""",,"Jan 13, 1992",07797f10b9569cfc,"Duluth, Minnesota",200.7326049804688,Start BJJ
 Teemu Packalen,"6' 1""","75""",,"May 22, 1987",8f4eeaf7a0df7c1a,Turku,7.964982986450195,Finnfighters Gym
-George Pacurariu,"5' 7""",--,,"Jul 28, 1984",c51da79b0346b5b7,,,
+George Pacurariu,"5' 7""",--,,"Jul 28, 1984",c51da79b0346b5b7,,,Octagon MMA
 Cyrillo Padilha,"5' 11""",--,,"Jan 23, 1978",856c4d2668a875f9,,,
 Gary Padilla,"5' 11""",--,,"May 04, 1980",01dd4cdc2446f665,"San Diego, California",15.22877025604248,Alliance MMA
 Fernando Padilla,"6' 1""","76""",,"Dec 15, 1996",d2f43cfaf8ca3560,"Juarez, Chihuahua",1127.167724609375,Team Oyama
@@ -2769,10 +2769,10 @@ Raulian Paiva,"5' 8""","69""",,"Oct 17, 1995",82b4e942781b1046,"Santana, Amapa",
 Dinis Paiva Jr.,"5' 9""","71""",,"May 26, 1988",ad3a5e465c76e499,,,
 Fredson Paixao,"5' 6""","66""",,"May 13, 1979",320edfb0332b7073,"Las Vegas, Nevada",611.1598510742188,Syndicate MMA
 Luis Pajuelo,"5' 10""","69""",,"Dec 18, 1994",e530df53922f413e,Lima,136.0156860351562,Contacto Livre
-Jose Palacios,"5' 9""",--,,--,de20ffb3fc2e7629,,,
+Jose Palacios,"5' 9""",--,,--,de20ffb3fc2e7629,,,Unlimited MMA
 Ricky Palacios,"5' 6""",--,,"Jul 05, 1987",797ddccda75f169f,"Mission, Texas",44.41212463378906,
 Bart Palaszewski,"5' 9""","70""",,"May 30, 1983",4304992c2acc187b,"Crystal Lake, Illinois",277.4019470214844,Team Curran
-Sasha Palatnikov,"6' 1""","72""",,"Mar 15, 1989",a6c20202c701e5ca,,,
+Sasha Palatnikov,"6' 1""","72""",,"Mar 15, 1989",a6c20202c701e5ca,,,Warrior Academy
 Soa Palelei,"6' 4""","81""",,"Jul 12, 1977",60029bcf496bd707,"Perth, Western Australia",13.64652729034424,AKA Thailand
 Rousimar Palhares,"5' 8""","71""",,"Feb 26, 1980",8ddf9c51c5fdea75,"Dores do Indaia, Minas Gerais",720.4540405273438,Team Nogueira
 Tulio Palhares,--,--,,--,e8c170a64dc920ac,Sao Paulo,761.88525390625,
@@ -2784,7 +2784,7 @@ Jared Papazian,"5' 8""","67""",,"Feb 01, 1988",edad57b3dddf2168,"West Hills, Cal
 Kathryn Paprocki,"5' 3""","63""",,"Apr 28, 1993",bd381cde8426077a,"Denver, Colorado",1596.667846679688,DCO MMA & FItness
 Joe Pardo,"6' 1""",--,,--,74fefd43f073cd2f,"Torrance, California",26.27122497558594,Gracie Jiu-Jitsu Academy
 Bryan Pardoe,"6' 1""",--,,--,56116537d71a578c,"Chandler, Arizona",369.6975708007812,Team Cannon
-Remco Pardoel,"6' 3""",--,,--,749685d24e2cac50,Oss,9.506085395812988,Pardoel Sports
+Remco Pardoel,"6' 3""",--,,--,749685d24e2cac50,Oss,,Pardoel Sports
 Ido Pariente,"5' 8""",--,,--,7573d25a078b5732,Tel Aviv,20.56819343566895,Pariente Academy
 Josh Parisian,"6' 4""","79""",,"Jun 28, 1989",b5da8f7d05e85a55,"Brighton, Michigan",281.8045043945312,Scorpion Fighting System
 Karo Parisyan,"5' 10""","72""",,"Aug 28, 1982",349aaa3da11eb587,"North Hollywood, California",200.8743591308594,
@@ -2803,7 +2803,7 @@ Jordan Parsons,"5' 9""",--,,"Aug 26, 1990",8b2a18d3c6735083,"Berrien Springs, Mi
 Preston Parsons,"5' 11""","71""",,"Jul 15, 1995",9fe7af8b3fbe00a0,"Jacksonville Beach, Florida",4.605308055877686,Elevate MMA
 Jonny Parsons,"5' 9""","69""",,"Sep 06, 1991",2975297f505e9447,"Las Vegas, Nevada",611.1598510742188,Syndicate MMA
 Onassis Parungao,"5' 11""",--,,--,96d173b7f92aa520,Manila,3.233131885528564,
-Ramona Pascual,"5' 7""","66""",,"Sep 23, 1988",3eb4dc9a7d4ac906,,,
+Ramona Pascual,"5' 7""","66""",,"Sep 23, 1988",3eb4dc9a7d4ac906,,,Syndicate MMA
 Billy Pasulatan,"5' 5""","66""",,"Aug 07, 1991",e5a59983f4603621,"Minahasa Regency, North Sulawesi",806.300048828125,Tornado MMA
 Jhonoven Pati,"6' 1""","75""",,"Aug 29, 1990",6b16024d44eb03a2,"Copperas Cove, Texas",332.2115478515625,Twin Wolves MMA
 Windri Patilima,"5' 6""","71""",,"Jul 19, 1993",66d42e9503fa108e,"Kotamobagu, North Sulawesi",257.9997253417969,TCW Fighting Camp
@@ -2816,7 +2816,7 @@ Justin Patterson,"5' 10""",--,,"Dec 07, 1985",2dc7c49cfaeb867c,"Arlington, Texas
 Sam Patterson,"6' 3""","78""",,"Apr 30, 1996",8b6e5dc2ba1edbe7,Walford,51.66321563720703,Team Crossface
 Zac Pauga,"6' 2""","76""",,"Feb 25, 1988",56f7d7ee06be4aab,"Denver, Colorado",1596.667846679688,Elevation Fight Team
 Julio Paulino,"6' 0""",--,,"Dec 04, 1975",60c72f7459827881,"Anchorage, Alaska",28.57769966125488,Legacy Jiu-Jitsu
-Thomas Paull,"5' 7""","67""",,"Oct 15, 1994",dda67d7d3df6b406,,,
+Thomas Paull,"5' 7""","67""",,"Oct 15, 1994",dda67d7d3df6b406,,,Team Underground MMA
 Sergei Pavlovich,"6' 3""","84""",,"May 13, 1992",f14cf73e51b29254,"Rostov-on-Don, Rostov",6.558608055114746,Eagles MMA
 Pawel Pawlak,"6' 0""","73""",,"Feb 08, 1989",9310418684bc896f,Lodz,207.5135345458984,Octopus Lodz
 Estevan Payan,"5' 10""",--,,"Mar 14, 1982",d0a5ef38a7778ac2,"Tempe, Arizona",354.3387756347656,Arizona Combat Sports
@@ -2830,14 +2830,14 @@ Carlo Pedersoli Jr.,"5' 11""","75""",,"Jun 08, 1993",198994b47f395af0,"Miami, Fl
 Matt Pedro,--,--,,--,f354c50b8d63d9b3,,,
 Tyson Pedro,"6' 3""","79""",,"Sep 17, 1991",49e96ff8ab781589,"Sydney, New South Wales",24.58777236938477,Lions High Performance Centre
 Trevor Peek,"5' 9""","70""",,"Jan 09, 1995",0bc697c5936a2d0a,"Pisgah, Alabama",419.4203796386719,Agoge Combatives
-Willie Peeters,"5' 9""",--,,"Oct 26, 1965",e7bfdb5e0112891e,,,
+Willie Peeters,"5' 9""",--,,"Oct 26, 1965",e7bfdb5e0112891e,,,Dolman Gym
 Filip Pejic,"5' 8""",--,,"Jul 21, 1992",38ed5a2299230227,Zagreb,132.6188049316406,American Top Team Zagreb
 Kurt Pellegrino,"5' 8""","70""",,"May 07, 1979",aa1952ec0b3dd8e1,"Point Pleasant, New Jersey",5.937036514282227,Pellegrino MMA
 Yan Pellerin,"5' 11""",--,,--,bfe95ec546692b13,"Sherbrooke, Quebec",158.9266510009766,
 Julianna Pena,"5' 6""","69""",,"Aug 19, 1989",3253b16d38ae087d,"Spokane, Washington",573.4121704101562,SikJitsu
 Luis Pena,"6' 3""","75""",,"Jul 05, 1993",2844b047183a1adb,"Little Rock, Arkansas",101.5746154785156,American Top Team Sunrise
 Felipe Pena,--,--,,"Oct 19, 1991",566ff9546fc29acd,,,
-Matej Penaz,"6' 3""","83""",,"Oct 14, 1996",abd64006fd37298d,,,
+Matej Penaz,"6' 3""","83""",,"Oct 14, 1996",abd64006fd37298d,,,Reinders MMA
 Sherman Pendergarst,"6' 1""",--,,"Aug 01, 1967",e670f8cc2969a789,"Baltimore, Maryland",10.96663093566895,Miletich Fighting Systems
 Drew Pendleton,--,--,,"Dec 08, 1983",34b634cb2471bdde,"Leander, Texas",298.2171020507812,
 Cathal Pendred,"6' 1""","75""",,"Sep 02, 1987",99c7610aa74995d3,"Dublin, Leinster",5.0190749168396,SBG Ireland
@@ -2854,7 +2854,7 @@ Viviane Pereira,"5' 1""","63""",,"Aug 28, 1993",d50382dc0565a9e1,"Taua, Ceara",3
 Michel Pereira,"6' 1""","73""",,"Oct 06, 1993",595db60957de51d3,"Tucuma, Para",320.9457092285156,Overcome Academy
 Alex Pereira,"6' 4""","79""",,"Jul 07, 1987",e5549c82bfb5582d,"Sao Bernardo do Campo, Sao Paulo",755.0800170898438,Teixeira MMA & Fitness
 Daniel Pereira,"5' 10""",--,,"Dec 13, 1990",44f46b0592ca0814,"Mogi das Cruzes, Sao Paulo",744.0300903320312,Arena
-Luciano Pereira,--,--,,"Jan 09, 2001",d7ee49bf3c779fa6,,,
+Luciano Pereira,--,--,,"Jan 09, 2001",d7ee49bf3c779fa6,Salto,,Combate Vilamir
 Rolando Perez,"5' 8""",--,,--,4a9e305633f3ef47,"Chula Vista, California",20.03131484985352,Alliance MMA
 Philip Perez,"5' 5""",--,,--,eee8efec7b951d84,,,
 Erik Perez,"5' 8""","68""",,"Nov 19, 1989",af62f99eb7606308,"Monterrey, Nuevo Leon",541.4340209960938,Alliance MMA
@@ -2886,7 +2886,7 @@ Peter Petties,"5' 11""","72""",,"Dec 20, 1990",7ea5d60d2e6a8ad0,"Columbia, Maryl
 Anthony Pettis,"5' 10""","72""",,"Jan 27, 1987",cbb682f5fcc44bfc,"Milwaukee, Wisconsin",187.2257080078125,Roufusport
 Sergio Pettis,"5' 6""","69""",,"Aug 18, 1993",de75d1c45a39e221,"Milwaukee, Wisconsin",187.2257080078125,Roufusport
 Forrest Petz,"5' 9""","71""",,"Sep 22, 1975",e86bc32f5997a8f7,"Cleveland, Ohio",199.8630676269531,Strong Style Fight Team
-Dino Pezao,--,--,,--,81b57acd6975ac06,,,
+Dino Pezao,--,--,,--,81b57acd6975ac06,,,Champions Factory
 Cody Pfister,"5' 10""","73""",,"Jul 12, 1990",5904b0b38dc6718d,"Amarillo, Texas",1118.594848632812,Nick's Fight Club
 Nam Phan,"5' 6""","70""",,"Mar 13, 1983",80dbeb1dd5b53e64,"Garden Grove, California",25.76286697387695,Nam Phan MMA Academy
 Constantinos Philippou,"5' 11""","73""",,"Nov 29, 1979",05560764359161e4,,,
@@ -2939,10 +2939,10 @@ Marcin Prachnio,"6' 3""","74""",,"Jul 14, 1988",6370c1c1e12723d5,Warsaw,112.8618
 Wagner Prado,"6' 0""","74""",,"Dec 30, 1986",7f6ef4e1227600bc,"Campinas, Sao Paulo",670.6317749023438,Evolucao Thai
 Francisco Prado,"5' 10""","69""",,"Jun 16, 2002",3920d0cc288f9b0d,"San Lorenzo, Santa Fe",32,The Goat Shed Academy
 Trevor Prangley,"6' 1""","75""",,"Aug 24, 1972",f5ff7bcdcfeba3ad,"Cape Town, Western Cape",13.82797813415527,American Kickboxing Academy
-Ricardo Prasel,"6' 7""","78""",,"Jun 02, 1990",b51d0ed3782a1bf5,"Guarapuava, Parana",1101.283569335938,Alemao Brothers Team
+Ricardo Prasel,"6' 7""","78""",,"Jun 02, 1990",b51d0ed3782a1bf5,"Guarapuava, Parana",1101.379638671875,Alemao Brothers Team
 Carlo Prater,"5' 11""","72""",,"Jun 25, 1981",4f853e98886283cf,"Brasilia, Federal District",1114.345825195312,Neo Dojo
 Carlos Prates,"6' 1""","78""",,"Aug 17, 1993",7ee0fd831c0fe7c3,"Taubate, Sao Paulo",575.97216796875,Phuket Top Team
-Michel Prazeres,"5' 6""","67""",,"Jul 25, 1981",e51fcd9cd84c0b93,"Belem, Para",1.740754961967468,Coalizao Fight Team
+Michel Prazeres,"5' 6""","67""",,"Jul 25, 1981",e51fcd9cd84c0b93,"Belem, Para",1.722213268280029,Coalizao Fight Team
 Philip Preece,"5' 8""",--,,--,6597b611f1c32555,"Amarillo, Texas",1118.594848632812,
 Kyle Prepolec,"5' 10""","70""",,"Aug 30, 1989",873626e5547b5235,"Windsor, Ontario",183.2586822509766,Maximum Training Centre
 Dorian Price,"6' 3""",--,,"Aug 20, 1977",ee4b670e159f4a33,"Columbus, Ohio",237.6403350830078,Team Jorge Gurgel
@@ -2956,7 +2956,7 @@ Joe Proctor,"5' 10""","72""",,"Aug 10, 1985",a36556bb1565e32d,"Pembroke, Massach
 Cole Province,"5' 9""","68""",,"Jan 17, 1981",2a470ad41c22c25a,"Edmond, Oklahoma",367.0429992675781,
 Daniel Puder,"6' 3""",--,,"Oct 09, 1981",66e0a70352fef46a,"Cupertino, California",72.4531478881836,American Kickboxing Academy
 Lucie Pudilova,"5' 8""","67""",,"Jun 13, 1994",3cf66c62d9069f43,Pribram,520.172607421875,SBG Ireland
-Claudio Puelles,"5' 10""","72""",,"Apr 21, 1996",d747eb273a40a920,,,
+Claudio Puelles,"5' 10""","72""",,"Apr 21, 1996",d747eb273a40a920,Molina,,Kill Cliff FC
 Juan Puerta,"5' 9""","71""",,"Jan 20, 1988",fdba548aff9763d9,"Lilburn, Georgia",291.4219665527344,American Top Team Atlanta
 Bubba Pugh,"5' 10""",--,,--,6cf2352cdb3de59d,California,145.0107269287109,Excel Jiu-Jitsu
 Juan Manuel Puig,"5' 9""",--,,"Apr 23, 1989",85d0fafb8b75d634,Mexico City,2229.728759765625,American Kickboxing Academy
@@ -2980,7 +2980,7 @@ Landon Quinones,"5' 9""","70""",,"Nov 21, 1995",267f4a6568abe245,"Sunrise, Flori
 Jose Quinonez,"5' 8""","69""",,"Jul 28, 1990",36549928f90f1d36,,,
 Cristian Quinonez,"5' 8""","70""",,"Apr 26, 1996",7debc13b36343605,Zacatecas,2422.540283203125,Entram Gym
 Benji Radach,"5' 10""",--,,"Apr 05, 1979",01b39decaf0abf6a,"Castlerock, Washington",17.12847900390625,Reign MMA
-Jordan Radev,"5' 7""",--,,"Sep 28, 1976",45bc8f98d62bd096,,,
+Jordan Radev,"5' 7""",--,,"Sep 28, 1976",45bc8f98d62bd096,,,Sportcentrum KOPS
 Charles Radtke,"5' 9""","72""",,"Jul 09, 1990",feedf3053472fe56,,,
 Loik Radzhabov,"5' 11""","69""",,"Sep 17, 1990",8c169fbe1ac33637,Dushanbe,810.1680908203125,Kill Cliff FC
 Gilbert Rael,"5' 8""",--,,--,6cc25d19a891f435,"Sante Fe, New Mexico",2133.549560546875,
@@ -3012,7 +3012,7 @@ Ed Ratcliff,"5' 10""","71""",,"Mar 05, 1983",8c90c1563972e44d,"San Diego, Califo
 Bec Rawlings,"5' 6""","64""",,"Feb 11, 1989",907e60fd13407e1e,"Brisbane, Queensland",12.19050693511963,Alliance MMA
 Gideon Ray,"5' 10""",--,,"May 27, 1973",ea3ef6206c7907d5,"Roselle, Illinois",232.5865936279297,MMA Masters Chicago
 Joe Ray,--,--,,"Dec 17, 1984",d92e6e17f637fe4d,"Miramar, Florida",2.373204469680786,Tiger Muay Thai
-Stevie Ray,"5' 10""","70""",,"Mar 25, 1990",31a13532e724ca2b,,,
+Stevie Ray,"5' 10""","70""",,"Mar 25, 1990",31a13532e724ca2b,California,145.0107269287109,Elite Team
 Keenan Raymond,--,--,,--,bdd16cd6b29cb499,"Providence, Rhode Island",2.790312528610229,Rivera Athletic Center
 Iony Razafiarison,"5' 3""",--,,"Dec 23, 1984",a303588c33d8c5ae,Paris,32.53561782836914,Team XXL
 Abdul Razak Alhassan,"5' 10""","73""",,"Aug 11, 1985",eae431e70064e046,Accra,56.60673904418945,Elevation Fight Team
@@ -3072,7 +3072,7 @@ Joe Riggs,"6' 0""","70""",,"Sep 23, 1982",d512d9f204059f57,"Phoenix, Arizona",33
 Jeremiah Riggs,"6' 0""",--,,"Dec 17, 1982",f1a9ad7485e5024a,"Vicksburg, Michigan",260.3346557617188,Sports Lab
 Aaron Riley,"5' 8""","69""",,"Dec 09, 1980",f2c8ebbeafd45f2b,"Tell City, Indiana",128.677978515625,Jackson-Wink MMA
 Jason Riley,"6' 6""",--,,"Sep 22, 1975",995af04c697d78b7,"Columbus, Ohio",237.6403350830078,Buckeye MMA
-Moise Rimbon,"5' 10""",--,,"Apr 20, 1977",9be3728f3f7badb2,,,
+Moise Rimbon,"5' 10""",--,,"Apr 20, 1977",9be3728f3f7badb2,,,Phuket Top Team
 Jordan Rinaldi,"5' 10""","72""",,"Sep 25, 1987",c07efc18b231f170,"Charlotte, North Carolina",232.5207214355469,One Kick's Gym
 Nick Ring,"6' 0""","74""",,"Feb 10, 1979",b13da0b1a3aed3e7,"Calgary, Alberta",1048.1533203125,Champion's Creed MMA
 Robbie Ring,"5' 9""","68""",,"Jul 14, 2000",fa9746fa5d23c202,"Wytheville, Virginia",696.2906494140625,"Ring Combat Sports, LLC"
@@ -3084,7 +3084,7 @@ Shannon Ritch,"5' 9""",--,,"Sep 27, 1970",1c7cce2f5c17160d,"Coolidge, Arizona",4
 Diego Rivas,"5' 8""","69""",,"Nov 11, 1991",09f579be4520394a,"Temuco, Araucania",118.8068084716797,Elemental Dojo
 Jorge Rivera,"6' 1""","73""",,"Feb 28, 1972",cb46dface0e28a2c,"Milford, Massachusetts",79.40966033935547,Rivera Athletic Center
 Dante Rivera,"6' 1""",--,,"Dec 08, 1974",288aaa8f82040e02,"Jackson, New Jersey",45.76943969726562,Renzo Gracie Jiu-Jitsu
-Mario Rivera,"5' 10""",--,,--,0f7210aa8d61af8d,Pennsylvania,176.5777740478516,
+Mario Rivera,"5' 10""",--,,--,0f7210aa8d61af8d,"Coalinga, California",204.6297607421875,California Warriors
 Francisco Rivera,"5' 8""","70""",,"Oct 08, 1981",7ea4a9f07df33a45,"Buena Park, California",21.47510147094727,All In MMA
 Jonathan Rivera,--,--,,--,145df84ea4dfd904,"Lake Forest, California",150.7165222167969,Team Awesome
 Jimmie Rivera,"5' 4""","68""",,"Jun 29, 1989",9c907996820d2d69,"Ramsey, New Jersey",104.0346603393555,Team Tiger Schulmann
@@ -3186,7 +3186,7 @@ Jairzinho Rozenstruik,"6' 2""","78""",,"Mar 17, 1988",2cd428e9606856fd,Paramarib
 Mauricio Rua,"6' 1""","76""",,"Nov 25, 1981",140745cbbcb023ac,"Curitiba, Parana",898.2212524414062,Universidade da Luta
 Murilo Rua,"5' 11""",--,,"May 22, 1980",90e7447d8b7f3f35,"Curitiba, Parana",898.2212524414062,Universidade da Luta
 Marco Ruas,"6' 1""",--,,"Jan 23, 1961",597db668b01c442c,Rio De Janeiro,7.758727073669434,Ruas Vale Tudo
-Rodrigo Ruas,"5' 10""",--,,"Oct 06, 1977",94070f6544c4b2a5,,,
+Rodrigo Ruas,"5' 10""",--,,"Oct 06, 1977",94070f6544c4b2a5,,,Ruas Vale Tudo
 Rodolfo Rubio Perez,"5' 5""",--,,"Jan 29, 1987",c4731f43693b96b8,,,
 Gabe Ruediger,"5' 10""",--,,"Aug 29, 1977",ccba80d4820ef557,"Rancho Cucamonga, California",367.6153259277344,PKG
 Mauricio Ruffy,"5' 11""","75""",,"Jun 17, 1996",9c393e836a852f30,"Sao Paulo, Sao Paulo",761.88525390625,Gilmar China Team
@@ -3257,7 +3257,7 @@ Raul Sandoval,--,--,,--,f9ad10f6a49e5452,,,
 Joseph Sandoval,"5' 7""",--,,"May 11, 1986",696002b59f09d73b,"Lubbock, Texas",974.2586669921875,Bighead MMA
 Hector Sandoval,"5' 2""","64""",,"Jul 19, 1986",449c890bd90f3374,"Ukiah, California",191.3914337158203,Team Alpha Male
 Chris Sanford,"5' 11""",--,,"Mar 12, 1968",29f935654825331b,"San Francisco, California",15.56241893768311,Cesar Gracie Jiu-Jitsu
-Roldan Sangcha'an,"5' 4""",--,,"Dec 04, 1990",57887765f831e228,,,
+Roldan Sangcha'an,"5' 4""",--,,"Dec 04, 1990",57887765f831e228,"Baguio, Cordillera Administrative Region",1462.771484375,Lakay MMA
 Yuhi Sano,"5' 11""",--,,"Feb 02, 1965",4c12aa7ca246e7a4,Tokyo,38.86952590942383,Takada Dojo
 Martin Sano,"5' 11""","75""",,"May 30, 1991",16a64f93f6678b7b,"Vallejo, California",20.85063743591309,Nick Diaz Academy
 Jonathan Santa Maria,"5' 9""",--,,--,3143e5daff9e5b71,"Santa Fe Springs, California",40.44343566894531,Reign MMA
@@ -3273,7 +3273,7 @@ Art Santore,"6' 2""",--,,"Oct 26, 1972",012fc7cd0779c09a,"Wildomar, California",
 Adriano Santos,--,--,,--,c6e6926a81adcd00,,,
 Paulo Santos,--,--,,--,7ca4c3f8aa8bacae,,,
 Evangelista Santos,"5' 10""","76""",,"Dec 12, 1977",99bf06f20491cb54,"Rondonopolis, Mato Grosso",219.7142639160156,Chute Boxe Team Cyborg
-Luis Santos,"6' 1""",--,,--,7701377be464d2ef,"Belem, Para",1.740754961967468,American Top Team
+Luis Santos,"6' 1""",--,,--,7701377be464d2ef,"Belem, Para",1.722213268280029,American Top Team
 Iliarde Santos,"5' 5""","67""",,"Sep 25, 1980",14aa21bc82cac57d,"Escada, Pernambuco",92.89462280273438,American Top Team
 Leonardo Santos,"6' 0""","75""",,"Feb 05, 1980",9c65736747ca92ec,"Rio de Janeiro, Rio de Janeiro",7.758727073669434,Nova Uniao
 Thiago Santos,"6' 2""","76""",,"Jan 07, 1984",dea070ed4a2a8281,"Rio de Janeiro, Rio de Janeiro",7.758727073669434,Team Marreta
@@ -3297,7 +3297,7 @@ Alexander Sarnavskiy,"5' 11""",--,,"Jan 17, 1989",2097b1a5ff47dfb0,Omsk,83.57697
 Yuki Sasaki,"6' 2""",--,,"Sep 12, 1976",e5c38954c006f15c,"Kushiro, Hokkaido",2.204010963439941,Grabaka
 Kyosuke Sasaki,"5' 7""",--,,--,23bd78c3f89bdb54,"Uwajima, Ehime",3.133077383041382,U-File Camp
 Yuta Sasaki,"5' 10""","71""",,"Oct 07, 1989",7c3c48cf54a2848e,"Numazu, Shizuoka",3.291457891464233,Serra-Longo Fight Team
-Paul Sass,"6' 0""","73""",,"Aug 04, 1988",7b143a54451263d9,,,
+Paul Sass,"6' 0""","73""",,"Aug 04, 1988",7b143a54451263d9,Liverpool,,Team Kaobon
 Keisuke Sasu,"5' 5""","69""",,"Sep 30, 1994",b7bcf6dfbbb7c16c,"Oiso, Kanagawa",13.91449356079102,Master Japan
 Masaaki Satake,"6' 1""",--,,"Aug 17, 1965",f4a031ac205ac580,"Suita, Osaka",5.392367839813232,
 Takenori Sato,"5' 10""",--,,"Jun 08, 1985",276c60b14b571dd4,"Akita, Akita",7.023475170135498,Battle Box
@@ -3333,7 +3333,7 @@ Bob Schrijber,"6' 0""",--,,--,d86e913c548c07c2,Wormer,1.310409545898438,Team Sch
 Nate Schroeder,"6' 1""",--,,--,040426baba8a45e8,"Rock Island, Illinois",171.77685546875,
 Lacey Schuckman,"5' 3""",--,,--,e44c679c30403cba,,,
 Mark Schultz,"5' 9""",--,,--,c1684f00c626f4c0,"Lindon, Utah",1415.05810546875,
-Brian Schwartz,"6' 3""",--,,--,99c80d2bd5dbe5a9,,,
+Brian Schwartz,"6' 3""",--,,--,99c80d2bd5dbe5a9,,,Undisputed Boxing
 Eric Schwartz,--,--,,--,79cbdf233e5e0496,"San Luis Obsipo, California",69.1565933227539,The Pit
 Justin Scoggins,"5' 7""","66""",,"May 02, 1992",9fa568ad2bf2cb0b,"Spartanburg, South Carolina",245.4740142822266,Revolution Mixed Martial Arts
 Brad Scott,"6' 1""","76""",,"Jun 24, 1989",34e552520a934063,,,
@@ -3382,8 +3382,8 @@ Valentina Shevchenko,"5' 5""","66""",,"Mar 07, 1988",132deb59abae64b1,Bishkek,74
 Antonina Shevchenko,"5' 8""","67""",,"Nov 20, 1984",d7338bcb141abd2c,Bishkek,748.27197265625,Tiger Muay Thai
 Katsuyori Shibata,"6' 0""",--,,"Nov 17, 1979",d4da8995fc91e7ef,"Kuwana, Mie",4.469360828399658,Laughter7
 Jake Shields,"6' 0""","72""",,"Jan 09, 1979",fe435e440b5de0ff,"San Francisco, California",15.56241893768311,Cesar Gracie Fight Team
-Henrique Shiguemoto,"5' 11""","72""",,"Jun 22, 1989",5d1700cfbaafbe06,"Campo Grande, Mato Grosso do Sul",516.2339477539062,Fight Move Academy
-Shunichi Shimizu,"5' 5""",--,,"Jan 31, 1985",10657c60ce349e0f,"Meguro, Tokyo",20.4774227142334,Uruno Dojo
+Henrique Shiguemoto,"5' 11""","72""",,"Jun 22, 1989",5d1700cfbaafbe06,"Campo Grande, Mato Grosso do Sul",488.3685302734375,Fight Move Academy
+Shunichi Shimizu,"5' 5""",--,,"Jan 31, 1985",10657c60ce349e0f,"Meguro, Tokyo",20.4774227142334,Polar Gym Osaka
 Wade Shipp,"6' 3""",--,,"Feb 09, 1975",a9a314cc77d90b6e,"San Diego, California",15.22877025604248,Alliance MMA
 Raja Shippen,"5' 6""",--,,"Oct 07, 1986",d9e1942637bd57a4,"Dana Point, California",44.01461791992188,Ruas Vale Tudo
 Yuya Shirai,"5' 8""",--,,"Apr 02, 1980",a79bfbc01b2264d6,"Toyohashi, Aichi",13.19105529785156,Tribe Tokyo MMA
@@ -3407,7 +3407,7 @@ Xavier Siller,"5' 5""",--,,"Jun 06, 1994",9a08c2753184ac6d,"Abilene, Texas",520.
 Assuerio Silva,"5' 10""",--,,"Jun 18, 1974",e091482fa6648261,"Curitiba, Parana",898.2212524414062,
 Anderson Silva,"6' 2""","77""",,"Apr 14, 1975",1f454354805b6f75,"Curitiba, Parana",898.2212524414062,Team Nogueira
 Wanderlei Silva,"5' 11""","74""",,"Jul 03, 1976",a1f6999fe57236e0,"Curitiba, Parana",898.2212524414062,Wand Fight Team
-Thiago Silva,"6' 2""","74""",,"Nov 12, 1982",2924886ee9c4c527,"Sao Carlos, Sao Paulo",861.6117553710938,Kill Cliff FC
+Thiago Silva,"6' 2""","74""",,"Nov 12, 1982",2924886ee9c4c527,"Carauari, Amazonas",82.03350067138672,Clube Liborio
 Paulo Cesar Silva,"7' 5""",--,,"Jul 21, 1963",55b8dc4e54fe2c59,Sao Paulo,761.88525390625,
 Jean Silva,"5' 6""",--,,"Oct 08, 1977",9211aae062b799d6,"Joao Pessoa, Paraiba",31.58108329772949,Jean Silva Team
 Edson Silva,--,--,,--,a1153013cb5f628f,"Macapa, Amapa",11.78280162811279,Kenny Team
@@ -3440,7 +3440,7 @@ Douglas Silva de Andrade,"5' 7""","68""",,"Jun 22, 1985",3a314d9fa7c6825d,"Casta
 Leonardo Silva de Oliveira,"6' 2""",--,,"Apr 23, 1992",28e088bbcaaa6366,"Fortaleza, Ceara",28.06310272216797,China Team
 Marcus Silveira,"6' 3""",--,,--,f717b6002486f73f,Rio de Janeiro,7.758727073669434,American Top Team
 Elias Silverio,"5' 11""","73""",,"Sep 22, 1986",52ba464d9068d871,"Pirapora do Bom Jesus, Sao Paulo",669.4517211914062,Elias Silverio Team
-Sim Kai Xiong,"5' 5""","66""",,"Sep 06, 1997",79e2cb1e813f881b,,,
+Sim Kai Xiong,"5' 5""","66""",,"Sep 06, 1997",79e2cb1e813f881b,,,Team Highlight Reel
 Jamey Simmons,"5' 6""","70""",,"Sep 11, 1992",f0fad0e9f3b65752,"Milwaukee, Wisconsin",187.2257080078125,Pura Vida BJJ
 Ricky Simon,"5' 6""","69""",,"Aug 31, 1992",5987b2458f4b5290,"Vancouver, Washington",19.97336196899414,American Top Team Portland
 Aaron Simpson,"6' 0""","73""",,"Jul 20, 1974",d5f820c11a121050,"Phoenix, Arizona",331.523681640625,Power MMA Team
@@ -3496,14 +3496,14 @@ Denis Sobolev,"6' 3""",--,,--,03b1e846b09f721d,"Chelyabinsk, Chelyabinsk Oblast"
 Peter Sobotta,"6' 0""","75""",,"Jan 11, 1987",1fcfc3709fe58151,"Balingen, Baden-Wurttemberg",521.821533203125,Planet Eater
 Renato Sobral,"6' 1""","75""",,"Sep 07, 1975",d468288756ae3982,Rio de Janeiro,7.758727073669434,Babalu's Iron Gym
 Rameau Thierry Sokoudjou,"5' 10""","78""",,"Apr 18, 1984",d1152823307d7e7c,"San Diego, California",15.22877025604248,Team Quest
-Alexander Soldatkin,"6' 2""","75""",,"Jun 10, 1993",f1451d605bad178e,,,
+Alexander Soldatkin,"6' 2""","75""",,"Jun 10, 1993",f1451d605bad178e,Togliatti,,Spitfire Gym Berlin
 Joe Solecki,"5' 9""","70""",,"Aug 27, 1993",af65aa688d13eedf,"Wenonah, New Jersey",24.33876609802246,Gym-O
 Chris Solomon,"5' 11""",--,,--,324c7a749128df8d,"Victorville, California",829.2160034179688,
 Joe Son,"5' 4""",--,,"Nov 22, 1970",83b743fedde154fb,"Huntington Beach, California",11.58590698242188,
 Paul Song,--,--,,--,9775eabcb1be1a00,"Huntington Beach, California",11.58590698242188,Kings MMA
 Song Kenan,"6' 0""","71""",,"Mar 10, 1990",32490e80ddab1e5a,"Tangshan, Hebei",38.91719818115234,Jackson-Wink MMA
 Song Yadong,"5' 8""","67""",,"Dec 02, 1997",efb96bf3e9ada36f,Tianjin,2.242972612380981,Team Alpha Male
-Emrah Sonmez,"5' 10""","71""",,"Jun 26, 1992",fe759b24e344d7eb,Barking,11.3214168548584,BKK Fighters
+Emrah Sonmez,"5' 10""","71""",,"Jun 26, 1992",fe759b24e344d7eb,Barking,8.58677864074707,BKK Fighters
 Chael Sonnen,"6' 1""","73""",,"Apr 03, 1977",48d1f690b763934c,"West Linn, Oregon",187.6976318359375,Team Quest
 Cody Sons,"5' 9""",--,,--,3324129f3745b300,"Bakersfield, California",123.170051574707,Dawg House MMA
 Jin Soo Son,"5' 6""","69""",,"Apr 01, 1993",7c9c6a884be167fe,Seoul,192.5899200439453,Korean Zombie MMA
@@ -3521,10 +3521,10 @@ Mario Soto,"6' 0""",--,,--,cac3aaa66c20bee1,"Sacramento, California",8.196825027
 Andre Soukhamthath,"5' 9""","70""",,"Oct 23, 1988",d0e50a3d1b250708,"Woonsocket, Rhode Island",58.55860900878906,Combat Club
 Mario Sousa,"6' 3""","79""",,"Oct 20, 1996",72782745eb47161a,,,
 Bobby Southworth,"6' 2""",--,,"Dec 16, 1969",aee8eecfc4bfb1e7,"Santa Cruz, California",6.945577144622803,American Kickboxing Academy
-Jacare Souza,"6' 1""","72""",,"Dec 07, 1979",7a703c565ccaa18f,,,
+Jacare Souza,"6' 1""","72""",,"Dec 07, 1979",7a703c565ccaa18f,"Melaco, Para",,
 Edimilson Souza,"6' 0""","74""",,"Oct 17, 1984",6c7020b859c7a3ce,"Salvador, Bahia",37.99760818481445,DS Team
 Livinha Souza,"5' 3""","63""",,"Mar 11, 1991",dab8cfbb6b1db10a,"Araraquara, Sao Paulo",685.713623046875,Team Maximo
-Bruno Souza,"5' 10""","70""",,"Mar 07, 1996",0e5c4e72237461bb,,,
+Bruno Souza,"5' 10""","70""",,"Mar 07, 1996",0e5c4e72237461bb,,,Renovacao Fight Team
 Ketlen Souza,"5' 3""","63""",,"Aug 18, 1994",8bd4200561c77a62,"Manaus, Amazonas",45.5338249206543,Carioca Academy
 Charon Spain,"5' 9""",--,,"Mar 11, 1988",c278e8843b8abfec,"Walla Walla, Washington",286.8331604003906,Gravity Fitness Center
 Chris Spang,"6' 2""",--,,"Nov 26, 1987",411d012af19ecb59,"Las Vegas, Nevada",611.1598510742188,J-Sect MMA
@@ -3545,7 +3545,7 @@ Serghei Spivac,"6' 3""","78""",,"Jan 24, 1995",e2f6b2769aaedd6c,,,
 Daniel Spohn,"6' 4""","79""",,"Oct 12, 1984",87f3bbf52e6c9dc9,,,
 Pete Spratt,"5' 9""",--,,"Jan 09, 1971",c3ea8deeba00462b,"San Antonio, Texas",198.8741912841797,Team Spratt
 Austin Springer,"5' 8""","71""",,"May 12, 1987",37cc294027f55e4d,"Vancouver, Washington",19.97336196899414,Vancouver Elite Martial Arts
-Georges St-Pierre,"5' 11""","76""",,"May 19, 1981",6506c1d34da9c013,,,
+Georges St-Pierre,"5' 11""","76""",,"May 19, 1981",6506c1d34da9c013,"St. Isidore, Quebec",59.8020133972168,Tristar Gym
 Bobby Stack,"5' 9""",--,,--,6436029b50a9c255,"Pacifica, California",13.96860218048096,Skrap Pack
 Andreas Stahl,"5' 11""",--,,"May 20, 1988",69a400af4420cd6a,"Umea, Vasterbotten",5.428297996520996,Renyi Fight Camp
 Ron Stallings,"6' 2""","75""",,"Jan 25, 1983",6dd758d34da8d254,"Temple Hills, Maryland",84.07478332519531,Team Lloyd Irvin
@@ -3615,7 +3615,7 @@ Amar Suloev,"5' 9""",--,,"Jul 01, 1976",7aa88401f93ce836,Kalinin City,132.254104
 Magomed Sultanakhmedov,"6' 2""",--,,--,fe1fdc6be470f773,"Tula, Tula Oblast",159.7964935302734,Gorets
 Justin Sumter,"6' 2""","80""",,"Nov 16, 1989",31f9a1f56cbb6ac5,"Myrtle Beach, South Carolina",7.540753841400146,Fighting Arts Academy CT
 Sumudaerji,"5' 8""","72""",,"Jan 20, 1996",3cf18e01cb6cbde3,,,
-Kyu Sung Kim,--,--,,"Nov 05, 1992",e7ecfab8fd86d3e1,,,
+Kyu Sung Kim,--,--,,"Nov 05, 1992",e7ecfab8fd86d3e1,,,Jeonju First Gym
 Rama Supandhi,"5' 5""","66""",,"Nov 07, 1991",6d537248fe7cccf1,Jakarta,1.546286106109619,Warrior Fight Camp
 Aji Susilo,"5' 10""",--,,--,22af3546bd967280,"Bandung, West Java",696.3651733398438,
 Jason Suttie,"6' 0""",--,,"Aug 07, 1973",cc5834a495d1ea08,Apia,10.35947036743164,
@@ -3640,7 +3640,7 @@ Eugenio Tadeu,"5' 8""",--,,--,f70144caea5c4c80,Rio de Janeiro,7.758727073669434,
 Justin Tafa,"6' 0""","74""",,"Dec 13, 1993",e13abac8089a801a,"Brisbane, New South Wales",187.0889587402344,NTG Fight & Fitness
 Junior Tafa,"6' 3""","75""",,"Sep 21, 1996",c15fa95b9a12fde4,Avondale,8.956778526306152,NTG Fight & Fitness
 Khalid Taha,"5' 5""","69""",,"Feb 15, 1992",b4537562f88ac582,Dortmund,89.75387573242188,Arena Dortmund
-Joe Taimanglo,"5' 4""",--,,"Jun 27, 1984",9bf126927843e184,,,
+Joe Taimanglo,"5' 4""",--,,"Jun 27, 1984",9bf126927843e184,Yona,,Spike 22
 Tatsuro Taira,"5' 7""","70""",,"Jan 27, 2000",4461d7e47375a895,"Naha, Okinawa",7.763179302215576,Paraestra Okinawa
 Mairbek Taisumov,"5' 9""","73""",,"Aug 08, 1988",8f5c8850b2484173,"Grozny, Chechnya",126.5825881958008,Team Taisumov
 Nobuhiko Takada,"6' 0""",--,,"Apr 12, 1962",a25b71fe5e31fa97,"Yokohama, Kanagawa",12.80799961090088,Takada Dojo
@@ -3659,7 +3659,7 @@ Eli Tamez,"5' 7""",--,,"Aug 22, 1985",bfd4d50591033a1f,"Rowlett, Texas",153.6773
 Kiyoshi Tamura,"5' 11""",--,,"Dec 17, 1969",30e8b4505f5ccf92,"Okayama, Okayama",3.332851886749268,U-File Camp
 Akitoshi Tamura,"5' 9""","70""",,"May 31, 1980",c95fbc085e17a532,"Nishiwaki, Hyogo",63.25822067260742,Tsudanuma Dojo
 Issei Tamura,"5' 5""","63""",,"Mar 12, 1984",57bf89d42364d39e,"Shinagawa, Tokyo",9.5,IJC
-Jason Tan,"5' 10""",--,,"Dec 17, 1981",ad3041e61896b975,,,
+Jason Tan,"5' 10""",--,,"Dec 17, 1981",ad3041e61896b975,Liverpool,,
 Akihito Tanaka,--,--,,--,1bf49bf829964144,"Chikuzen, Fukuoka",33.59035491943359,
 Michinori Tanaka,"5' 5""","67""",,"Oct 04, 1990",64788ee44b062ded,"Yokohama, Kanagawa",12.80799961090088,Team Alpha Male Japan
 Evan Tanner,"6' 0""","74""",,"Feb 11, 1971",8f2d9ee27f206f1f,"Amarillo, Texas",1118.594848632812,Hard Knocks Kickboxing
@@ -3678,7 +3678,7 @@ Torrance Taylor,"5' 7""",--,,--,88e53ec16b801740,"Cleveland, Ohio",199.863067626
 Louis Taylor,"5' 11""",--,,"May 12, 1979",49bddfee9ed54cf3,"Chicago, Illinois",183,Chicago Fight Team
 Anthony Taylor,"5' 7""",--,,--,637a4d8825464c62,,,
 Danielle Taylor,"5' 0""","60""",,"Oct 25, 1989",b76c6268dc1d3c05,"Palmdale, California",809.5014038085938,Saekson Muay Thai
-J.T Taylor,"5' 10""",--,,--,17c6e35e4da505b0,,,
+J.T Taylor,"5' 10""",--,,--,17c6e35e4da505b0,"Bend, Oregon",1105.027099609375,Desert Dogs
 James Te Huna,"6' 2""","75""",,"Sep 29, 1981",f5431394fb284bb9,"Penrith, New South Wales",26.88945579528809,Pirtek Athletic Allstars
 Shawn Teed,"6' 5""",--,,"Feb 13, 1992",5bb70ebd65075c5c,"Willingboro, New Jersey",12.20830917358398,Ricardo Almeida Jiu-Jitsu
 Glover Teixeira,"6' 2""","76""",,"Oct 28, 1979",7ff97850e8c32bda,"Sobralia, Minas Gerais",275.6954650878906,Teixeira MMA & Fitness
@@ -3727,7 +3727,7 @@ Kazuki Tokudome,"5' 11""","73""",,"Mar 04, 1987",c4af2feb4b58bc3b,"Hachioji, Tok
 Puja Tomar,--,--,,"Dec 05, 1993",19f8a2f6eecd92ac,"Muzaffarnagar, Uttar Pradesh",267.9238891601562,Soma Fight Club
 Tyler Toner,"5' 8""","70""",,"Mar 31, 1983",8e893f269d5696b2,"Aurora, Colorado",1647.207153320312,Elevation Fight Team
 James Toney,"5' 9""",--,,"Aug 24, 1968",d10b35152277cf98,"Grand Rapids, Michigan",194.9165954589844,M-1 Global Training Center
-Masanori Tonooka,"5' 8""",--,,--,9de7c97e1c0d7927,,,
+Masanori Tonooka,"5' 8""",--,,--,9de7c97e1c0d7927,,,Seido Kaikan
 Carl Toomey,--,--,,--,5ee87e0432205755,"Brisbane, Queensland",12.19050693511963,Muay Thai Mulisha
 Ilia Topuria,"5' 7""","69""",,"Jan 21, 1997",54f64b5e283b0ce7,Alicante,19.94586181640625,Climent Club
 Anthony Torres,"5' 8""",--,,"Jul 31, 1978",918d9d89d4d52acc,"Kailua, Hawaii",0,MMA Development
@@ -3735,7 +3735,7 @@ Miguel Torres,"5' 9""","76""",,"Jan 18, 1981",33b2f68ef95252e0,"East Chicago, In
 Ronys Torres,"5' 7""",--,,"Aug 13, 1975",cce79e827569f26e,"Manacapuru, Amazonas",37.41908264160156,Nova Uniao
 Haven Torres,--,--,,--,1ff10dee2f7ae60c,"Pueblo, Colorado",1420.464721679688,Pacific Warriors
 Tecia Torres,"5' 1""","60""",,"Aug 16, 1989",31ef8b67e13495b3,"Fort Lauderdale, Florida",1.475489735603333,American Top Team
-Alex Torres,"5' 10""",--,,"May 29, 1988",e4e0f310b3cf23a8,,,
+Alex Torres,"5' 10""",--,,"May 29, 1988",e4e0f310b3cf23a8,,,Carlson Gracie Team
 Abram Torres,"5' 10""",--,,"Oct 29, 1982",e175a261a280f7cb,"Edinburg, Texas",28.75799942016602,
 Jose Torres,"5' 4""","65""",,"Aug 02, 1992",d2036f31c035e0d1,"Chicago, Illinois",183,KHK MMA
 Desmond Torres,"5' 6""","69""",,"Jan 06, 1997",971aebf56267de20,"Wahiawa, Hawaii",270.11572265625,Team Oyama
@@ -3743,7 +3743,7 @@ Manuel Torres,"5' 10""","73""",,"Mar 25, 1995",2e7878927067fdca,"Chihuahua, Chih
 Eduardo Torres Caut,"5' 7""","70""",,"Apr 26, 1995",c8d46028907bcece,,,
 Salim Touahri,"5' 10""","72""",,"Sep 28, 1989",cbf1c7ba5408a66f,Cracow,212.4738159179688,Grappling Krakow
 Dequan Townsend,"6' 3""","79""",,"May 11, 1986",3f7dab21b6c971bc,"Lansing, Michigan",260.1031799316406,Murcielago MMA
-Minoru Toyonaga,"5' 11""",--,,--,04076783ca83d6ae,"Kagoshima, Kagoshima",5.490913867950439,Takada Dojo
+Minoru Toyonaga,"5' 11""",--,,--,04076783ca83d6ae,"Kagoshima, Kagoshima",59.99510192871094,Takada Dojo
 Slim Trabelsi,"6' 3""",--,,"May 09, 1993",ff2ec83f44000f78,Tunis,0.3383322656154633,American Kickboxing Academy
 Roberto Traven,"6' 3""",--,,"Sep 16, 1968",20ec0061400178ca,Rio de Janeiro,7.758727073669434,Alliance Team
 Bryan Travers,--,--,,"Apr 11, 1983",008cf84faae9c7a5,"Bakersfield, California",123.170051574707,Academy of Martial Arts and Fitness
@@ -3788,7 +3788,7 @@ Andy Uhrich,"6' 0""",--,,--,4a1a492f299581d9,"Memphis, Tennessee",79.20690917968
 Tagir Ulanbekov,"5' 7""","70""",,"Aug 07, 1991",f00ac08ab056af5d,"Makhachkala, Dagestan",-4.028912544250488,Eagles MMA
 Carlos Ulberg,"6' 4""","77""",,"Nov 07, 1990",9014c02eff8b3d62,Auckland,17,City Kickboxing
 Gasan Umalatov,"5' 11""","71""",,"Sep 11, 1982",7a39bbac8cc0fa70,"Zinzeli, Astrakhan Oblast",-26.01870918273926,Astrakhan Top Team
-Jeremy Umphries,--,--,,--,4793a2d90f5ab8ae,,,
+Jeremy Umphries,--,--,,--,4793a2d90f5ab8ae,,,PKG
 Zach Underwood,"6' 2""",--,,--,1e310618d02ff93b,"Nashville, Tennessee",152.9315185546875,
 Caol Uno,"5' 7""","70""",,"May 08, 1975",eb1723480fa2f96c,"Yokosuka, Kanagawa",4.503237247467041,Uno Dojo
 Kengo Ura,"5' 9""",--,,"Jun 20, 1981",58258914525740a5,"Komatsu, Ishikawa",2.894315004348755,Ingram
@@ -3817,7 +3817,7 @@ Joshua Van,"5' 5""","65""",,"Oct 10, 2001",17e97649403ba428,Hakha,1753.872070312
 Mike van Arsdale,"6' 2""",--,,"Jun 20, 1965",2ee09ec2a0695eb9,"San Jose, California",24.67866325378418,
 Matt Van Buren,"6' 5""",--,,"Jun 12, 1986",7b39035fae7268b8,"Norfolk, Virginia",4.636955738067627,Team Gutter
 Ron van Clief,"5' 10""",--,,"Jan 25, 1943",23ab42947c1990e3,"Brooklyn, New York",18.86631393432617,
-Lloyd Van Dams,"6' 1""",--,,"Mar 05, 1972",02177caefe7c07d4,,,
+Lloyd Van Dams,"6' 1""",--,,"Mar 05, 1972",02177caefe7c07d4,Para,,
 Cameron VanCamp,"6' 2""","74""",,"Apr 27, 1993",87e2468b986ebb79,"Lebanon, Indiana",286.9012756347656,Indy Boxing & Grappling
 Chad Vance,"6' 0""",--,,--,26d61e92a6069cd2,"Charles City, Iowa",305.6612243652344,
 Jared Vanderaa,"6' 4""","80""",,"May 12, 1992",2b68d9f125d07b42,"Hemet, California",486.1929626464844,Team Quest
@@ -3858,7 +3858,7 @@ Bryan Vetell,"6' 3""",--,,"Jul 26, 1977",13a0fb8fbdafb54f,"New York City, New Yo
 Marvin Vettori,"6' 0""","74""",,"Sep 20, 1993",7acbb0972e75281a,"Mezzocorona, Trentino",1130.272094726562,Xtreme Couture
 Hugo Viana,"5' 6""","67""",,"Sep 26, 1982",f95381efb3051d81,"Salvador, Bahia",37.99760818481445,Champion Team
 Guilherme Viana,"6' 4""",--,,--,393b8e03fb410a78,"Porto Alegre, Rio Grande do Sul",10.40267753601074,Teixeira MMA & Fitness
-Polyana Viana,"5' 5""","67""",,"Jun 14, 1992",9673a497a9da119a,"Sao Geraldo do Araguaia, Para",139.1873779296875,Chute Boxe Diego Lima
+Polyana Viana,"5' 5""","67""",,"Jun 14, 1992",9673a497a9da119a,"Sao Geraldo do Araguaia, Para",139.2287292480469,Chute Boxe Diego Lima
 Vitor Vianna,--,--,,--,744f50016c39c26c,"Las Vegas, Nevada",611.1598510742188,Wand Fight Team
 James Vick,"6' 3""","76""",,"Feb 23, 1987",6256b2b1562cb8e1,"Mineral Wells, Texas",268.9588623046875,Team Lloyd Irvin
 Tamires Vidal,"5' 6""","68""",,"Jul 27, 1998",4f3064faf17aa711,"Niteroi, Rio de Janeiro",7.833485126495361,Team Brothers
@@ -3915,7 +3915,7 @@ Erick Wanderlei,"6' 1""",--,,--,d57e6a8971b6d2bd,,,
 Dimitiri Wanderley,--,--,,--,a1d6b308781aa2f5,,,
 Andy Wang,"5' 6""",--,,"May 28, 1977",476414d2f18cd059,"Los Angeles, California",95.03136444091797,Grappling Unlimited
 Sai Wang,"6' 0""",--,,"Jan 14, 1986",efb9a43415a56d34,Beijing,45.26335906982422,AKA Thailand
-Anying Wang,"6' 0""",--,,"Apr 04, 1991",69e8c632135af48b,,,
+Anying Wang,"6' 0""",--,,"Apr 04, 1991",69e8c632135af48b,,,Phuket Top Team
 Joshua Wang-Kim,"5' 9""","71""",,"Nov 16, 1992",d538f13ab21d9633,,,
 Curt Warburton,"6' 0""","73""",,--,2721bb808bb2523c,"Bishop Auckland, County Durham",105.8302841186523,NEVT
 Brennan Ward,"5' 10""","71""",,"Jun 28, 1988",67cd6495280b0a57,"Waterford, Connecticut",37.10898971557617,Whaling City Boxing
@@ -3942,7 +3942,7 @@ Enrique Watson,--,--,,--,a99d4aa689bdca18,"St. Robert, Missouri",316.67507934570
 Brok Weaver,"6' 0""","73""",,"Dec 05, 1991",7c9f96f9a6a5cd50,"McIntosh, Alabama",15.29442977905273,American Top Team
 Jonavin Webb,"5' 10""",--,,"Apr 28, 1989",f40ec51dd4de47c3,"Marlton, New Jersey",33.03229522705078,Renzo Gracie Philly
 Stephanie Webber,"5' 6""",--,,--,d44a84409bf0da64,"Seattle, Washington",47.50616073608398,Victory Athletics
-Royston Wee,"5' 7""","67""",,"Nov 15, 1986",b9c03e7a4557e542,,,
+Royston Wee,"5' 7""","67""",,"Nov 15, 1986",b9c03e7a4557e542,,,Impact MMA Singapore
 Darian Weeks,"5' 11""","72""",,"Nov 23, 1993",326a001926ffb7ec,"Sedalia, Missouri",276.9152526855469,Hulett House Gym
 Joshua Weems,"5' 8""","69""",,"May 05, 1994",69888118d968ba52,"Jackson, Mississippi",85.95271301269531,Black Sails MMA
 Daniel Weichel,"5' 10""","70""",,"Nov 22, 1984",7b9dade6bedaabbe,"Frankfurt, Hesse",98.0745620727539,Team MMA Spirit
@@ -3976,7 +3976,7 @@ Joe Wilk,"5' 9""",--,,"Apr 12, 1982",781014fb7e8e647a,"Manhattan, Kansas",311.80
 Aaron Wilkinson,"5' 10""",--,,"Jan 31, 1987",338a11d3674eb2d4,"Manchester, Greater Manchester",58.92958831787109,Straight Blast Gym
 Mike Wilkinson,"5' 7""","66""",,"Sep 15, 1987",cfaf010d5b389c09,"Leigh, Wigan",31.2669734954834,Atherton Submission Wrestling
 Rob Wilkinson,"6' 3""","80""",,"Feb 22, 1992",826475cc758e60e6,"Hobart, Tasmania",13.02181816101074,Hybrid Training Centre
-James Wilks,"6' 1""","75""",,"May 04, 1978",852454c572675334,"Leicestershire, East Midlands",46.11428451538086,Lightning MMA
+James Wilks,"6' 1""","75""",,"May 04, 1978",852454c572675334,"Leicestershire, East Midlands",88.21925354003906,Lightning MMA
 Tedd Williams,"6' 1""",--,,"Dec 19, 1969",b63e800c18e011b5,"Hesperia, California",970.387939453125,Williams Combat Grappling
 Pete Williams,"6' 3""",--,,"Jul 10, 1975",6291ac0a3726732f,"San Lorenzo, California",10.22877311706543,Lion's Den
 Rubin Williams,"6' 1""",--,,"Apr 09, 1976",6f812143641ceff8,"Detroit, Michigan",182.3614044189453,
@@ -4047,14 +4047,14 @@ Yan Qihui,"5' 3""","62""",,"Oct 01, 1996",5c9c2e247c836b67,"Guangnan, Yunnan",12
 Adam Yandiev,"5' 9""","74""",,"Aug 07, 1988",0a95c474e61a6c44,"Nazran, Ingushetia",519.362060546875,Fight or Die
 Adrian Yanez,"5' 7""","70""",,"Nov 29, 1993",0232cabbc30a2372,"La Porte, Texas",5.643839359283447,Metro Fight Club
 Dongi Yang,"5' 10""","73""",,"Dec 07, 1984",aed06011bf62237b,Seoul,192.5899200439453,Team Macho
-Jianping Yang,"5' 7""",--,,"Nov 27, 1988",d3c554d6e11fc9d6,,,
+Jianping Yang,"5' 7""",--,,"Nov 27, 1988",d3c554d6e11fc9d6,,,Fight Emperor
 Masutatsu Yano,"5' 9""",--,,"Jul 11, 1975",d56caaa5e123f518,"Sakurai, Nara",75.5453109741211,RJW Central
 Emmanuel Yarborough,"6' 8""",--,,"Sep 05, 1960",2299605af59fd309,"Rahway, New Jersey",5.502711296081543,Freelance
 Cale Yarbrough,"6' 1""",--,,"Dec 27, 1986",a0b91014e9d16a76,"Atlanta, Georgia",318.4681701660156,Hardcore Gym
 Tadao Yasuda,"6' 4""",--,,"Oct 09, 1963",49e7e05f902479ca,"Ota, Tokyo",8.353009223937988,
 Yoshiaki Yatsu,"6' 1""",--,,"Jul 19, 1956",620be7e0712d431b,"Ora, Gunma",26.98764228820801,SPWF
 Chris Yee,"5' 9""",--,,--,920632ca1b78fae5,"Marysville, Oregon",1415.196411132812,Team Quest
-Yibugele,"5' 9""","70""",,"Nov 13, 1989",cc2fcae2c0dc501d,,,
+Yibugele,"5' 9""","70""",,"Nov 13, 1989",cc2fcae2c0dc501d,Inner Mongolia,1056.920043945312,Haosheng Fight Gym
 Yizha,"5' 7""","71""",,"Jan 08, 1997",3f11fd1751fa83b1,,,
 Ashley Yoder,"5' 7""","69""",,"Oct 20, 1987",b4c6c904a9ffc5e8,"Temecula, California",306.6764221191406,Team Quest
 Hirotaka Yokoi,"5' 11""",--,,"Jun 08, 1978",35585d970300d45a,"Iwamizawa, Hokkaido",29.57497787475586,Alliance-Square
