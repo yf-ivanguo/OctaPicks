@@ -36,7 +36,7 @@ class HometownAdvatage():
         return None
 
     # Modified function to calculate home advantage
-    def calculate_home_advantage(self, fighter_name, fighter_id, fight_location, fighter_df, gmaps, log_csv_path='missing_data_log.csv'):
+    def calculate_home_advantage(self, fighter_id, fight_location, fighter_df, gmaps, log_csv_path='missing_data_log.csv'):
         # Check if fighter_id exists in fighter_df
         if fighter_id not in fighter_df['ID'].values:
             return 0
@@ -55,7 +55,7 @@ class HometownAdvatage():
         ht_adv = 0
         if self.calculate_distance(hometown_coords, location_coords) <= 20:
             ht_adv = 1
-            
+
         return ht_adv
 
     def home_adv_feat(self, fighter_df, fights_df, gmaps_key, include_progress_bar=True):
@@ -73,14 +73,14 @@ class HometownAdvatage():
         # Apply the function to calculate home advantage for fighter A
         if include_progress_bar:
             
-            fights_df['fighter_a_home_advantage'] = fights_df.progress_apply(lambda row: self.calculate_home_advantage(row['fighter_a'], row['fighter_a_id'], row['location'], fighter_df, gmaps), axis=1)
+            fights_df['fighter_a_home_advantage'] = fights_df.progress_apply(lambda row: self.calculate_home_advantage(row['fighter_a_id'], row['location'], fighter_df, gmaps), axis=1)
         else:
-            fights_df['fighter_A_home_advantage'] = fights_df.apply(lambda row: self.calculate_home_advantage(row['fighter_a'],row['fighter_a_id'], row['location'], fighter_df, gmaps), axis=1)
+            fights_df['fighter_A_home_advantage'] = fights_df.apply(lambda row: self.calculate_home_advantage(row['fighter_a_id'], row['location'], fighter_df, gmaps), axis=1)
 
         # Apply the function to calculate home advantage for fighter B
         if include_progress_bar:
-            fights_df['fighter_B_home_advantage'] = fights_df.progress_apply(lambda row: self.calculate_home_advantage(row['fighter_b'], row['fighter_b_id'], row['location'], fighter_df, gmaps), axis=1)
+            fights_df['fighter_B_home_advantage'] = fights_df.progress_apply(lambda row: self.calculate_home_advantage(row['fighter_b_id'], row['location'], fighter_df, gmaps), axis=1)
         else:
-            fights_df['fighter_B_home_advantage'] = fights_df.apply(lambda row: self.calculate_home_advantage(row['fighter_b'], row['fighter_b_id'], row['location'], fighter_df, gmaps), axis=1)
+            fights_df['fighter_B_home_advantage'] = fights_df.apply(lambda row: self.calculate_home_advantage(row['fighter_b_id'], row['location'], fighter_df, gmaps), axis=1)
 
         return fights_df
