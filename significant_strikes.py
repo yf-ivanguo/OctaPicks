@@ -40,7 +40,6 @@ class SignificantStrikes():
         result_df = self.calculate_significant_strikes_differential(result_df, col_names_differential)
 
         return result_df
-    
 
     def calculate_significant_strikes(self, df, fighter_a_id, fighter_b_id, index, col_names):
         """
@@ -113,7 +112,6 @@ class SignificantStrikes():
                 res.append(self.calculate_significant_strikes_absorbed(raw_significant_strike_stats, fighter_id))
 
         return pd.Series(res)
-    
 
     def calculate_significant_strikes_differential(self, df, col_names_differential):
         """
@@ -215,33 +213,11 @@ class SignificantStrikes():
             fighter_b_id_vals = all_prev_fights.fighter_b_id.values
 
             prev_fights = all_prev_fights[((fighter_a_id_vals == fighter_id) | (fighter_b_id_vals == fighter_id))]
-            num_fights = len(prev_fights)
 
-            # Initialize empty DataFrames for the scenarios where there are fewer than 3 or 5 fights
-            last_3_fights = pd.DataFrame()
-            last_5_fights = pd.DataFrame()
-
-            # Check if the fighter has at least 3 fights
-            if num_fights >= 3:
-                last_3_fights = prev_fights.tail(3)
-                
-            else:
-                # If fewer than 3 fights, return all available fights
-                last_3_fights = prev_fights
-
-            # Check if the fighter has at least 5 fights
-            if num_fights >= 5:
-                last_5_fights = prev_fights.tail(5)
-                
-            else:
-                # If fewer than 5 fights, return all available fights
-                last_5_fights = prev_fights
-                
-            return last_3_fights, last_5_fights, prev_fights
-
+            return prev_fights[-3:], prev_fights[-5:], prev_fights
+    
         return pd.DataFrame(), pd.DataFrame(), pd.DataFrame()
         
-
     def get_raw_significant_strikes_stats(self, df, round):
         """
         Extracts raw significant strike stats from the dataframe for a specific round.
@@ -272,28 +248,19 @@ class SignificantStrikes():
                 f'fighter_b_round_{round[1]}_sig_str_attempted'
             ]
 
-        # Initialize an empty DataFrame with the specified columns
-        stats_df = pd.DataFrame(columns=[
-            'total_fight_time', 'fighter_a_id', 'fighter_b_id',
-            'fighter_a_sig_str_landed', 'fighter_a_sig_str_attempted',
-            'fighter_b_sig_str_landed', 'fighter_b_sig_str_attempted'
-        ])
+        # Apply vectorization for calculating total fight time
+        total_fight_times = df.apply(lambda row: self.get_round_time(row['outcome_round'], row['outcome_time'], round), axis=1)
 
-        # Iterate through each fight in the DataFrame
-        for index, fight in df.iterrows():
-            # Calculate the total fight time
-            total_fight_time = self.get_round_time(fight['outcome_round'], fight['outcome_time'], round)
+        # Select and rename the significant strike stats columns in the DataFrame to match the target structure
+        sig_str_stats_df = df[sig_str_cols].rename(columns={
+            sig_str_cols[0]: 'fighter_a_sig_str_landed',
+            sig_str_cols[1]: 'fighter_a_sig_str_attempted',
+            sig_str_cols[2]: 'fighter_b_sig_str_landed',
+            sig_str_cols[3]: 'fighter_b_sig_str_attempted'
+        })
 
-            # Extract relevant columns for the round
-            sig_str_stats = [fight[col] for col in sig_str_cols]
-
-            # Create a list of stats for the current fight
-            fight_stats = [
-                total_fight_time, fight['fighter_a_id'], fight['fighter_b_id']
-            ] + sig_str_stats
-
-            # Append the stats to the DataFrame
-            stats_df.loc[index] = fight_stats
+        # Concatenate the total fight times with the significant strike stats
+        stats_df = pd.concat([total_fight_times.rename('total_fight_time'), df[['fighter_a_id', 'fighter_b_id']], sig_str_stats_df], axis=1)
 
         return stats_df
 
@@ -309,22 +276,15 @@ class SignificantStrikes():
             float: The rate of significant strikes landed per minute in the given fights.
         """
 
-        # Initialize variables to store totals
-        sig_str_landed = 0
-        total_fight_time = 0
+        # Get the IDs of the fighters in the fights
+        fighter_a_id_vals = stats_by_fight_df.fighter_a_id.values
+        fighter_b_id_vals = stats_by_fight_df.fighter_b_id.values
 
-        # Iterate through each fight in the DataFrame
-        for index, fight in stats_by_fight_df.iterrows():
-            if fight['fighter_a_id'] == fighter_id:
-                # Fighter is Fighter A
-                sig_str_landed += fight['fighter_a_sig_str_landed']
-
-            elif fight['fighter_b_id'] == fighter_id:
-                # Fighter is Fighter B
-                sig_str_landed += fight['fighter_b_sig_str_landed']
-
-            # Sum the total fight time
-            total_fight_time += fight['total_fight_time']
+        # sum sig strikes landed by fighter
+        sig_str_landed = stats_by_fight_df[fighter_a_id_vals == fighter_id]['fighter_a_sig_str_landed'].sum() + stats_by_fight_df[fighter_b_id_vals == fighter_id]['fighter_b_sig_str_landed'].sum()
+        
+        # sum total fight time
+        total_fight_time = stats_by_fight_df['total_fight_time'].sum()
 
         # If no fights, return default value
         if total_fight_time == 0:
@@ -332,8 +292,7 @@ class SignificantStrikes():
         
         return sig_str_landed / total_fight_time
 
-
-    def calculate_significant_strikes_accuracy(self, stats_df, fighter_id):
+    def calculate_significant_strikes_accuracy(self, stats_by_fight_df, fighter_id):
         """
         Calculates the accuracy of significant strikes for a fighter.
 
@@ -345,30 +304,21 @@ class SignificantStrikes():
             float: The accuracy of significant strikes as a percentage in the given fights.
         """
 
-        # Initialize variables to store totals
-        sig_str_landed = 0
-        sig_str_attempted = 0
+        # Get the IDs of the fighters in the fights
+        fighter_a_id_vals = stats_by_fight_df.fighter_a_id.values
+        fighter_b_id_vals = stats_by_fight_df.fighter_b_id.values
 
-        # Iterate through each fight in the DataFrame
-        for index, fight in stats_df.iterrows():
-            if fight['fighter_a_id'] == fighter_id:
-                # Fighter is Fighter A
-                sig_str_landed += fight['fighter_a_sig_str_landed']
-                sig_str_attempted += fight['fighter_a_sig_str_attempted']
-
-            elif fight['fighter_b_id'] == fighter_id:
-                # Fighter is Fighter B
-                sig_str_landed += fight['fighter_b_sig_str_landed']
-                sig_str_attempted += fight['fighter_b_sig_str_attempted']
-
+        # sum sig strikes landed and attempted by fighter
+        sig_str_landed = stats_by_fight_df[fighter_a_id_vals == fighter_id]['fighter_a_sig_str_landed'].sum() + stats_by_fight_df[fighter_b_id_vals == fighter_id]['fighter_b_sig_str_landed'].sum()
+        sig_str_attempted = stats_by_fight_df[fighter_a_id_vals == fighter_id]['fighter_a_sig_str_attempted'].sum() + stats_by_fight_df[fighter_b_id_vals == fighter_id]['fighter_b_sig_str_attempted'].sum()
+   
         # If no fights, return default value
         if sig_str_attempted == 0:
             return self.default_val
         
         return sig_str_landed / sig_str_attempted
 
-
-    def calculate_significant_strikes_defense(self, stats_df, fighter_id):
+    def calculate_significant_strikes_defense(self, stats_by_fight_df, fighter_id):
         """
         Calculates the defense rate against significant strikes for a fighter.
 
@@ -380,21 +330,13 @@ class SignificantStrikes():
             float: The defense rate against significant strikes as a percentage in the given fights.
         """
 
-        # Initialize variables to store totals
-        sig_str_landed_op = 0
-        sig_str_attempted_op = 0
+        # Get the IDs of the fighters in the fights
+        fighter_a_id_vals = stats_by_fight_df.fighter_a_id.values
+        fighter_b_id_vals = stats_by_fight_df.fighter_b_id.values
 
-        # Iterate through each fight in the DataFrame
-        for index, fight in stats_df.iterrows():
-            if fight['fighter_a_id'] == fighter_id:
-                # Fighter is Fighter A
-                sig_str_landed_op += fight['fighter_b_sig_str_landed']
-                sig_str_attempted_op += fight['fighter_b_sig_str_attempted']
-
-            elif fight['fighter_b_id'] == fighter_id:
-                # Fighter is Fighter B
-                sig_str_landed_op += fight['fighter_a_sig_str_landed']
-                sig_str_attempted_op += fight['fighter_a_sig_str_attempted']
+        # sum sig strikes landed by opponent and sig strikes attempted by opponent
+        sig_str_landed_op = stats_by_fight_df[fighter_a_id_vals == fighter_id]['fighter_b_sig_str_landed'].sum() + stats_by_fight_df[fighter_b_id_vals == fighter_id]['fighter_a_sig_str_landed'].sum()
+        sig_str_attempted_op = stats_by_fight_df[fighter_a_id_vals == fighter_id]['fighter_b_sig_str_attempted'].sum() + stats_by_fight_df[fighter_b_id_vals == fighter_id]['fighter_a_sig_str_attempted'].sum()
 
         # If no fights, return default value
         if sig_str_attempted_op == 0:
@@ -402,8 +344,7 @@ class SignificantStrikes():
         
         return 1 - (sig_str_landed_op / sig_str_attempted_op)
 
-
-    def calculate_significant_strikes_absorbed(self, stats_df, fighter_id):
+    def calculate_significant_strikes_absorbed(self, stats_by_fight_df, fighter_id):
         """
         Calculates the rate of significant strikes absorbed per minute by a fighter.
 
@@ -415,24 +356,16 @@ class SignificantStrikes():
             float: The rate of significant strikes absorbed per minute in the given fights.
         """
 
-        # Initialize variables to store totals
-        sig_str_landed_op = 0
-        sig_str_attempted_op = 0
-        total_fight_time = 0
+        # Get the IDs of the fighters in the fights
+        fighter_a_id_vals = stats_by_fight_df.fighter_a_id.values
+        fighter_b_id_vals = stats_by_fight_df.fighter_b_id.values
 
-        # Iterate through each fight in the DataFrame
-        for index, fight in stats_df.iterrows():
-            if fight['fighter_a_id'] == fighter_id:
-                # Fighter is Fighter A
-                sig_str_landed_op += fight['fighter_b_sig_str_landed']
-                sig_str_attempted_op += fight['fighter_b_sig_str_attempted']
-            elif fight['fighter_b_id'] == fighter_id:
-                # Fighter is Fighter B
-                sig_str_landed_op += fight['fighter_a_sig_str_landed']
-                sig_str_attempted_op += fight['fighter_a_sig_str_attempted']
-            
-            # Sum the total fight time
-            total_fight_time += fight['total_fight_time']
+        # sum sig strikes landed by opponent and sig strikes attempted by opponent
+        sig_str_landed_op = stats_by_fight_df[fighter_a_id_vals == fighter_id]['fighter_b_sig_str_landed'].sum() + stats_by_fight_df[fighter_b_id_vals == fighter_id]['fighter_a_sig_str_landed'].sum()
+        sig_str_attempted_op = stats_by_fight_df[fighter_a_id_vals == fighter_id]['fighter_b_sig_str_attempted'].sum() + stats_by_fight_df[fighter_b_id_vals == fighter_id]['fighter_a_sig_str_attempted'].sum()
+        
+        # sum total fight time
+        total_fight_time = stats_by_fight_df['total_fight_time'].sum()
         
         # If no fights, return default value
         if total_fight_time == 0:
@@ -440,7 +373,6 @@ class SignificantStrikes():
 
         return (sig_str_attempted_op - sig_str_landed_op) / total_fight_time
     
-
     def convert_time_to_seconds(self, time_str):
         """
         Converts a time string in MM:SS format to total seconds.
@@ -458,7 +390,6 @@ class SignificantStrikes():
         else:
             return int(time_str)
         
-
     def get_round_time(self, outcome_round, outcome_time, round):
         """
         Calculates the total fight time in a specific round.
