@@ -58,8 +58,8 @@ class SignificantStrikes():
         """
         # Initialize result list
         res = []
-        fighter_a_last_3_fights, fighter_a_last_5_fights, fighter_a_prev_fights = self.get_fighter_fights_significant_strikes(df, fighter_a_id, index)
-        fighter_b_last_3_fights, fighter_b_last_5_fights, fighter_b_prev_fights = self.get_fighter_fights_significant_strikes(df, fighter_b_id, index)
+        fighter_a_last_3_fights, fighter_a_last_5_fights, fighter_a_prev_fights = self.get_fighter_fights(df, fighter_a_id, index)
+        fighter_b_last_3_fights, fighter_b_last_5_fights, fighter_b_prev_fights = self.get_fighter_fights(df, fighter_b_id, index)
 
         for i in range(len(col_names)):
             split = col_names[i].split('_')
@@ -194,7 +194,7 @@ class SignificantStrikes():
                         col_names.append(col_name)
         return col_names
     
-    def get_fighter_fights_significant_strikes(self, df, fighter_id, index):
+    def get_fighter_fights(self, df, fighter_id, index):
         """
         Retrieves the most recent fights of a fighter before a given index in the dataframe.
 
