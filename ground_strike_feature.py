@@ -218,8 +218,8 @@ class GroundStrikes():
         Returns:
         - (float, float): The ground strikes percentages for each fighter as a tuple
         """
-        fighter_a_ground_strikes = fighter_a_ground_strikes_hit / fighter_a_ground_strikes_taken
-        fighter_b_ground_strikes = fighter_b_ground_strikes_hit / fighter_b_ground_strikes_taken
+        fighter_a_ground_strikes = fighter_a_ground_strikes_hit / fighter_a_ground_strikes_taken if fighter_a_ground_strikes_taken != 0 else 0
+        fighter_b_ground_strikes = fighter_b_ground_strikes_hit / fighter_b_ground_strikes_taken if fighter_b_ground_strikes_taken != 0 else 0
 
         if differential:
             return fighter_a_ground_strikes - fighter_b_ground_strikes, fighter_b_ground_strikes - fighter_a_ground_strikes
