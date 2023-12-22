@@ -3,19 +3,27 @@ import numpy as np
 import swifter
 
 class Knockdowns():
+    """
+    This class is used to create the knockdowns features for each fighter in the dataset.
+    """
+
     def __init__(self):
+        """
+        Initializes the Knockdowns class
+        """
         pass
 
-    """
-    Creates the knockdowns features for each fighter in the dataset
-
-    Parameters:
-        - df (DataFrame): DataFrame containing all the fights in the dataset
-
-    Returns:
-        - pd.DataFrame: DataFrame containing the knockdowns features for each fighter in the dataset
-    """
     def create_knockdown_feats(self, df, include_progress=False):
+        """
+        Creates the knockdowns features for each fighter in the dataset
+
+        Parameters:
+            df (pd.DataFrame): DataFrame containing all the fights in the dataset
+
+        Returns:
+            pd.DataFrame: DataFrame containing the knockdowns features for each fighter in the dataset
+        """
+
         col_names = ['fighter_a_kd_per_sigs_l3', 'fighter_b_kd_per_sigs_l3', \
                      'fighter_a_kd_per_sigs_l5', 'fighter_b_kd_per_sigs_l5', \
                      'fighter_a_kd_per_sigs_alltime', 'fighter_b_kd_per_sigs_alltime', \
@@ -35,21 +43,22 @@ class Knockdowns():
 
         return pd.concat([target_df, result_features], axis=1)
     
-    """
-    Computes the knockdowns features for a single example in the dataset
-
-    Parameters:
-        - df (DataFrame): DataFrame containing all the fights in the dataset
-        - fighter_a_id (str): ID of fighter A
-        - fighter_b_id (str): ID of fighter B
-        - index (int): Index of the current fight in the dataset
-        - last_fights (int): Number of last fights to consider
-        - differential (bool): Whether to compute the differential of the knockdowns features
-
-    Returns:
-        - pd.Series: Series containing the knockdowns features for both fighters
-    """
     def compute_knockdowns(self, df, fighter_a_id, fighter_b_id, index, last_fights=0, differential=False):
+        """
+        Computes the knockdowns features for a single example in the dataset
+
+        Parameters:
+            df (pd.DataFrame): DataFrame containing all the fights in the dataset
+            fighter_a_id (str): ID of fighter A
+            fighter_b_id (str): ID of fighter B
+            index (int): Index of the current fight in the dataset
+            last_fights (int): Number of last fights to consider
+            differential (bool): Whether to compute the differential of the knockdowns features
+
+        Returns:
+            pd.Series: Series containing the knockdowns features for both fighters
+        """
+
         all_prev_fights = df.loc[:index-1]
         if not all_prev_fights.empty:
             fighter_a_id_vals = all_prev_fights.fighter_a_id.values
@@ -68,17 +77,18 @@ class Knockdowns():
             
         return pd.Series([0, 0])
     
-    """
-    Given a fighter's past fights, returns the number of knockdowns per significant strikes landed
-
-    Parameters:
-        - fighter_past_fights (DataFrame): DataFrame containing the fighter's past fights
-        - fighter_id (str): ID of the fighter
-
-    Returns:
-        - float: Number of knockdowns per significant strikes landed
-    """
     def get_fighter_kd_per_sigs(self, fighter_past_fights, fighter_id):
+        """
+        Given a fighter's past fights, returns the number of knockdowns per significant strikes landed
+
+        Parameters:
+            fighter_past_fights (pd.DataFrame): DataFrame containing the fighter's past fights
+            fighter_id (str): ID of the fighter
+
+        Returns:
+            float: Number of knockdowns per significant strikes landed
+        """
+        
         if fighter_past_fights.empty:
             return 0
         
@@ -94,16 +104,17 @@ class Knockdowns():
 
         return fighter_knockdowns / fighter_sig_strikes if fighter_sig_strikes > 0 else 0
     
-    """
-    Tests the knockdowns feature
-
-    Parameters:
-        - df (DataFrame): DataFrame containing all the fights in the dataset
-
-    Returns:
-        - pd.DataFrame: DataFrame containing the knockdowns features for each fighter in the dataset
-    """
     def test_knockdown_feature(self, df):
+        """
+        Tests the knockdowns feature
+
+        Parameters:
+            df (pd.DataFrame): DataFrame containing all the fights in the dataset
+
+        Returns:
+            pd.DataFrame: DataFrame containing the knockdowns features for each fighter in the dataset
+        """
+
         test_df = self.create_knockdown_feats(df[((df['fighter_a_id'] == 'f1fac969a1d70b08') | (df['fighter_b_id'] == 'f1fac969a1d70b08'))]).reset_index(drop=True)
 
         fighter_a_cols = ['fighter_a_id', 'fighter_a_total_kd', 'fighter_a_total_sig_str_landed', \
@@ -127,18 +138,19 @@ class Knockdowns():
 
         print("Knockdown feature tests passed")
 
-    """
-    Swaps the fighter_a and fighter_b columns if the fighter_a_id is not the fighter we are interested in
-
-    Parameters:
-        - row (Series): Row of the DataFrame
-        - fighter_a_cols (list): List of fighter_a columns
-        - fighter_b_cols (list): List of fighter_b columns
-    
-    Returns:
-        - Series: Row of the DataFrame with the fighter_a and fighter_b columns swapped if necessary
-    """
     def swap_ids_and_columns(self, row, fighter_a_cols, fighter_b_cols):
+        """
+        Swaps the fighter_a and fighter_b columns if the fighter_a_id is not the fighter we are interested in
+
+        Parameters:
+            row (Series): Row of the DataFrame
+            fighter_a_cols (list): List of fighter_a columns
+            fighter_b_cols (list): List of fighter_b columns
+        
+        Returns:
+            Series: Row of the DataFrame with the fighter_a and fighter_b columns swapped if necessary
+        """
+
         if row['fighter_b_id'] == 'f1fac969a1d70b08':
             for i in range(len(fighter_a_cols)):
                 row[fighter_a_cols[i]], row[fighter_b_cols[i]] = row[fighter_b_cols[i]], row[fighter_a_cols[i]]
@@ -146,6 +158,13 @@ class Knockdowns():
         return row
 
     def test_knockdown_feature_l3(self, df):
+        """
+        Tests the knockdowns feature for the last 3 fights
+
+        Parameters:
+            df (pd.DataFrame): DataFrame containing all the fights in the dataset
+        """
+
         test_df = df.copy().reset_index(drop=True)
         columns_to_select = ['fighter_a_total_kd', 'fighter_a_total_sig_str_landed', 'fighter_b_total_kd', 'fighter_b_total_sig_str_landed']
         res_df = df[columns_to_select].rolling(3, min_periods=1).sum().reset_index(drop=True)

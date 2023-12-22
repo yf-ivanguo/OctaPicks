@@ -3,27 +3,48 @@ import swifter
 import pandas as pd
 
 class WinLoss():
+    """
+    This class is used to create the win/loss features for each fighter in the dataset.
+    """
+
     def __init__(self):
+        """
+        Initializes the WinLoss class
+        """
         pass
 
-    """
-    Creates the win/loss features for each fighter in the dataset
-
-    Usage:
-        win_loss = WinLoss()
-        win_loss_feats = win_loss.create_win_loss_feats(df)
-    """
     def create_win_loss_feats(self, df):
+        """
+        Creates the win/loss features for each fighter in the dataset
+
+        Args:
+            df (pd.DataFrame): The dataframe containing the fighter data
+
+        Returns:
+            pd.DataFrame: The dataframe with the win/loss features appended
+        """
+
         col_names = self.create_col_names()
         target_df = df
 
         target_df[col_names] = target_df.swifter.progress_bar(True).apply(lambda row: self.compute_win_loss(target_df, row['fighter_a_id'], row['fighter_b_id'], row.name, col_names), axis=1)
         return target_df
 
-    """
-    Computes the win/loss features for a single example in the dataset
-    """
     def compute_win_loss(self, df, fighter_a_id, fighter_b_id, index, col_names):
+        """
+        Computes the win/loss features for a single example in the dataset
+
+        Args:
+            df (pd.DataFrame): The dataframe containing the fighter data
+            fighter_a_id (int): The id of fighter a
+            fighter_b_id (int): The id of fighter b
+            index (int): The index of the example in the dataset
+            col_names (list): The list of column names for the win/loss features
+
+        Returns:
+            pd.Series: The win/loss features for the example
+        """
+
         res = []
         fighter_a_prev_fights, fighter_a_prev_fights_last_year = self.get_fighter_fights(df, fighter_a_id, index)
         fighter_b_prev_fights, fighter_b_prev_fights_last_year = self.get_fighter_fights(df, fighter_b_id, index)
@@ -82,10 +103,17 @@ class WinLoss():
                 res.append(0)
         return pd.Series(res)
     
-    """
-    Filters the data by division
-    """
     def get_fighter_division(self, df):
+        """
+        Filters the data by division
+
+        Args:
+            df (pd.DataFrame): The dataframe containing the fighter data
+        
+        Returns:
+            pd.DataFrame: The dataframe containing the fighter data filtered by division
+        """
+
         fighter_flyweight = df[df['division'] == 'Flyweight']
         fighter_bantamweight = df[df['division'] == 'Bantamweight']
         fighter_featherweight = df[df['division'] == 'Featherweight']
@@ -98,28 +126,52 @@ class WinLoss():
         fighter_overall = df
         return fighter_flyweight, fighter_bantamweight, fighter_featherweight, fighter_lightweight, fighter_welterweight, fighter_middleweight, fighter_light_heavyweight, fighter_heavyweight, fighter_catchweight, fighter_overall
 
-    """
-    Filters the data by outcome method
-    """
     def get_fighter_outcome_methods(self, df):
+        """
+        Filters the data by outcome method
+
+        Args:
+            df (pd.DataFrame): The dataframe containing the fighter data
+
+        Returns:
+            pd.DataFrame: The dataframe containing the fighter data filtered by outcome method
+        """
+
         fighter_ko = df[(df['outcome_method'] == 'KO/TKO') | (df['outcome_method'] == 'TKO - Doctor\'s Stoppage')]
         fighter_sub = df[df['outcome_method'] == 'Submission']
         fighter_decision = df[(df['outcome_method'] == 'Decision - Unanimous') | (df['outcome_method'] == 'Decision - Split') | (df['outcome_method'] == 'Decision - Majority')]
         fighter_total = df
         return fighter_ko, fighter_sub, fighter_decision, fighter_total
 
-    """
-    Filters the data by outcome
-    """
     def get_fighter_outcomes(self, df, fighter_id):
+        """
+        Filters the data by outcome
+
+        Args:
+            df (pd.DataFrame): The dataframe containing the fighter data
+            fighter_id (int): The id of the fighter
+
+        Returns:
+            pd.DataFrame: The dataframe containing the fighter data filtered by outcome
+        """
+
         fighter_wins = df[df['winner_id'] == fighter_id]
         fighter_losses = df[df['winner_id'] != fighter_id]
         return fighter_wins, fighter_losses
 
-    """
-    Filters the data by a specific fighter
-    """
     def get_fighter_fights(self, df, fighter_id, index):
+        """
+        Filters the data by a specific fighter
+
+        Args:
+            df (pd.DataFrame): The dataframe containing the fighter data
+            fighter_id (int): The id of the fighter
+            index (int): The index of the example in the dataset
+
+        Returns:
+            pd.DataFrame: The dataframe containing the fighter data filtered by fighter
+        """
+
         year_ago = self.compute_year_ago(df)
         all_prev_fights = df.loc[:index-1]
         if not all_prev_fights.empty:
@@ -132,10 +184,14 @@ class WinLoss():
             return prev_fights, prev_fights_last_year
         return pd.DataFrame(), pd.DataFrame()
     
-    """
-    Creates the column names for the win/loss features
-    """
     def create_col_names(self):
+        """
+        Creates the column names for the win/loss features
+
+        Returns:
+            list: The list of column names for the win/loss features
+        """
+
         col_names = []
         fighters = ['fighter-a', 'fighter-b']
         outcomes = ['wins', 'losses']
@@ -152,10 +208,17 @@ class WinLoss():
                             col_names.append(col_name)
         return col_names
     
-    """
-    Gets the date a year ago from the current date
-    """
     def compute_year_ago(self, df):
+        """
+        Gets the date a year ago from the current date
+
+        Args:
+            df (pd.DataFrame): The dataframe containing the fighter data
+        
+        Returns:
+            pd.Series: The series containing the date a year ago from the current date
+        """
+        
         temp_year_ago_df = pd.to_datetime(df['date'])
         temp_year_ago_df = temp_year_ago_df - pd.DateOffset(years=1)
         return temp_year_ago_df
