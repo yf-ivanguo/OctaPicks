@@ -254,14 +254,14 @@ class GroundStrikes():
             fighter_a_fights = all_prev_fights[(fighter_a_id_vals == fighter_a_id)][-last_fights:]
             fighter_b_fights = all_prev_fights[(fighter_b_id_vals == fighter_b_id)][-last_fights:]
 
-            sum_a, count_a = self.get_fighter_ground_details(fighter_a_fights, fighter_a_id, round_number, f'total_{column_name}' if round_number == 0 else f'round_{round_number}_{column_name}', is_defense, is_percentage)
-            sum_b, count_b = self.get_fighter_ground_details(fighter_b_fights, fighter_b_id, round_number, f'total_{column_name}' if round_number == 0 else f'round_{round_number}_{column_name}', is_defense, is_percentage)
+            sum_a, time_a = self.get_fighter_ground_details(fighter_a_fights, fighter_a_id, round_number, f'total_{column_name}' if round_number == 0 else f'round_{round_number}_{column_name}', is_defense)
+            sum_b, time_b = self.get_fighter_ground_details(fighter_b_fights, fighter_b_id, round_number, f'total_{column_name}' if round_number == 0 else f'round_{round_number}_{column_name}', is_defense)
 
-            return self.get_ground_strike_return_values(sum_a, sum_b, count_a, count_b, differential, is_percentage)
+            return self.get_ground_strike_return_values(sum_a, time_a, sum_b, time_b, differential, is_percentage)
 
         return 0, 0
     
-    def get_ground_strike_return_values(self, sum_a, sum_b, count_a, count_b, differential, is_percentage):
+    def get_ground_strike_return_values(self, sum_a, time_a, sum_b, time_b, differential, is_percentage):
         """
         Computes the ground strikes averages
 
@@ -271,20 +271,19 @@ class GroundStrikes():
         - count_a (int): The number of fights for fighter a
         - count_b (int): The number of fights for fighter b
         - differential (bool): Whether to compute the differential or not
-        - is_percentage (bool): Whether to compute the percentage or not
 
         Returns:
         - (float, float): The ground strikes for each fighter as a tuple
         """
-        fighter_a_ground_strikes = sum_a / count_a if not is_percentage else sum_a
-        fighter_b_ground_strikes = sum_b / count_b if not is_percentage else sum_b
+        fighter_a_ground_strikes = (sum_a / time_a if time_a > 0 else 1) if not is_percentage else sum_a
+        fighter_b_ground_strikes = (sum_b / time_b if time_b > 0 else 1) if not is_percentage else sum_b
         
         if differential:
             return fighter_a_ground_strikes - fighter_b_ground_strikes, fighter_b_ground_strikes - fighter_a_ground_strikes
         else:
             return fighter_a_ground_strikes, fighter_b_ground_strikes
 
-    def get_fighter_ground_details(self, fighter_past_fights, fighter_id, round_number, column_name, is_defense=False, is_percentage=False):
+    def get_fighter_ground_details(self, fighter_past_fights, fighter_id, round_number, column_name, is_defense=False):
         """
         Computes the ground strikes for each fighter in the dataset based on column_name
 
@@ -294,10 +293,9 @@ class GroundStrikes():
         - round_number (int): The round number of the current fight
         - column_name (string): The name of the column to compute
         - is_defense (bool): Whether to compute the defense or not
-        - is_percentage (bool): Whether to compute the percentage or not
 
         Returns:
-        - (float, float): The ground strike sum and count to calulate the average
+        - (float, float) : The ground strike sum and time sum for each fighter as a tuple
         """
         if fighter_past_fights.empty:
             return 0, 1
@@ -305,12 +303,12 @@ class GroundStrikes():
         fights_as_a = fighter_past_fights[fighter_past_fights['fighter_a_id'] == fighter_id]
         fights_as_b = fighter_past_fights[fighter_past_fights['fighter_b_id'] == fighter_id]
 
-        sum_a = self.get_ground_detail_sum(round_number, f'fighter_a_{column_name}' if not is_defense else f'fighter_b_{column_name}', fights_as_a, not is_percentage)
-        sum_b = self.get_ground_detail_sum(round_number, f'fighter_b_{column_name}' if not is_defense else f'fighter_a_{column_name}', fights_as_b, not is_percentage)
+        strike_sum_a, time_sum_a = self.get_ground_detail_sums(round_number, f'fighter_a_{column_name}' if not is_defense else f'fighter_b_{column_name}', fights_as_a)
+        strike_sum_b, time_sum_b = self.get_ground_detail_sums(round_number, f'fighter_b_{column_name}' if not is_defense else f'fighter_a_{column_name}', fights_as_b)
 
-        return (sum_a + sum_b), (len(fights_as_a) + len(fights_as_b))
+        return strike_sum_a + strike_sum_b, time_sum_a + time_sum_b
     
-    def get_ground_detail_sum(self, round_number, column_name, fights, per_minute=True):
+    def get_ground_detail_sums(self, round_number, column_name, fights):
         """
         Computes the sum from each of the fights for the ground strikes stats
 
@@ -318,25 +316,26 @@ class GroundStrikes():
         - round_number (int): The round number of the current fight
         - column_name (string): The name of the column to compute
         - fights (pd.Dataframe): The dataframe containing all the past fights for the fighter
-        - per_minute (bool): Whether to compute the sum per minute or not
 
         Returns:
-        - (float): The sum of the ground strikes stats
+        - (float, float): The sum of the ground strikes stats and the total time
         """
-        sum = 0
+        strike_sum = 0
+        time_sum = 0
 
         for _, row in fights.iterrows():
             if row[column_name] == "":
                 continue
-            
-            if row["outcome_round"] is round_number:
-                divisor = self.convert_time_to_minutes(row["outcome_time"]) if per_minute else 1
-                sum += float(row[column_name]) / divisor
+
+            strike_sum += float(row[column_name])
+            if round_number == 0:
+                time_sum += self.convert_time_to_minutes(row["outcome_time"]) + (int(row["outcome_round"])-1)*5
+            elif row["outcome_round"] is round_number:
+                time_sum += self.convert_time_to_minutes(row["outcome_time"])
             else:
-                divisor = 5 if per_minute else 1
-                sum += float(row[column_name]) / divisor
+                time_sum += 5
         
-        return sum
+        return strike_sum, time_sum
     
     def convert_time_to_minutes(self, time):
         """
