@@ -251,8 +251,8 @@ class DistanceStrikes():
             fighter_a_id_vals = all_prev_fights.fighter_a_id.values
             fighter_b_id_vals = all_prev_fights.fighter_b_id.values
 
-            fighter_a_fights = all_prev_fights[(fighter_a_id_vals == fighter_a_id)][-last_fights:]
-            fighter_b_fights = all_prev_fights[(fighter_b_id_vals == fighter_b_id)][-last_fights:]
+            fighter_a_fights = all_prev_fights[(fighter_a_id_vals == fighter_a_id) | (fighter_b_id_vals == fighter_a_id)][-last_fights:]
+            fighter_b_fights = all_prev_fights[(fighter_b_id_vals == fighter_b_id) | (fighter_a_id_vals == fighter_b_id)][-last_fights:]
 
             sum_a, time_a = self.get_fighter_distance_details(fighter_a_fights, fighter_a_id, round_number, f'total_{column_name}' if round_number == 0 else f'round_{round_number}_{column_name}', is_defense)
             sum_b, time_b = self.get_fighter_distance_details(fighter_b_fights, fighter_b_id, round_number, f'total_{column_name}' if round_number == 0 else f'round_{round_number}_{column_name}', is_defense)
@@ -360,7 +360,20 @@ class DistanceStrikes():
         """
         col_names = []
         fighters = ['fighter-a', 'fighter-b']
-        distance_strike_stats = ['distance-strikes-attempted-per-minute', 'distance-strikes-landed-per-minute', 'distance-strikes-accuracy-percentage', 'distance-strikes-absorbed-per-minute', 'distance-strikes-recieved-per-minute', 'distance-strikes-defended-percentage', 'distance-strikes-attempted-per-minute-diff', 'distance-strikes-landed-per-minute-diff', 'distance-strikes-accuracy-percentage-diff', 'distance-strikes-absorbed-per-minute-diff', 'distance-strikes-recieved-per-minute-diff', 'distance-strikes-defended-percentage-diff']
+        distance_strike_stats = [
+            'distance-strikes-attempted-per-minute', 
+            'distance-strikes-landed-per-minute', 
+            'distance-strikes-accuracy-percentage', 
+            'distance-strikes-absorbed-per-minute', 
+            'distance-strikes-recieved-per-minute', 
+            'distance-strikes-defended-percentage', 
+            'distance-strikes-attempted-per-minute-diff', 
+            'distance-strikes-landed-per-minute-diff', 
+            'distance-strikes-accuracy-percentage-diff', 
+            'distance-strikes-absorbed-per-minute-diff', 
+            'distance-strikes-recieved-per-minute-diff', 
+            'distance-strikes-defended-percentage-diff'
+        ]
         rounds = ['R1', 'R2', 'R3', 'R4', 'R5', 'overall']
         time_periods = ['l3', 'l5', 'alltime']
 
