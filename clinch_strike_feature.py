@@ -140,8 +140,8 @@ class ClinchStrikes():
         Returns:
         - (float, float): The clinch strikes accuracy percentage for each fighter as a tuple
         """
-        fighter_a_clinch_strikess_landed, fighter_b_clinch_strikess_landed = self.compute_clinch_strikes(df, fighter_a_id, fighter_b_id, index, round_number, last_fights, column_name="clinch_landed", differential=differential, is_defense=True, is_percentage=True)
-        fighter_a_clinch_strikess_attempted, fighter_b_clinch_strikess_attempted = self.compute_clinch_strikes(df, fighter_a_id, fighter_b_id, index, round_number, last_fights, column_name="clinch_attempted", differential=differential, is_defense=True, is_percentage=True)
+        fighter_a_clinch_strikess_landed, fighter_b_clinch_strikess_landed = self.compute_clinch_strikes(df, fighter_a_id, fighter_b_id, index, round_number, last_fights, column_name="clinch_landed", differential=differential, is_percentage=True)
+        fighter_a_clinch_strikess_attempted, fighter_b_clinch_strikess_attempted = self.compute_clinch_strikes(df, fighter_a_id, fighter_b_id, index, round_number, last_fights, column_name="clinch_attempted", differential=differential, is_percentage=True)
         return self.compute_clinch_strikes_percentages(fighter_a_clinch_strikess_landed, fighter_a_clinch_strikess_attempted, fighter_b_clinch_strikess_landed, fighter_b_clinch_strikess_attempted, differential=differential)
 
     '''
