@@ -140,8 +140,8 @@ class DistanceStrikes():
         Returns:
         - (float, float): The distance strikes accuracy percentage for each fighter as a tuple
         """
-        fighter_a_distance_strikes_landed, fighter_b_distance_strikes_landed = self.compute_distance_strikes(df, fighter_a_id, fighter_b_id, index, round_number, last_fights, column_name="distance_shots_landed", differential=differential, is_defense=True, is_percentage=True)
-        fighter_a_distance_strikes_attempted, fighter_b_distance_strikes_attempted = self.compute_distance_strikes(df, fighter_a_id, fighter_b_id, index, round_number, last_fights, column_name="distance_shots_attempted", differential=differential, is_defense=True, is_percentage=True)
+        fighter_a_distance_strikes_landed, fighter_b_distance_strikes_landed = self.compute_distance_strikes(df, fighter_a_id, fighter_b_id, index, round_number, last_fights, column_name="distance_shots_landed", differential=differential, is_percentage=True)
+        fighter_a_distance_strikes_attempted, fighter_b_distance_strikes_attempted = self.compute_distance_strikes(df, fighter_a_id, fighter_b_id, index, round_number, last_fights, column_name="distance_shots_attempted", differential=differential, is_percentage=True)
         return self.compute_distance_strikes_percentages(fighter_a_distance_strikes_landed, fighter_a_distance_strikes_attempted, fighter_b_distance_strikes_landed, fighter_b_distance_strikes_attempted, differential=differential)
 
     '''

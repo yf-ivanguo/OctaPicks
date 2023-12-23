@@ -140,8 +140,8 @@ class GroundStrikes():
         Returns:
         - (float, float): The ground strikes accuracy percentage for each fighter as a tuple
         """
-        fighter_a_ground_strikes_landed, fighter_b_ground_strikes_landed = self.compute_ground_strikes(df, fighter_a_id, fighter_b_id, index, round_number, last_fights, column_name="ground_landed", differential=differential, is_defense=True, is_percentage=True)
-        fighter_a_ground_strikes_attempted, fighter_b_ground_strikes_attempted = self.compute_ground_strikes(df, fighter_a_id, fighter_b_id, index, round_number, last_fights, column_name="ground_attempted", differential=differential, is_defense=True, is_percentage=True)
+        fighter_a_ground_strikes_landed, fighter_b_ground_strikes_landed = self.compute_ground_strikes(df, fighter_a_id, fighter_b_id, index, round_number, last_fights, column_name="ground_landed", differential=differential, is_percentage=True)
+        fighter_a_ground_strikes_attempted, fighter_b_ground_strikes_attempted = self.compute_ground_strikes(df, fighter_a_id, fighter_b_id, index, round_number, last_fights, column_name="ground_attempted", differential=differential, is_percentage=True)
         return self.compute_ground_strikes_percentages(fighter_a_ground_strikes_landed, fighter_a_ground_strikes_attempted, fighter_b_ground_strikes_landed, fighter_b_ground_strikes_attempted, differential=differential)
 
     '''
