@@ -43,10 +43,10 @@ class WLDifferential():
         - fighter_a_id (int): The id of the first fighter
         - fighter_b_id (int): The id of the second fighter
         - index (int): The index of the current fight
-        - col_names (list): The list of column names for the consecutive w/l features
+        - col_names (list): The list of column names for the w/l differential features
 
         Returns:
-        - pd.Series: The series containing the consecutive w/l features for each fighter
+        - pd.Series: The series containing the w/l differential features for each fighter
         """
         res = []
         for i in range(0, len(col_names), 4):
@@ -56,27 +56,27 @@ class WLDifferential():
             else:
                 last_fights = 0
                         
-            fighter_a_cwins, fighter_a_closses, fighter_b_cwins, fighter_b_closses = self.compute_wl_diff_stats(df, fighter_a_id, fighter_b_id, index, last_fights)
-            res.append(fighter_a_cwins)
-            res.append(fighter_a_closses)
-            res.append(fighter_b_cwins)
-            res.append(fighter_b_closses)
+            fighter_a_wins_diff, fighter_a_losses_diff, fighter_b_wins_diffs, fighter_b_losses_diff = self.compute_wl_diff_stats(df, fighter_a_id, fighter_b_id, index, last_fights)
+            res.append(fighter_a_wins_diff)
+            res.append(fighter_a_losses_diff)
+            res.append(fighter_b_wins_diffs)
+            res.append(fighter_b_losses_diff)
                 
         return pd.Series(res)
 
     def compute_wl_diff_stats(self, df, fighter_a_id, fighter_b_id, index, last_fights):
         """
-        Computes the consecutive w/l stats for each fighter in the dataset
+        Computes the w/l differential stats for each fighter in the dataset
 
         Parameters:
         - df (pd.Dataframe): The original dataframe containing all the fights
         - fighter_a_id (int): The id of the first fighter
         - fighter_b_id (int): The id of the second fighter
         - index (int): The index of the row in the dataframe
-        - col_names (list): The list of column names for the consecutive w/l stats
+        - col_names (list): The list of column names for the w/l differential stats
 
         Returns:
-        - list: The list of consecutive w/l stats for each fighter
+        - list: The list of w/l differential stats for each fighter
         """
         all_prev_fights = df.loc[:index-1]
         if not all_prev_fights.empty:
