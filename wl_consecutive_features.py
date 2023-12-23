@@ -99,24 +99,44 @@ class ConsecutiveWL():
             fighter_a_closses = 0
             fighter_b_cwins = 0
             fighter_b_closses = 0
-
+            
             if not fighter_a_fights.empty:
+                most_recent_fight = fighter_a_fights[-1:]
+                won_last_fight = most_recent_fight['winner_id'].iloc[0] == fighter_a_id
+                fighter_a_cwins = 1 if won_last_fight else 0
+                fighter_a_closses = 0 if won_last_fight else 1
+                fighter_a_fights = fighter_a_fights[:-1]
+                fighter_a_fights = fighter_a_fights[::-1]
                 for _, fight in fighter_a_fights.iterrows():
-                    if fight['winner_id'] == fighter_a_id:
+                    if fight['winner_id'] == fighter_a_id and fighter_a_cwins > 0:
                         fighter_a_cwins += 1
                         fighter_a_closses = 0
-                    else:
+                    elif fighter_a_cwins > 0:
+                        break;
+                    elif fight['winner_id'] != fighter_a_id and fighter_b_closses > 0:
                         fighter_a_closses += 1
                         fighter_a_cwins = 0
+                    else:
+                        break;
     
             if not fighter_b_fights.empty:
+                most_recent_fight = fighter_b_fights[-1:]
+                won_last_fight = most_recent_fight['winner_id'].iloc[0] == fighter_a_id
+                fighter_b_cwins = 1 if won_last_fight else 0
+                fighter_b_closses = 0 if won_last_fight else 1
+                fighter_b_fights = fighter_b_fights[:-1]
+                fighter_b_fights = fighter_b_fights[::-1]
                 for _, fight in fighter_b_fights.iterrows():
-                    if fight['winner_id'] == fighter_b_id:
+                    if fight['winner_id'] == fighter_b_id and fighter_b_cwins > 0:
                         fighter_b_cwins += 1
                         fighter_b_closses = 0
-                    else:
+                    elif fighter_b_cwins > 0:
+                        break;
+                    elif fight['winner_id'] != fighter_b_id and fighter_b_closses > 0:
                         fighter_b_closses += 1
                         fighter_b_cwins = 0
+                    else: 
+                        break;
         
             if diff:
                 return fighter_a_cwins - fighter_b_cwins, fighter_a_closses - fighter_b_closses, fighter_b_cwins - fighter_a_cwins, fighter_b_closses - fighter_a_closses
