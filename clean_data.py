@@ -12,11 +12,15 @@ Usage:
 class CleanData():
     def __init__(self, df) -> None:
         self.df = df
+        self.convert_to_datetime()
         self.rename_data()
         self.drop_useless_cols()
         self.impute_data()
         self.enforce_types()
         self.replace_divisions()
+
+    def convert_to_datetime(self):
+        self.df['date'] = pd.to_datetime(self.df['date'])
 
     def rename_data(self):
         self.df.columns = self.df.columns.str.lower().str.replace(' ', '_').str.replace('%', 'pct')
