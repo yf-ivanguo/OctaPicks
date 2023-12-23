@@ -251,8 +251,8 @@ class ClinchStrikes():
             fighter_a_id_vals = all_prev_fights.fighter_a_id.values
             fighter_b_id_vals = all_prev_fights.fighter_b_id.values
 
-            fighter_a_fights = all_prev_fights[(fighter_a_id_vals == fighter_a_id)][-last_fights:]
-            fighter_b_fights = all_prev_fights[(fighter_b_id_vals == fighter_b_id)][-last_fights:]
+            fighter_a_fights = all_prev_fights[(fighter_a_id_vals == fighter_a_id) | (fighter_b_id_vals == fighter_a_id)][-last_fights:]
+            fighter_b_fights = all_prev_fights[(fighter_b_id_vals == fighter_b_id) | (fighter_a_id_vals == fighter_b_id)][-last_fights:]
 
             sum_a, time_a = self.get_fighter_clinch_details(fighter_a_fights, fighter_a_id, round_number, f'total_{column_name}' if round_number == 0 else f'round_{round_number}_{column_name}', is_defense)
             sum_b, time_b = self.get_fighter_clinch_details(fighter_b_fights, fighter_b_id, round_number, f'total_{column_name}' if round_number == 0 else f'round_{round_number}_{column_name}', is_defense)
@@ -360,7 +360,20 @@ class ClinchStrikes():
         """
         col_names = []
         fighters = ['fighter-a', 'fighter-b']
-        clinch_strike_stats = ['clinch-strikes-attempted-per-minute', 'clinch-strikes-landed-per-minute', 'clinch-strikes-accuracy-percentage', 'clinch-strikes-absorbed-per-minute', 'clinch-strikes-recieved-per-minute', 'clinch-strikes-defended-percentage', 'clinch-strikes-attempted-per-minute-diff', 'clinch-strikes-landed-per-minute-diff', 'clinch-strikes-accuracy-percentage-diff', 'clinch-strikes-absorbed-per-minute-diff', 'clinch-strikes-recieved-per-minute-diff', 'clinch-strikes-defended-percentage-diff']
+        clinch_strike_stats = [
+            'clinch-strikes-attempted-per-minute', 
+            'clinch-strikes-landed-per-minute', 
+            'clinch-strikes-accuracy-percentage', 
+            'clinch-strikes-absorbed-per-minute', 
+            'clinch-strikes-recieved-per-minute', 
+            'clinch-strikes-defended-percentage', 
+            'clinch-strikes-attempted-per-minute-diff', 
+            'clinch-strikes-landed-per-minute-diff', 
+            'clinch-strikes-accuracy-percentage-diff', 
+            'clinch-strikes-absorbed-per-minute-diff', 
+            'clinch-strikes-recieved-per-minute-diff', 
+            'clinch-strikes-defended-percentage-diff'
+        ]
         rounds = ['R1', 'R2', 'R3', 'R4', 'R5', 'overall']
         time_periods = ['l3', 'l5', 'alltime']
 
