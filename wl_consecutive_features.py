@@ -87,7 +87,7 @@ class ConsecutiveWL():
         Returns:
         - list: The list of consecutive w/l stats for each fighter
         """
-        all_prev_fights = df.iloc[:index]
+        all_prev_fights = df.loc[:index-1]
         if not all_prev_fights.empty:
             fighter_a_id_vals = all_prev_fights.fighter_a_id.values
             fighter_b_id_vals = all_prev_fights.fighter_b_id.values
