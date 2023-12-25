@@ -140,8 +140,8 @@ class GroundStrikes():
         Returns:
         - (float, float): The ground strikes accuracy percentage for each fighter as a tuple
         """
-        fighter_a_ground_strikes_landed, fighter_b_ground_strikes_landed = self.compute_ground_strikes(df, fighter_a_id, fighter_b_id, index, round_number, last_fights, column_name="ground_landed", differential=differential, is_defense=True, is_percentage=True)
-        fighter_a_ground_strikes_attempted, fighter_b_ground_strikes_attempted = self.compute_ground_strikes(df, fighter_a_id, fighter_b_id, index, round_number, last_fights, column_name="ground_attempted", differential=differential, is_defense=True, is_percentage=True)
+        fighter_a_ground_strikes_landed, fighter_b_ground_strikes_landed = self.compute_ground_strikes(df, fighter_a_id, fighter_b_id, index, round_number, last_fights, column_name="ground_landed", differential=differential, is_percentage=True)
+        fighter_a_ground_strikes_attempted, fighter_b_ground_strikes_attempted = self.compute_ground_strikes(df, fighter_a_id, fighter_b_id, index, round_number, last_fights, column_name="ground_attempted", differential=differential, is_percentage=True)
         return self.compute_ground_strikes_percentages(fighter_a_ground_strikes_landed, fighter_a_ground_strikes_attempted, fighter_b_ground_strikes_landed, fighter_b_ground_strikes_attempted, differential=differential)
 
     '''
@@ -251,8 +251,8 @@ class GroundStrikes():
             fighter_a_id_vals = all_prev_fights.fighter_a_id.values
             fighter_b_id_vals = all_prev_fights.fighter_b_id.values
 
-            fighter_a_fights = all_prev_fights[(fighter_a_id_vals == fighter_a_id)][-last_fights:]
-            fighter_b_fights = all_prev_fights[(fighter_b_id_vals == fighter_b_id)][-last_fights:]
+            fighter_a_fights = all_prev_fights[(fighter_a_id_vals == fighter_a_id) | (fighter_b_id_vals == fighter_a_id)][-last_fights:]
+            fighter_b_fights = all_prev_fights[(fighter_b_id_vals == fighter_b_id) | (fighter_a_id_vals == fighter_b_id)][-last_fights:]
 
             sum_a, time_a = self.get_fighter_ground_details(fighter_a_fights, fighter_a_id, round_number, f'total_{column_name}' if round_number == 0 else f'round_{round_number}_{column_name}', is_defense)
             sum_b, time_b = self.get_fighter_ground_details(fighter_b_fights, fighter_b_id, round_number, f'total_{column_name}' if round_number == 0 else f'round_{round_number}_{column_name}', is_defense)
@@ -360,7 +360,20 @@ class GroundStrikes():
         """
         col_names = []
         fighters = ['fighter-a', 'fighter-b']
-        ground_strike_stats = ['ground-strikes-attempted-per-minute', 'ground-strikes-landed-per-minute', 'ground-strikes-accuracy-percentage', 'ground-strikes-absorbed-per-minute', 'ground-strikes-recieved-per-minute', 'ground-strikes-defended-percentage', 'ground-strikes-attempted-per-minute-diff', 'ground-strikes-landed-per-minute-diff', 'ground-strikes-accuracy-percentage-diff', 'ground-strikes-absorbed-per-minute-diff', 'ground-strikes-recieved-per-minute-diff', 'ground-strikes-defended-percentage-diff']
+        ground_strike_stats = [
+            'ground-strikes-attempted-per-minute', 
+            'ground-strikes-landed-per-minute', 
+            'ground-strikes-accuracy-percentage', 
+            'ground-strikes-absorbed-per-minute', 
+            'ground-strikes-recieved-per-minute', 
+            'ground-strikes-defended-percentage', 
+            'ground-strikes-attempted-per-minute-diff', 
+            'ground-strikes-landed-per-minute-diff', 
+            'ground-strikes-accuracy-percentage-diff', 
+            'ground-strikes-absorbed-per-minute-diff', 
+            'ground-strikes-recieved-per-minute-diff', 
+            'ground-strikes-defended-percentage-diff'
+        ]
         rounds = ['R1', 'R2', 'R3', 'R4', 'R5', 'overall']
         time_periods = ['l3', 'l5', 'alltime']
 
