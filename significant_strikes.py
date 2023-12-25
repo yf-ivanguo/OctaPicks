@@ -165,10 +165,10 @@ class SignificantStrikes():
         time_periods = ['l3', 'l5', 'alltime']
 
         # Iterate through all combinations to create column names
-        for fighter in fighters:
-            for significant_strike_stat in significant_strike_stats:
-                for round in rounds:
-                    for time_period in time_periods:
+        for significant_strike_stat in significant_strike_stats:
+            for round in rounds:
+                for time_period in time_periods:
+                    for fighter in fighters:
                         col_name = f"{fighter.replace(' ', '_')}_{significant_strike_stat.replace(' ', '_')}_{round}_{time_period.replace(' ', '_')}"
                         col_names.append(col_name)
         return col_names
@@ -188,10 +188,10 @@ class SignificantStrikes():
         time_periods = ['l3', 'l5', 'alltime']
 
         # Iterate through all combinations to create column names
-        for fighter in fighters:
-            for significant_strike_stat in significant_strike_stats:
-                for round in rounds:
-                    for time_period in time_periods:
+        for significant_strike_stat in significant_strike_stats:
+            for round in rounds:
+                for time_period in time_periods:
+                    for fighter in fighters:
                         col_name = f"{fighter.replace(' ', '_')}_{significant_strike_stat.replace(' ', '_')}_{round}_{time_period.replace(' ', '_')}"
                         col_names.append(col_name)
         return col_names
