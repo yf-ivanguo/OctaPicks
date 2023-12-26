@@ -18,6 +18,7 @@ class CleanData():
         self.impute_data()
         self.enforce_types()
         self.replace_divisions()
+        self.rename_data()
 
     def convert_to_datetime(self):
         self.df['date'] = pd.to_datetime(self.df['date'])
@@ -165,3 +166,6 @@ class CleanData():
             'TUF Nations Canada vs. Australia Middleweight Tournament Title' : 'Middleweight',
             'Catch Weight' : 'Catchweight'
         })
+
+    def rename_data(self):
+        self.df = self.df.rename(columns={'division' : 'weight_class', 'outcome_format' : 'rounds_format'}, inplace=True)
