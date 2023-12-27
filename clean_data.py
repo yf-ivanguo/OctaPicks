@@ -32,6 +32,9 @@ class CleanData():
     def impute_data(self):
         self.df = self.df.fillna(0)
 
+    def replace_outdated_rounds(self):
+        self.df['outcome_format'] = self.df['outcome_format'].apply(lambda x: 3 if x == 'No' or int(x) < 3 else int(x))
+
     def enforce_types(self):
         mixed_type_cols = ['fighter_a_round_1_kd', 'fighter_a_round_1_sig_str_landed', 'fighter_a_round_1_sig_str_attempted', 
                            'fighter_a_round_1_total_str_landed', 'fighter_a_round_1_total_str_attempted', 'fighter_a_round_1_td_landed', 
