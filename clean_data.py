@@ -10,24 +10,32 @@ Usage:
     Renames all the columns to work with easier, drops useless columns, and imputes missing data with 0
 """
 class CleanData():
-    def __init__(self, df) -> None:
+    def __init__(self):
+        self.fighter_cols = ['a', 'b']
+        self.stat_cols = ['kd', 'sig_str_landed', 'sig_str_attempted', 'sig_str_pct', 'total_str_landed', 'total_str_attempted', 'td_landed', 'td_attempted', 'td_pct', 'sub_att', 'rev', 'ctrl']
+        self.round_cols = ['1', '2', '3', '4', '5']
+        self.target_cols = ['head', 'body', 'leg', 'distance', 'clinch', 'ground']
+        self.target_accuracy_cols = ['shots_landed', 'shots_attempted']
+        self.cols = [f'fighter_{f}_round_{r}_{stat}' for f in self.fighter_cols for r in self.round_cols for stat in self.stat_cols] + \
+					[f'fighter_{f}_total_{stat}' for f in self.fighter_cols for stat in self.stat_cols] + \
+					[f'fighter_{f}_round_{r}_{shot}_{acc}' for f in self.fighter_cols for r in self.round_cols for shot in self.target_cols for acc in self.target_accuracy_cols] + \
+					[f'fighter_{f}_total_{shot}_{acc}' for f in self.fighter_cols for shot in self.target_cols for acc in self.target_accuracy_cols]
+
+    def clean_data(self, df):
         self.df = df
         self.convert_to_datetime()
-        self.rename_data()
         self.drop_useless_cols()
         self.impute_data()
         self.enforce_types()
         self.replace_divisions()
         self.rename_data()
+        return self.df
 
     def convert_to_datetime(self):
         self.df['date'] = pd.to_datetime(self.df['date'])
 
-    def rename_data(self):
-        self.df.columns = self.df.columns.str.lower().str.replace(' ', '_').str.replace('%', 'pct')
-    
     def drop_useless_cols(self):
-        self.df = self.df.drop('outcome_detail', axis=1)
+        self.df = self.df.drop(['outcome_detail', 'elevation'], axis=1)
     
     def impute_data(self):
         self.df = self.df.fillna(0)
@@ -36,34 +44,7 @@ class CleanData():
         self.df['outcome_format'] = self.df['outcome_format'].apply(lambda x: 3 if x == 'No' or int(x) < 3 else int(x))
 
     def enforce_types(self):
-        mixed_type_cols = ['fighter_a_round_1_kd', 'fighter_a_round_1_sig_str_landed', 'fighter_a_round_1_sig_str_attempted', 
-                           'fighter_a_round_1_total_str_landed', 'fighter_a_round_1_total_str_attempted', 'fighter_a_round_1_td_landed', 
-                           'fighter_a_round_1_td_attempted', 'fighter_a_round_1_sub_att', 'fighter_a_round_1_rev', 'fighter_a_total_kd', 
-                           'fighter_a_total_sig_str_landed', 'fighter_a_total_sig_str_attempted', 'fighter_a_total_total_str_landed', 
-                           'fighter_a_total_total_str_attempted', 'fighter_a_total_td_landed', 'fighter_a_total_attempted', 
-                           'fighter_a_total_sub_att', 'fighter_a_total_rev', 'fighter_b_round_1_kd', 'fighter_b_round_1_sig_str_landed', 
-                           'fighter_b_round_1_sig_str_attempted', 'fighter_b_round_1_total_str_landed', 'fighter_b_round_1_total_str_attempted', 
-                           'fighter_b_round_1_td_landed', 'fighter_b_round_1_attempted', 'fighter_b_round_1_sub_att', 'fighter_b_round_1_rev', 
-                           'fighter_b_total_kd', 'fighter_b_total_sig_str_landed', 'fighter_b_total_sig_str_attempted', 'fighter_b_total_total_str_landed', 
-                           'fighter_b_total_total_str_attempted', 'fighter_b_total_td_landed', 'fighter_b_total_attempted', 'fighter_b_total_sub_att', 
-                           'fighter_b_total_rev', 'fighter_a_round_1_head_shots_landed', 'fighter_a_round_1_head_shots_attempted', 'fighter_a_round_1_body_shots_landed', 
-                           'fighter_a_round_1_body_shots_attempted', 'fighter_a_round_1_leg_shots_landed', 'fighter_a_round_1_leg_shots_attempted', 
-                           'fighter_a_round_1_distance_shots_landed', 'fighter_a_round_1_distance_shots_attempted', 'fighter_a_round_1_clinch_landed', 
-                           'fighter_a_round_1_clinch_attempted', 'fighter_a_round_1_ground_landed', 'fighter_a_round_1_ground_attempted', 
-                           'fighter_a_total_head_shots_landed', 'fighter_a_total_head_shots_attempted', 'fighter_a_total_body_shots_landed', 
-                           'fighter_a_total_body_shots_attempted', 'fighter_a_total_leg_shots_landed', 'fighter_a_total_leg_shots_attempted', 
-                           'fighter_a_total_distance_shots_landed', 'fighter_a_total_distance_shots_attempted', 'fighter_a_total_clinch_landed', 
-                           'fighter_a_total_clinch_attempted', 'fighter_a_total_ground_landed', 'fighter_a_total_ground_attempted', 
-                           'fighter_b_round_1_head_shots_landed', 'fighter_b_round_1_head_shots_attempted', 'fighter_b_round_1_body_shots_landed', 
-                           'fighter_b_round_1_body_shots_attempted', 'fighter_b_round_1_leg_shots_landed', 'fighter_b_round_1_leg_shots_attempted', 
-                           'fighter_b_round_1_distance_shots_landed', 'fighter_b_round_1_distance_shots_attempted', 'fighter_b_round_1_clinch_landed', 
-                           'fighter_b_round_1_clinch_attempted', 'fighter_b_round_1_ground_landed', 'fighter_b_round_1_ground_attempted', 
-                           'fighter_b_total_head_shots_landed', 'fighter_b_total_head_shots_attempted', 'fighter_b_total_body_shots_landed', 
-                           'fighter_b_total_body_shots_attempted', 'fighter_b_total_leg_shots_landed', 'fighter_b_total_leg_shots_attempted', 
-                           'fighter_b_total_distance_shots_landed', 'fighter_b_total_distance_shots_attempted', 'fighter_b_total_clinch_landed', 
-                           'fighter_b_total_clinch_attempted', 'fighter_b_total_ground_landed', 'fighter_b_total_ground_attempted']
-        
-        for col in mixed_type_cols:
+        for col in self.cols:
             # Convert to numeric, all that can't be converted convert to NaN
             self.df[col] = pd.to_numeric(self.df[col], errors='coerce')
             self.df = self.df.fillna(0)
@@ -171,4 +152,4 @@ class CleanData():
         })
 
     def rename_data(self):
-        self.df = self.df.rename(columns={'division' : 'weight_class', 'outcome_format' : 'rounds_format'}, inplace=True)
+        self.df.rename(columns={'division' : 'weight_class', 'outcome_format' : 'rounds_format'})
