@@ -75,10 +75,7 @@ class TakeDown():
             
             prev_fights = pd.DataFrame()
 
-            if fighter == 'fighter-a':
-                fighter_id = fighter_a_id
-            else:
-                fighter_id = fighter_b_id
+            fighter_id = fighter_a_id if fighter == 'fighter-a' else fighter_b_id
 
             # filter based on time period
             if time_period == 'l3':
@@ -402,9 +399,14 @@ class TakeDown():
         fighter_a_id_vals = stats_by_fight_df.fighter_a_id.values
         fighter_b_id_vals = stats_by_fight_df.fighter_b_id.values
 
+        # Filter rows where the fighter is fighter_a and sum up their takedowns
+        td_landed_a = stats_by_fight_df[fighter_a_id_vals == fighter_id][f'fighter_a_td_landed' if not is_defence else f'fighter_b_td_landed'].sum()
 
-        # Sum up takedowns landed based on whether it's for defence or offence
-        td_landed = stats_by_fight_df[fighter_a_id_vals == fighter_id][f'fighter_a_td_landed' if not is_defence else f'fighter_b_td_landed'].sum() + stats_by_fight_df[fighter_b_id_vals == fighter_id][f'fighter_b_td_landed' if not is_defence else f'fighter_a_td_landed'].sum()
+        # Filter rows where the fighter is fighter_b and sum up their takedowns
+        td_landed_b = stats_by_fight_df[fighter_b_id_vals == fighter_id][f'fighter_b_td_landed' if not is_defence else f'fighter_a_td_landed'].sum()
+
+        # Sum up takedowns landed from both calculations
+        td_landed = td_landed_a + td_landed_b
 
         if not is_percentage:
             # Sum total fight time and calculate rate of takedowns landed per minute
