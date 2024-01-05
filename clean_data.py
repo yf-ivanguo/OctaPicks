@@ -12,11 +12,16 @@ Usage:
 class CleanData():
     def __init__(self, df) -> None:
         self.df = df
+        self.convert_to_datetime()
         self.rename_data()
         self.drop_useless_cols()
         self.impute_data()
         self.enforce_types()
         self.replace_divisions()
+        self.rename_data()
+
+    def convert_to_datetime(self):
+        self.df['date'] = pd.to_datetime(self.df['date'])
 
     def rename_data(self):
         self.df.columns = self.df.columns.str.lower().str.replace(' ', '_').str.replace('%', 'pct')
@@ -26,6 +31,9 @@ class CleanData():
     
     def impute_data(self):
         self.df = self.df.fillna(0)
+
+    def replace_outdated_rounds(self):
+        self.df['outcome_format'] = self.df['outcome_format'].apply(lambda x: 3 if x == 'No' or int(x) < 3 else int(x))
 
     def enforce_types(self):
         mixed_type_cols = ['fighter_a_round_1_kd', 'fighter_a_round_1_sig_str_landed', 'fighter_a_round_1_sig_str_attempted', 
@@ -161,3 +169,6 @@ class CleanData():
             'TUF Nations Canada vs. Australia Middleweight Tournament Title' : 'Middleweight',
             'Catch Weight' : 'Catchweight'
         })
+
+    def rename_data(self):
+        self.df = self.df.rename(columns={'division' : 'weight_class', 'outcome_format' : 'rounds_format'}, inplace=True)

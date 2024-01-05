@@ -92,7 +92,6 @@ class Knockdowns():
         if fighter_past_fights.empty:
             return 0
         
-        
         fighter_a_id_vals = fighter_past_fights.fighter_a_id.values
         fighter_b_id_vals = fighter_past_fights.fighter_b_id.values
         
