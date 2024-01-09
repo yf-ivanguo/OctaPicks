@@ -210,6 +210,8 @@ class SignificantStrikes():
         """
 
         all_prev_fights = df.loc[:index-1]
+        col_names = df.columns
+        all_prev_fights_default = pd.DataFrame(columns=col_names)
 
         if not all_prev_fights.empty:
             # Filter fights involving the specified fighter
@@ -220,7 +222,7 @@ class SignificantStrikes():
 
             return prev_fights[-3:], prev_fights[-5:], prev_fights
 
-        return pd.DataFrame(), pd.DataFrame(), pd.DataFrame()
+        return all_prev_fights_default(), all_prev_fights_default(), all_prev_fights_default()
         
     def get_raw_significant_strikes_stats(self, df, round):
         """
