@@ -16,6 +16,7 @@ import time
 import asyncio
 
 UFC_STATS_URL = 'http://www.ufcstats.com/statistics/events/completed?page=all'
+FIGHTS_CSV = 'data/ufc_men_fights.csv'
 
 # Add to these columns with new data scraped
 MATCH_COLS = ['fight_night_title', 'date', 'location', 'elevation', 'fighter_a', 'fighter_a_id', 'fighter_b', 'fighter_b_id', 'winner', 
@@ -40,7 +41,7 @@ def clean_up(delete_csv_on_fail):
     """
 
     if delete_csv_on_fail:
-        os.remove('ufc_men_fights.csv')
+        os.remove(FIGHTS_CSV)
 
 def read_config(file_path='config.ini'):
     """
@@ -499,7 +500,7 @@ def store_results(list_of_lists):
 
 	fights_list = sum(list_of_lists, []) # flatten lists
 
-	with open('ufc_men_fights.csv', 'w') as fights_file:
+	with open(FIGHTS_CSV, 'w') as fights_file:
 		fieldnames = COLS
 		file_writer = csv.DictWriter(fights_file, fieldnames=fieldnames)
 		file_writer.writeheader()
