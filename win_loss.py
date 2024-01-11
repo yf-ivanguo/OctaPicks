@@ -174,6 +174,8 @@ class WinLoss():
 
         year_ago = self.compute_year_ago(df)
         all_prev_fights = df.loc[:index-1]
+        col_names = df.columns
+        all_prev_fights_default = pd.DataFrame(columns=col_names)
         if not all_prev_fights.empty:
             fighter_a_id_vals = all_prev_fights.fighter_a_id.values
             fighter_b_id_vals = all_prev_fights.fighter_b_id.values
@@ -182,7 +184,7 @@ class WinLoss():
             prev_fights_last_year = all_prev_fights[((fighter_a_id_vals == fighter_id) | (fighter_b_id_vals == fighter_id)) & (pd.to_datetime(all_prev_fights['date']) > year_ago[index])]
 
             return prev_fights, prev_fights_last_year
-        return pd.DataFrame(), pd.DataFrame()
+        return all_prev_fights_default, all_prev_fights_default
     
     def create_col_names(self):
         """
