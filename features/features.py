@@ -1,5 +1,5 @@
 import pandas as pd
-from clean_data import CleanData
+from features.clean_data import CleanData
 
 FIGHT_CSV = 'data/ufc_men_fights.csv'
 FIGHTERS_CSV = 'data/ufc_men_fighters.csv'
