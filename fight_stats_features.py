@@ -6,7 +6,7 @@ class FightStats:
     def __init__(self, df):
         self.df = df
 
-    def get_fight_stats(self):
+    def create_fight_stat_features(self):
         self.df = self.create_knockdown_feats(self.df)
         self.df = self.create_significant_strikes_feats(self.df)
         self.df = self.create_takedown_feats(self.df)
