@@ -1,15 +1,16 @@
 import pandas as pd
 
-"""
-Usage:
-    from clean_data import CleanData
-
-    df = pd.read_csv('data.csv')
-    df = CleanData(df).df
-
-    Renames all the columns to work with easier, drops useless columns, and imputes missing data with 0
-"""
 class CleanData():
+    """
+    Usage:
+        from clean_data import CleanData
+
+        df = pd.read_csv('data.csv')
+        df = CleanData(df).df
+
+        Renames all the columns to work with easier, drops useless columns, and imputes missing data with 0
+    """
+    
     def __init__(self):
         self.fighter_cols = ['a', 'b']
         self.stat_cols = ['kd', 'sig_str_landed', 'sig_str_attempted', 'sig_str_pct', 'total_str_landed', 'total_str_attempted', 'td_landed', 'td_attempted', 'td_pct', 'sub_att', 'rev', 'ctrl']
@@ -32,18 +33,38 @@ class CleanData():
         return self.df
 
     def convert_to_datetime(self):
+        """
+        Convert the date column to datetime.
+        """
+
         self.df['date'] = pd.to_datetime(self.df['date'])
 
     def drop_useless_cols(self):
+        """
+        Drop useless columns.
+        """
+
         self.df = self.df.drop(['outcome_detail', 'elevation'], axis=1)
     
     def impute_data(self):
+        """
+        Impute missing data with 0.
+        """
+
         self.df = self.df.fillna(0)
 
     def replace_outdated_rounds(self):
+        """
+        Replace outdated rounds with their current round.
+        """
+
         self.df['outcome_format'] = self.df['outcome_format'].apply(lambda x: 3 if x == 'No' or int(x) < 3 else int(x))
 
     def enforce_types(self):
+        """
+        Enforce types for columns that should be numeric.
+        """
+        
         for col in self.cols:
             # Convert to numeric, all that can't be converted convert to NaN
             self.df[col] = pd.to_numeric(self.df[col], errors='coerce')
@@ -51,6 +72,10 @@ class CleanData():
             self.df[col] = self.df[col].astype(int)
 
     def replace_divisions(self):
+        """
+        Replace outdated divisions with their current division.
+        """
+
         self.df['division'] = self.df['division'].replace({
             'Open Weight' : 'Lightweight',
             'UFC 2 Tournament Title' : 'Lightweight',
@@ -152,4 +177,8 @@ class CleanData():
         })
 
     def rename_data(self):
+        """
+        Rename the following columns to be used as features.
+        """
+
         self.df.rename(columns={'division' : 'weight_class', 'outcome_format' : 'rounds_format'})
