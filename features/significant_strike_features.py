@@ -66,27 +66,27 @@ class SignificantStrikeFeatures():
                 round_number = int(round[1])
             
             has_diff = 'diff' in stat
-            if stat == f'{target}-strikes-attempted-per-minute-diff':
+            if stat in f'{target}-strikes-attempted-per-minute-diff':
                 fighter_a_strikes_attempted, fighter_b_strikes_attempted = self.compute_strikes_attempted_per_minute(df, fighter_a_id, fighter_b_id, index, round_number, target, differential=has_diff, last_fights=last_fights)
                 res.append(fighter_a_strikes_attempted)
                 res.append(fighter_b_strikes_attempted)
-            elif stat == f'{target}-strikes-landed-per-minute-diff':
+            elif stat in f'{target}-strikes-landed-per-minute-diff':
                 fighter_a_strikes_landed, fighter_b_strikes_landed = self.compute_strikes_landed_per_minute(df, fighter_a_id, fighter_b_id, index, round_number, target, differential=has_diff, last_fights=last_fights)
                 res.append(fighter_a_strikes_landed)
                 res.append(fighter_b_strikes_landed)
-            elif stat == f'{target}-strikes-accuracy-percentage-diff':
+            elif stat in f'{target}-strikes-accuracy-percentage-diff':
                 fighter_a_strikes_accuracy_percentage, fighter_b_strikes_accuracy_percentage = self.compute_strikes_accuracy_percentage(df, fighter_a_id, fighter_b_id, index, round_number, target, differential=has_diff, last_fights=last_fights)
                 res.append(fighter_a_strikes_accuracy_percentage)
                 res.append(fighter_b_strikes_accuracy_percentage)
-            elif stat == f'{target}-strikes-absorbed-per-minute-diff':
+            elif stat in f'{target}-strikes-absorbed-per-minute-diff':
                 fighter_a_strikes_absorbed_per_minute, fighter_b_strikes_absorbed_per_minute = self.compute_strikes_absorbed_per_minute(df, fighter_a_id, fighter_b_id, index, round_number, target, differential=has_diff, last_fights=last_fights)
                 res.append(fighter_a_strikes_absorbed_per_minute)
                 res.append(fighter_b_strikes_absorbed_per_minute)
-            elif stat == f'{target}-strikes-received-per-minute-diff':
+            elif stat in f'{target}-strikes-received-per-minute-diff':
                 fighter_a_strikes_received_per_minute, fighter_b_strikes_received_per_minute = self.compute_strikes_received_per_minute(df, fighter_a_id, fighter_b_id, index, round_number, target, differential=has_diff, last_fights=last_fights)
                 res.append(fighter_a_strikes_received_per_minute)
                 res.append(fighter_b_strikes_received_per_minute)
-            elif stat == f'{target}-strikes-defended-percentage-diff':
+            elif stat in f'{target}-strikes-defended-percentage-diff':
                 fighter_a_strikes_defended_percentage, fighter_b_strikes_defended_percentage = self.compute_strikes_defended_percentage(df, fighter_a_id, fighter_b_id, index, round_number, target, differential=has_diff, last_fights=last_fights)
                 res.append(fighter_a_strikes_defended_percentage)
                 res.append(fighter_b_strikes_defended_percentage)
