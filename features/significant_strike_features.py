@@ -66,7 +66,7 @@ class SignificantStrikeFeatures():
                 round_number = int(round[1])
             
             has_diff = 'diff' in stat
-            if stat in f'{target}-strikes-attempted-per-minute-diff':
+            if stat == f'{target}-strikes-attempted-per-minute-diff':
                 fighter_a_strikes_attempted, fighter_b_strikes_attempted = self.compute_strikes_attempted_per_minute(df, fighter_a_id, fighter_b_id, index, round_number, target, differential=has_diff, last_fights=last_fights)
                 res.append(fighter_a_strikes_attempted)
                 res.append(fighter_b_strikes_attempted)
@@ -339,7 +339,6 @@ class SignificantStrikeFeatures():
         strike_sum_b, time_sum_b = self.get_strike_detail_sums(round_number, f'fighter_b_{column_name}' if not is_defense else f'fighter_a_{column_name}', fights_as_b)
 
         return strike_sum_a + strike_sum_b, time_sum_a + time_sum_b
-    
 
     def get_strike_detail_sums(self, round_number, column_name, fights):
         """
