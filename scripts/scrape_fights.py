@@ -1,12 +1,10 @@
 import argparse
 import requests
 import csv
-import googlemaps
 from bs4 import BeautifulSoup
 from tqdm import tqdm
 import re
 import configparser
-import googlemaps
 import os
 import pandas as pd
 import aiohttp
@@ -58,31 +56,8 @@ def read_config(file_path='config.ini'):
     config.read(file_path)
     return config
 
-def test_google_maps_api(api_key_file):
-    """
-    Tests the Google Maps API key
-
-    Parameters:
-        api_key_file (str): Path to the config file containing the Google Maps API key
-
-    Returns:
-        googlemaps.Client: Google Maps API client
-    """
-
-    try:
-        config = read_config(file_path=api_key_file)
-        google_maps_api_key = config.get('GoogleMaps', 'api_key')
-        google_maps_client = googlemaps.Client(key=google_maps_api_key)
-
-        # Test sending a response to Google Maps API
-        google_maps_client.geocode('1600+Amphitheatre+Parkway,+Mountain+View,+CA')
-
-        return google_maps_client
-    except Exception as e:
-        print("Error reading Google Maps API key:", str(e))
-        return None
 	
-def get_fight_date_and_location(soup, gmaps):
+def get_fight_date_and_location(soup):
     """
     Obtains the fight date and location from the fight link
 
@@ -97,31 +72,59 @@ def get_fight_date_and_location(soup, gmaps):
     data = soup.find_all('li', attrs={'class' : 'b-list__box-list-item'})
     date = data[0].text.strip().split("Date:")[1].strip()
     location = data[1].text.strip().split("Location:")[1].strip()
-    location_elevation = get_elevation(location, gmaps)
+    location_elevation = get_elevation(location)
     return date, location, location_elevation
 
-def get_elevation(loc, gmaps):
-    """
-    Obtains the elevation of the location from the Google Maps API
-
-    Parameters:
-        loc (str): Location to get the elevation of
-        gmaps (googlemaps.Client): Google Maps API client
-
-    Returns:
-        float: Elevation of the location
-    """
-
-    geocode_result = gmaps.geocode(loc)
-
-    if(len(geocode_result) == 0):
-        return None
+def get_coords(city_name):
+    base_url = "http://api.openweathermap.org/geo/1.0/direct"
+    params = {
+        'q': city_name,
+        'limit': 1,  # Number of results to return (optional)
+        'appid': 'e6b7a294c747e973de19cc9bd7a5e243'
+    }
     
-    coords = geocode_result[0]['geometry']['location']
-    elev_res = gmaps.elevation((coords['lat'], coords['lng']))
-    elevation = elev_res[0]['elevation']
+    response = requests.get(base_url, params=params)
+    
+    if response.status_code == 200:
+        geocode_data = response.json()
+        if geocode_data:
+            return geocode_data[0]  # Returns the first result
+        else:
+            return None
+    else:
+        return None
 
-    return elevation
+
+def get_elevation(loc):
+	"""
+	Obtains the elevation of the location from the
+
+	Parameters:
+		loc (str): Location to get the elevation of
+
+	Returns:
+		float: Elevation of the location
+	"""
+	coords = get_coords(loc)
+	if not coords:
+		return None
+
+	latitude = coords['lat']
+	longitude = coords['lon']
+
+	# Make the API call to Open-Meteo to get elevation
+	open_meteo_url = f"https://api.open-meteo.com/v1/elevation?latitude={latitude}&longitude={longitude}"
+
+	response = requests.get(open_meteo_url)
+
+	if response.status_code == 200:
+		elevation_data = response.json()
+		if 'elevation' in elevation_data:
+			return elevation_data['elevation']
+		else:
+			return None
+	else:
+		return None
 
 def isSameName(name1, name2):
     """
@@ -427,7 +430,7 @@ async def get_fight_sig_strikes_stats(link, round, session):
 
 		return data
 
-async def scrape_ufc_fights(fight_page, session, google_maps_client, delete_csv_on_fail, is_men=True):
+async def scrape_ufc_fights(fight_page, session, delete_csv_on_fail, is_men=True):
 	"""
 	Scrapes men's UFC fights
       
@@ -443,7 +446,7 @@ async def scrape_ufc_fights(fight_page, session, google_maps_client, delete_csv_
 		async with session.get(fight_page.get('href')) as res:
 			soup_fights = BeautifulSoup(await res.text(), 'lxml')
 			fight_list = soup_fights.find_all('tr', attrs={'class': 'b-fight-details__table-row b-fight-details__table-row__hover js-fight-details-click'})
-			date, location, location_elevation = get_fight_date_and_location(soup_fights, google_maps_client)
+			date, location, location_elevation = get_fight_date_and_location(soup_fights)
 
 			data = []
 			for i in range(len(fight_list) - 1, -1, -1):
@@ -509,7 +512,7 @@ def store_results(list_of_lists):
 async def main():
 	parser = argparse.ArgumentParser(description='Scrape UFC fights')
 
-	parser.add_argument("--api_key_file", type=str, help="File containing Google Maps API key", default="config.ini")
+	# parser.add_argument("--api_key_file", type=str, help="File containing Google Maps API key", default="config.ini")
 	parser.add_argument("--delete_csv_on_fail", type=bool, help="Whether to delete the CSV file if the script fails", default=True)
 
 	args = parser.parse_args()
@@ -520,11 +523,10 @@ async def main():
 	ssl_context.verify_mode = ssl.CERT_NONE
 
 	pages = find_fight_pages()
-	google_maps_client = test_google_maps_api(args.api_key_file)
 
 	async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=ssl_context)) as session:
 		tasks = [
-			scrape_ufc_fights(page, session, google_maps_client, args.delete_csv_on_fail)
+			scrape_ufc_fights(page, session, args.delete_csv_on_fail)
 			for page in pages
 		]
 
