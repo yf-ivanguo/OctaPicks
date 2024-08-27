@@ -75,10 +75,10 @@ def get_fight_date_and_location(soup):
     location_elevation = get_elevation(location)
     return date, location, location_elevation
 
-def get_coords(city_name):
+def get_coords(loc):
     base_url = "http://api.openweathermap.org/geo/1.0/direct"
     params = {
-        'q': city_name,
+        'q': loc,
         'limit': 1,  # Number of results to return (optional)
         'appid': 'e6b7a294c747e973de19cc9bd7a5e243'
     }
