@@ -120,7 +120,7 @@ def get_elevation(loc):
 	if response.status_code == 200:
 		elevation_data = response.json()
 		if 'elevation' in elevation_data:
-			return elevation_data['elevation']
+			return elevation_data['elevation'][0]
 		else:
 			return None
 	else:
@@ -508,39 +508,78 @@ def store_results(list_of_lists):
 		file_writer = csv.DictWriter(fights_file, fieldnames=fieldnames)
 		file_writer.writeheader()
 		file_writer.writerows(fights_list)
+
+def load_existing_fights():
+    """
+    Load existing fights from the CSV file.
+
+    Returns:
+        set: A set of fight identifiers (e.g., fight titles) that have already been scraped.
+    """
+    if os.path.exists(FIGHTS_CSV):
+        try:
+            df = pd.read_csv(FIGHTS_CSV, encoding='utf-8')
+        except UnicodeDecodeError:
+            df = pd.read_csv(FIGHTS_CSV, encoding='ISO-8859-1')  # Try a different encoding if UTF-8 fails
+        return set(df['fight_night_title'].unique())
+    return set()
+
+def append_results_to_csv(list_of_lists):
+    """
+    Appends the results to the existing CSV file.
+
+    Parameters:
+        list_of_lists (list): List of lists containing the results.
+    """
+
+    fights_list = sum(list_of_lists, [])  # flatten lists
+
+    with open(FIGHTS_CSV, 'a') as fights_file:  # Open in append mode
+        fieldnames = COLS
+        file_writer = csv.DictWriter(fights_file, fieldnames=fieldnames)
+        if os.path.getsize(FIGHTS_CSV) == 0:
+            file_writer.writeheader()  # Write header only if file is empty
+        file_writer.writerows(fights_list)
 		
 async def main():
-	parser = argparse.ArgumentParser(description='Scrape UFC fights')
+    parser = argparse.ArgumentParser(description='Scrape UFC fights')
+    parser.add_argument("--delete_csv_on_fail", type=bool, help="Whether to delete the CSV file if the script fails", default=True)
+    args = parser.parse_args()
 
-	# parser.add_argument("--api_key_file", type=str, help="File containing Google Maps API key", default="config.ini")
-	parser.add_argument("--delete_csv_on_fail", type=bool, help="Whether to delete the CSV file if the script fails", default=True)
+    # Load existing fight titles to avoid re-scraping
+    existing_fights = load_existing_fights()
 
-	args = parser.parse_args()
+    # Create a SSLContext object with SSL verification disabled
+    ssl_context = ssl.create_default_context()
+    ssl_context.check_hostname = False
+    ssl_context.verify_mode = ssl.CERT_NONE
 
-	# Create a SSLContext object with SSL verification disabled
-	ssl_context = ssl.create_default_context()
-	ssl_context.check_hostname = False
-	ssl_context.verify_mode = ssl.CERT_NONE
+    pages = find_fight_pages()
 
-	pages = find_fight_pages()
+    # Filter out pages that have already been scraped
+    pages = [page for page in pages if page.text.strip() not in existing_fights]
 
-	async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=ssl_context)) as session:
-		tasks = [
-			scrape_ufc_fights(page, session, args.delete_csv_on_fail)
-			for page in pages
-		]
+    if not pages:
+        print("No new fights to scrape.")
+        return
 
-		list_of_lists = []
-		progress_bar = tqdm(total=len(tasks))  # Initialize the progress bar
+    async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=ssl_context)) as session:
+        tasks = [
+            scrape_ufc_fights(page, session, args.delete_csv_on_fail)
+            for page in pages
+        ]
 
-		for i in range(0, len(tasks), 10):
-			sublist = tasks[i:i+10]
-			results = await asyncio.gather(*sublist)
-			list_of_lists.extend(results)
-			progress_bar.update(len(sublist))  # Update the progress bar
+        list_of_lists = []
+        progress_bar = tqdm(total=len(tasks))  # Initialize the progress bar
 
-		progress_bar.close()  # Close the progress bar
-		store_results(list_of_lists)
+        for i in range(0, len(tasks), 10):
+            sublist = tasks[i:i+10]
+            results = await asyncio.gather(*sublist)
+            list_of_lists.extend(results)
+            progress_bar.update(len(sublist))  # Update the progress bar
+
+        progress_bar.close()  # Close the progress bar
+        append_results_to_csv(list_of_lists)  # Append new results to CSV
 
 if __name__ == "__main__":
 	start_time = time.time()  # Start the timer
