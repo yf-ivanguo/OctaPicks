@@ -15,7 +15,7 @@ class SignificantStrikeFeatures():
         Returns:
         - pd.Dataframe: The dataframe containing the strikes features for each fighter
         """
-        
+
         distance_col_names = self.create_col_names('distance')
         clinch_col_names = self.create_col_names('clinch')
         ground_col_names = self.create_col_names('ground')
@@ -47,7 +47,6 @@ class SignificantStrikeFeatures():
 
         res = []
         for i in range(0, len(col_names), 2):
-            print("on Column " + str(i))
             split_a = col_names[i].split('_')
             stat = split_a[1]
             round = split_a[2]
@@ -59,12 +58,12 @@ class SignificantStrikeFeatures():
                 last_fights = 5
             else:
                 last_fights = 0
-            
+
             if round == 'overall':
                 round_number = 0
             else:
                 round_number = int(round[1])
-            
+
             has_diff = 'diff' in stat
             if stat in f'{target}-strikes-attempted-per-minute-diff':
                 fighter_a_strikes_attempted, fighter_b_strikes_attempted = self.compute_strikes_attempted_per_minute(df, fighter_a_id, fighter_b_id, index, round_number, target, differential=has_diff, last_fights=last_fights)
@@ -90,12 +89,12 @@ class SignificantStrikeFeatures():
                 fighter_a_strikes_defended_percentage, fighter_b_strikes_defended_percentage = self.compute_strikes_defended_percentage(df, fighter_a_id, fighter_b_id, index, round_number, target, differential=has_diff, last_fights=last_fights)
                 res.append(fighter_a_strikes_defended_percentage)
                 res.append(fighter_b_strikes_defended_percentage)
-                
+
         return pd.Series(res)
 
     def compute_strikes_attempted_per_minute(self, df, fighter_a_id, fighter_b_id, index, round_number, target, differential=False, last_fights=0):
         """
-        Computes the strikes attempted per minute for each fighter in the dataset 
+        Computes the strikes attempted per minute for each fighter in the dataset
 
         Parameters:
             df (pd.Dataframe): The original dataframe containing all the fights
@@ -109,8 +108,8 @@ class SignificantStrikeFeatures():
         Returns:
             (float, float): The strikes attempted per minute for each fighter as a tuple
         """
-        return self.compute_strikes(df, fighter_a_id, fighter_b_id, index, round_number, last_fights, column_name=f"{target}_shots_attempted", differential=differential)
-   
+        return self.compute_strikes(df, fighter_a_id, fighter_b_id, index, round_number, last_fights, column_name=f"{target}_shots_attempted", differential=differential, is_defense=False, is_percentage=False)
+
     def compute_strikes_landed_per_minute(self, df, fighter_a_id, fighter_b_id, index, round_number, target, differential=False, last_fights=0):
         """
         Computes the strikes landed per minute for each fighter in the dataset
@@ -127,7 +126,7 @@ class SignificantStrikeFeatures():
         Returns:
             (float, float): The strikes landed per minute for each fighter as a tuple
         """
-        return self.compute_strikes(df, fighter_a_id, fighter_b_id, index, round_number, last_fights, column_name=f"{target}_shots_landed", differential=differential)
+        return self.compute_strikes(df, fighter_a_id, fighter_b_id, index, round_number, last_fights, column_name=f"{target}_shots_landed", differential=differential, is_defense=False, is_percentage=False)
 
 
     def compute_strikes_accuracy_percentage(self, df, fighter_a_id, fighter_b_id, index, round_number, target, differential=False, last_fights=0):
@@ -146,8 +145,8 @@ class SignificantStrikeFeatures():
         Returns:
             (float, float): The strikes accuracy percentage for each fighter as a tuple
         """
-        fighter_a_strikes_landed, fighter_b_strikes_landed = self.compute_strikes(df, fighter_a_id, fighter_b_id, index, round_number, last_fights, column_name=f"{target}_shots_landed", differential=differential, is_percentage=True)
-        fighter_a_strikes_attempted, fighter_b_strikes_attempted = self.compute_strikes(df, fighter_a_id, fighter_b_id, index, round_number, last_fights, column_name=f"{target}_shots_attempted", differential=differential, is_percentage=True)
+        fighter_a_strikes_landed, fighter_b_strikes_landed = self.compute_strikes(df, fighter_a_id, fighter_b_id, index, round_number, last_fights, column_name=f"{target}_shots_landed", differential=differential, is_defense=False, is_percentage=True)
+        fighter_a_strikes_attempted, fighter_b_strikes_attempted = self.compute_strikes(df, fighter_a_id, fighter_b_id, index, round_number, last_fights, column_name=f"{target}_shots_attempted", differential=differential, is_defense=False, is_percentage=True)
         return self.compute_strikes_percentages(fighter_a_strikes_landed, fighter_a_strikes_attempted, fighter_b_strikes_landed, fighter_b_strikes_attempted, differential=differential)
 
 
@@ -167,7 +166,7 @@ class SignificantStrikeFeatures():
         Returns:
             (float, float): The strikes absorbed per minute for each fighter as a tuple
         """
-        return self.compute_strikes(df, fighter_a_id, fighter_b_id, index, round_number, target, last_fights, column_name=f"{target}_shots_landed", differential=differential, is_defense=True)
+        return self.compute_strikes(df, fighter_a_id, fighter_b_id, index, round_number, last_fights, column_name=f"{target}_shots_landed", differential=differential, is_defense=True, is_percentage=False)
 
 
     def compute_strikes_received_per_minute(self, df, fighter_a_id, fighter_b_id, index, round_number, target, differential=False, last_fights=0):
@@ -186,7 +185,7 @@ class SignificantStrikeFeatures():
         Returns:
             (float, float): The strikes received per minute for each fighter as a tuple
         """
-        return self.compute_strikes(df, fighter_a_id, fighter_b_id, index, round_number, target, last_fights, column_name=f"{target}_shots_attempted", differential=differential, is_defense=True)
+        return self.compute_strikes(df, fighter_a_id, fighter_b_id, index, round_number, last_fights, column_name=f"{target}_shots_attempted", differential=differential, is_defense=True, is_percentage=False)
 
     def compute_strikes_defended_percentage(self, df, fighter_a_id, fighter_b_id, index, round_number, target, differential=False, last_fights=0):
         """
@@ -276,7 +275,7 @@ class SignificantStrikeFeatures():
         """
 
         all_prev_fights = df.loc[:index-1]
-        
+
         if not all_prev_fights.empty:
             fighter_a_id_vals = all_prev_fights.fighter_a_id.values
             fighter_b_id_vals = all_prev_fights.fighter_b_id.values
@@ -290,7 +289,7 @@ class SignificantStrikeFeatures():
             return self.get_strike_return_values(sum_a, time_a, sum_b, time_b, differential, is_percentage)
 
         return 0, 0
-    
+
     def get_strike_return_values(self, sum_a, time_a, sum_b, time_b, differential, is_percentage):
         """
         Computes the strikes averages
@@ -308,7 +307,7 @@ class SignificantStrikeFeatures():
 
         fighter_a_strikes = (sum_a / time_a if time_a > 0 else 1) if not is_percentage else sum_a
         fighter_b_strikes = (sum_b / time_b if time_b > 0 else 1) if not is_percentage else sum_b
-        
+
         if differential:
             return fighter_a_strikes - fighter_b_strikes, fighter_b_strikes - fighter_a_strikes
         else:
@@ -367,7 +366,7 @@ class SignificantStrikeFeatures():
                 time_sum += self.convert_time_to_minutes(row["outcome_time"])
             else:
                 time_sum += 5
-        
+
         return strike_sum, time_sum
 
     def convert_time_to_minutes(self, time):
@@ -384,7 +383,7 @@ class SignificantStrikeFeatures():
         minutes, seconds = map(int, time.split(':'))
         total_minutes = minutes + seconds / 60
         return total_minutes
-        
+
     def create_col_names(self, target):
         """
         Generates column names for significant strike statistics.
@@ -396,17 +395,17 @@ class SignificantStrikeFeatures():
         col_names = []
         fighters = ['fighter-a', 'fighter-b']
         strike_stats = [
-            f'{target}-strikes-attempted-per-minute', 
-            f'{target}-strikes-landed-per-minute', 
-            f'{target}-strikes-accuracy-percentage', 
-            f'{target}-strikes-absorbed-per-minute', 
-            f'{target}-strikes-received-per-minute', 
-            f'{target}-strikes-defended-percentage', 
-            f'{target}-strikes-attempted-per-minute-diff', 
-            f'{target}-strikes-landed-per-minute-diff', 
-            f'{target}-strikes-accuracy-percentage-diff', 
-            f'{target}-strikes-absorbed-per-minute-diff', 
-            f'{target}-strikes-received-per-minute-diff', 
+            f'{target}-strikes-attempted-per-minute',
+            f'{target}-strikes-landed-per-minute',
+            f'{target}-strikes-accuracy-percentage',
+            f'{target}-strikes-absorbed-per-minute',
+            f'{target}-strikes-received-per-minute',
+            f'{target}-strikes-defended-percentage',
+            f'{target}-strikes-attempted-per-minute-diff',
+            f'{target}-strikes-landed-per-minute-diff',
+            f'{target}-strikes-accuracy-percentage-diff',
+            f'{target}-strikes-absorbed-per-minute-diff',
+            f'{target}-strikes-received-per-minute-diff',
             f'{target}-strikes-defended-percentage-diff'
         ]
         rounds = ['R1', 'R2', 'R3', 'R4', 'R5', 'overall']

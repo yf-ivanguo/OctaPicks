@@ -1,18 +1,18 @@
 import pandas as pd
 import numpy as np
-
+import swifter
 
 class FightStats:
-    def __init__(self, df):
-        self.df = df
+    def __init__(self) -> None:
+        pass
 
-    def create_fight_stat_features(self):
-        self.df = self.create_knockdown_feats(self.df)
-        self.df = self.create_significant_strikes_feats(self.df)
-        self.df = self.create_takedown_feats(self.df)
+    def create_fight_stats_features(self, df):
+        df = self.create_knockdown_feats(df)
+        df = self.create_significant_strikes_feats(df)
+        df = self.create_takedown_feats(df)
 
-        return self.df
-    
+        return df
+
     def create_knockdown_feats(self, df, include_progress=False):
         """
         Creates the knockdowns features for each fighter in the dataset
@@ -42,7 +42,7 @@ class FightStats:
         result_features[['fighter_a_kd_per_sigs_alltime_diff', 'fighter_b_kd_per_sigs_alltime_diff']] = target_df.swifter.progress_bar(include_progress).apply(lambda row: self.__compute_knockdowns(df, row['fighter_a_id'], row['fighter_b_id'], row.name, differential=True), axis=1)
 
         return pd.concat([target_df, result_features], axis=1)
-    
+
     def create_significant_strikes_feats(self, df):
         """
         Creates a dataframe with added features for significant strikes and their differentials.
@@ -69,7 +69,7 @@ class FightStats:
         result_df = self.__calculate_significant_strikes_differential(result_df, col_names_differential)
 
         return result_df
-    
+
     def create_takedown_feats(self, df):
             """
             Creates a dataframe with added features for takedowns and their differentials.
@@ -96,7 +96,7 @@ class FightStats:
             result_df = self.__calculate_takedowns_differential(result_df, col_names_differential)
 
             return result_df
-    
+
     def __calculate_takedowns_differential(self, df, col_names_differential):
         """
         Calculates the differential of takedowns statistics between two fighters.
@@ -130,7 +130,7 @@ class FightStats:
         result_df = pd.concat([input_df, differential_features], axis=1)
 
         return result_df
-    
+
     def __calculate_significant_strikes_differential(self, df, col_names_differential):
         """
         Calculates the differential of significant strikes statistics between two fighters.
@@ -164,7 +164,7 @@ class FightStats:
         result_df = pd.concat([input_df, differential_features], axis=1)
 
         return result_df
-    
+
     def __compute_knockdowns(self, df, fighter_a_id, fighter_b_id, index, last_fights=0, differential=False):
         """
         Computes the knockdowns features for a single example in the dataset
@@ -196,9 +196,9 @@ class FightStats:
                 return pd.Series([fighter_a_kd_per_sigs - fighter_b_kd_per_sigs, fighter_b_kd_per_sigs - fighter_a_kd_per_sigs])
             else:
                 return pd.Series([fighter_a_kd_per_sigs, fighter_b_kd_per_sigs])
-            
+
         return pd.Series([0, 0])
-    
+
     def __get_fighter_kd_per_sigs(self, fighter_past_fights, fighter_id):
         """
         Given a fighter's past fights, returns the number of knockdowns per significant strikes landed
@@ -210,21 +210,21 @@ class FightStats:
         Returns:
             float: Number of knockdowns per significant strikes landed
         """
-        
+
         if fighter_past_fights.empty:
             return 0
-        
+
         fighter_a_id_vals = fighter_past_fights.fighter_a_id.values
         fighter_b_id_vals = fighter_past_fights.fighter_b_id.values
-        
+
         fighter_knockdowns = fighter_past_fights[fighter_a_id_vals == fighter_id]['fighter_a_total_kd'].sum() + \
                              fighter_past_fights[fighter_b_id_vals == fighter_id]['fighter_b_total_kd'].sum()
-        
+
         fighter_sig_strikes = fighter_past_fights[fighter_a_id_vals == fighter_id]['fighter_a_total_sig_str_landed'].sum() + \
                               fighter_past_fights[fighter_b_id_vals == fighter_id]['fighter_b_total_sig_str_landed'].sum()
 
         return fighter_knockdowns / fighter_sig_strikes if fighter_sig_strikes > 0 else 0
-    
+
     def __test_knockdown_feature(self, df):
         """
         Tests the knockdowns feature
@@ -241,19 +241,19 @@ class FightStats:
         fighter_a_cols = ['fighter_a_id', 'fighter_a_total_kd', 'fighter_a_total_sig_str_landed', \
                           'fighter_a_kd_per_sigs_l3', 'fighter_a_kd_per_sigs_l5', 'fighter_a_kd_per_sigs_alltime', \
                           'fighter_a_kd_per_sigs_l3_diff', 'fighter_a_kd_per_sigs_l5_diff', 'fighter_a_kd_per_sigs_alltime_diff']
-        
+
         fighter_b_cols = ['fighter_b_id', 'fighter_b_total_kd', 'fighter_b_total_sig_str_landed', \
                           'fighter_b_kd_per_sigs_l3', 'fighter_b_kd_per_sigs_l5', 'fighter_b_kd_per_sigs_alltime', \
                           'fighter_b_kd_per_sigs_l3_diff', 'fighter_b_kd_per_sigs_l5_diff', 'fighter_b_kd_per_sigs_alltime_diff']
-        
+
         combined_cols = np.concatenate((fighter_a_cols[3:], fighter_b_cols[3:]), axis=0)
 
         assert all(test_df[col].values[0] == 0.0 for col in combined_cols)
 
         formatted_test_df = test_df.apply(lambda row: self.__swap_ids_and_columns(row, fighter_a_cols, fighter_b_cols), axis=1)
-        
+
         test_methods = ['test_knockdown_feature_l3', 'test_knockdown_feature_l5', 'test_knockdown_feature_alltime']
-        
+
         for method in test_methods:
             getattr(self, method)(formatted_test_df)
 
@@ -267,7 +267,7 @@ class FightStats:
             row (Series): Row of the DataFrame
             fighter_a_cols (list): List of fighter_a columns
             fighter_b_cols (list): List of fighter_b columns
-        
+
         Returns:
             Series: Row of the DataFrame with the fighter_a and fighter_b columns swapped if necessary
         """
@@ -275,7 +275,7 @@ class FightStats:
         if row['fighter_b_id'] == 'f1fac969a1d70b08':
             for i in range(len(fighter_a_cols)):
                 row[fighter_a_cols[i]], row[fighter_b_cols[i]] = row[fighter_b_cols[i]], row[fighter_a_cols[i]]
-        
+
         return row
 
     def __test_knockdown_feature_l3(self, df):
@@ -317,7 +317,7 @@ class FightStats:
                 expected = res_df.loc[index-1, 'fighter_a_total_kd'] / res_df.loc[index-1, 'fighter_a_total_sig_str_landed']
                 actual = row.fighter_a_kd_per_sigs_alltime
                 assert expected == actual, f"Expected {expected}, but got {actual} on row {row.Index}"
-    
+
     def __calculate_significant_strikes(self, df, fighter_a_id, fighter_b_id, index, col_names):
         """
         Calculates significant strike features for both fighters in a match.
@@ -348,7 +348,7 @@ class FightStats:
             all_prev_fights = fighter_a_prev_fights if fighter == 'fighter-a' else fighter_b_prev_fights
             last_3_fights = fighter_a_last_3_fights if fighter == 'fighter-a' else fighter_b_last_3_fights
             last_5_fights = fighter_a_last_5_fights if fighter == 'fighter-a' else fighter_b_last_5_fights
-            
+
             prev_fights = pd.DataFrame()
 
             if fighter == 'fighter-a':
@@ -358,7 +358,7 @@ class FightStats:
 
             # filter based on time period
             if time_period == 'l3':
-                
+
                 prev_fights = last_3_fights
 
             if time_period == 'l5':
@@ -367,7 +367,7 @@ class FightStats:
             if time_period == 'alltime':
                 prev_fights = all_prev_fights
 
-            # if no fights 
+            # if no fights
             if prev_fights.empty:
                     res.append(0)
                     continue
@@ -382,7 +382,7 @@ class FightStats:
             if raw_significant_strike_stats.empty:
                 res.append(0)
                 continue
-        
+
             if stat == "significant-strikes-landed-per-minute":
                 res.append(self.__calculate_significant_strikes_landed(raw_significant_strike_stats, fighter_id))
             if stat == "significant-strikes-accuracy-percentage":
@@ -438,7 +438,7 @@ class FightStats:
                         col_name = f"{fighter.replace(' ', '_')}_{significant_strike_stat.replace(' ', '_')}_{round}_{time_period.replace(' ', '_')}"
                         col_names.append(col_name)
         return col_names
-        
+
     def __get_raw_significant_strikes_stats(self, df, round):
         """
         Extracts raw significant strike stats from the dataframe for a specific round.
@@ -511,7 +511,7 @@ class FightStats:
             float: The accuracy of significant strikes as a percentage in the given fights.
         """
 
-        return self.__get_significant_strikes_return_values(self, stats_by_fight_df, fighter_id, is_percentage=True, is_defence=False)
+        return self.__get_significant_strikes_return_values(stats_by_fight_df, fighter_id, is_percentage=True, is_defence=False)
 
     def __calculate_significant_strikes_defense(self, stats_by_fight_df, fighter_id):
         """
@@ -539,7 +539,7 @@ class FightStats:
             float: The rate of significant strikes absorbed per minute in the given fights.
         """
 
-        return self.__get_significant_strikes_return_values(self, stats_by_fight_df, fighter_id, is_percentage=False, is_defence=True)
+        return self.__get_significant_strikes_return_values(stats_by_fight_df, fighter_id, is_percentage=False, is_defence=True)
 
     def __convert_time_to_seconds(self, time_str):
         """
@@ -557,7 +557,7 @@ class FightStats:
             return int(minutes) * 60 + int(seconds)
         else:
             return int(time_str)
-        
+
     def __get_round_time(self, outcome_round, outcome_time, round):
         """
         Calculates the total fight time in a specific round.
@@ -573,7 +573,7 @@ class FightStats:
 
         # Convert outcome_time to seconds
         outcome_time = self.__convert_time_to_seconds(outcome_time)
-        
+
         # Handle the "overall" case
         if round == 0:
             # Calculate total fight time up to the outcome round
@@ -589,10 +589,10 @@ class FightStats:
         # Handle specific rounds
         if outcome_round == round:
             return outcome_time/60  # Convert to minutes
-        
+
         elif outcome_round > round:
             return 300/60  # Full round time
-        
+
         else:
             return 0  # Round did not occur
 
@@ -617,7 +617,8 @@ class FightStats:
 
 
         # Sum up significant strikes landed based on whether it's for defence or offence
-        sig_str_landed = stats_by_fight_df[fighter_a_id_vals == fighter_id][f'fighter_a_sig_str_landed' if not is_defence else f'fighter_b_sig_str_landed'].sum() + stats_by_fight_df[fighter_b_id_vals == fighter_id][f'fighter_b_sig_str_landed' if not is_defence else f'fighter_a_sig_str_landed'].sum()
+        sig_str_landed = stats_by_fight_df[fighter_a_id_vals == fighter_id][f'fighter_a_sig_str_landed' if not is_defence else f'fighter_b_sig_str_landed'].sum() + \
+                         stats_by_fight_df[fighter_b_id_vals == fighter_id][f'fighter_b_sig_str_landed' if not is_defence else f'fighter_a_sig_str_landed'].sum()
 
         if not is_percentage:
             # Sum total fight time and calculate rate of significant strikes landed per minute
@@ -662,7 +663,7 @@ class FightStats:
             all_prev_fights = fighter_a_prev_fights if fighter == 'fighter-a' else fighter_b_prev_fights
             last_3_fights = fighter_a_last_3_fights if fighter == 'fighter-a' else fighter_b_last_3_fights
             last_5_fights = fighter_a_last_5_fights if fighter == 'fighter-a' else fighter_b_last_5_fights
-            
+
             prev_fights = pd.DataFrame()
 
             if fighter == 'fighter-a':
@@ -672,7 +673,7 @@ class FightStats:
 
             # filter based on time period
             if time_period == 'l3':
-                
+
                 prev_fights = last_3_fights
 
             if time_period == 'l5':
@@ -681,7 +682,7 @@ class FightStats:
             if time_period == 'alltime':
                 prev_fights = all_prev_fights
 
-            # if no fights 
+            # if no fights
             if prev_fights.empty:
                     res.append(np.nan)
                     continue
@@ -696,7 +697,7 @@ class FightStats:
             if raw_significant_strike_stats.empty:
                 res.append(np.nan)
                 continue
-        
+
             if stat == "takedown-landed-per-minute":
                 res.append(self.__calculate_takedowns_landed(raw_significant_strike_stats, fighter_id))
             if stat == "takedown-accuracy-percentage":
@@ -780,7 +781,7 @@ class FightStats:
             return prev_fights[-3:], prev_fights[-5:], prev_fights
 
         return all_prev_fights_default(), all_prev_fights_default(), all_prev_fights_default()
-        
+
     def __get_raw_takedowns_stats(self, df, round):
         """
         Extracts raw significant strike stats from the dataframe for a specific round.
@@ -899,7 +900,7 @@ class FightStats:
             return int(minutes) * 60 + int(seconds)
         else:
             return int(time_str)
-        
+
     def __get_round_time(self, outcome_round, outcome_time, round):
         """
         Calculates the total fight time in a specific round.
@@ -915,7 +916,7 @@ class FightStats:
 
         # Convert outcome_time to seconds
         outcome_time = self.__convert_time_to_seconds(outcome_time)
-        
+
         # Handle the "overall" case
         if round == 0:
             # Calculate total fight time up to the outcome round
@@ -931,10 +932,10 @@ class FightStats:
         # Handle specific rounds
         if outcome_round == round:
             return outcome_time/60  # Convert to minutes
-        
+
         elif outcome_round > round:
             return 300/60  # Full round time
-        
+
         else:
             return 0  # Round did not occur
 

@@ -10,7 +10,7 @@ class CleanData():
 
         Renames all the columns to work with easier, drops useless columns, and imputes missing data with 0
     """
-    
+
     def __init__(self):
         self.fighter_cols = ['a', 'b']
         self.stat_cols = ['kd', 'sig_str_landed', 'sig_str_attempted', 'sig_str_pct', 'total_str_landed', 'total_str_attempted', 'td_landed', 'td_attempted', 'td_pct', 'sub_att', 'rev', 'ctrl']
@@ -27,6 +27,7 @@ class CleanData():
         self.convert_to_datetime()
         self.drop_useless_cols()
         self.impute_data()
+        self.replace_outdated_rounds()
         self.enforce_types()
         self.replace_divisions()
         self.rename_data()
@@ -44,8 +45,8 @@ class CleanData():
         Drop useless columns.
         """
 
-        self.df = self.df.drop(['outcome_detail', 'elevation'], axis=1)
-    
+        self.df = self.df.drop(['outcome_detail'], axis=1)
+
     def impute_data(self):
         """
         Impute missing data with 0.
@@ -64,7 +65,7 @@ class CleanData():
         """
         Enforce types for columns that should be numeric.
         """
-        
+
         for col in self.cols:
             # Convert to numeric, all that can't be converted convert to NaN
             self.df[col] = pd.to_numeric(self.df[col], errors='coerce')
