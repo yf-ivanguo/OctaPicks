@@ -1,19 +1,19 @@
 import pandas as pd
 import numpy as np
-
+import swifter
 
 class WinLossStats:
-    def __init__(self, df):
-        self.df = df
+    def __init__(self) -> None:
+        pass
 
-    def create_win_loss_stat_features(self):
-        self.df = self.create_h2h_feats(self.df)
-        self.df = self.create_win_loss_location_feats(self.df)
-        self.df = self.create_win_loss_round_feats(self.df)
-        self.df = self.create_win_loss_feats(self.df)
+    def create_win_loss_stat_features(self, df):
+        df = self.create_h2h_feats(df)
+        df = self.create_win_loss_location_feats(df)
+        df = self.create_win_loss_round_feats(df)
+        df = self.create_win_loss_feats(df)
+        df = self.create_win_loss_elevation_feats(df)
+        return df
 
-        return self.df
-    
     """
     Creates the head to head features for each fighter in the dataset
 
@@ -29,7 +29,7 @@ class WinLossStats:
 
         result_df = pd.concat([target_df, result_features], axis=1)
         return result_df
-    
+
     def create_win_loss_location_feats(self, df, include_progress=False):
         """
         Creates the win/loss location features for each fighter in the dataset
@@ -50,7 +50,7 @@ class WinLossStats:
         result_features[col_names] = target_df.swifter.progress_bar(include_progress).apply(lambda row: self.__compute_win_loss_location(df, row['fighter_a_id'], row['fighter_b_id'], row['location'], row.name), axis=1)
 
         return pd.concat([target_df, result_features], axis=1)
-    
+
     def create_win_loss_round_feats(self, df):
         """
         Creates a dataframe with added features for significant strikes and their differentials.
@@ -61,7 +61,7 @@ class WinLossStats:
         Returns:
             pd.DataFrame: A dataframe with additional columns for significant strike features and differentials.
         """
-        
+
         # Generate column names for significant strikes and differentials
         col_names = self.__create_col_names_win_loss_round()
 
@@ -76,7 +76,7 @@ class WinLossStats:
         result_df = pd.concat([input_df, result_features], axis=1)
 
         return result_df
-    
+
     def create_win_loss_feats(self, df):
         """
         Creates the win/loss features for each fighter in the dataset
@@ -93,11 +93,45 @@ class WinLossStats:
 
         target_df[col_names] = target_df.swifter.progress_bar(True).apply(lambda row: self.__compute_win_loss(target_df, row['fighter_a_id'], row['fighter_b_id'], row.name, col_names), axis=1)
         return target_df
-    
-    """
-    Computes the head to head features for a single example in the dataset
-    """
+
+    def create_win_loss_elevation_feats(self, df):
+        """
+        Creates the win/loss elevation features for each fighter in the dataset
+
+        Args:
+            df (pd.DataFrame): The dataframe containing the fighter data
+
+        Returns:
+            pd.DataFrame: The dataframe with the win/loss elevation features appended
+        """
+
+        target_df = df.copy()
+        col_names = ['fighter_a_wins_above_elevation', 'fighter_a_losses_above_elevation',
+                    'fighter_a_wins_below_elevation', 'fighter_a_losses_below_elevation',
+                'fighter_b_wins_above_elevation', 'fighter_b_losses_above_elevation',
+                'fighter_b_wins_below_elevation', 'fighter_b_losses_below_elevation']
+        result_features = pd.DataFrame(columns=col_names)
+
+        result_features[col_names] = target_df.swifter.progress_bar(True).apply(lambda row: self.__compute_win_loss_elevation(target_df, row['fighter_a_id'], row['fighter_b_id'], row['elevation'], row.name), axis=1)
+
+        result_df = pd.concat([target_df, result_features], axis=1)
+
+        return result_df
+
     def __compute_h2h(self, df, fighter_a_id, fighter_b_id, index):
+        """
+        Computes the head to head features for a single example in the dataset
+
+        Args:
+            df (pd.DataFrame): The dataframe containing the fighter data
+            fighter_a_id (int): The id of fighter a
+            fighter_b_id (int): The id of fighter b
+            index (int): The index of the example in the dataset
+
+        Returns:
+            pd.Series: The head to head features for the example
+        """
+
         all_prev_fights = df.loc[:index-1]
         if not all_prev_fights.empty:
             fighter_a_id_vals = all_prev_fights.fighter_a_id.values
@@ -110,7 +144,7 @@ class WinLossStats:
                 fighter_b_h2h_wins = prev_fight_len - fighter_a_h2h_wins
                 return pd.Series([fighter_a_h2h_wins, fighter_b_h2h_wins])
         return pd.Series([0, 0])
-    
+
     def __compute_win_loss_location(self, df, fighter_a_id, fighter_b_id, location, index):
         """
         Computes the win/loss location features for a single example in the dataset
@@ -144,9 +178,9 @@ class WinLossStats:
             fighter_b_losses_in_location = len(fighter_b_fights) - fighter_b_wins_in_location
 
             return pd.Series([fighter_a_wins_in_location, fighter_a_losses_in_location, fighter_b_wins_in_location, fighter_b_losses_in_location])
-            
+
         return pd.Series([0, 0, 0, 0])
-    
+
     def __create_col_names_win_loss_round(self):
             """
             Generates column names for significant strike statistics.
@@ -170,7 +204,7 @@ class WinLossStats:
                                 col_name = f"{fighter.replace(' ', '_')}_{num_rounds.replace(' ', '_')}_{dec_round}_{wl}_{time_period.replace(' ', '_')}"
                                 col_names.append(col_name)
             return col_names
-    
+
     def __compute_year_ago(self, df):
         """
         Calculates the date one year ago from each date in the dataframe's 'date' column.
@@ -218,12 +252,12 @@ class WinLossStats:
                     # Filter fights that are 3R or 5R
                     all_prev_fights_3R[col_names] = prev_fights[outcome_format_values == "(5-5-5)"]
                     all_prev_fights_5R[col_names] = prev_fights[outcome_format_values == "(5-5-5-5-5)"]
-                    
+
                     return all_prev_fights_3R, all_prev_fights_5R, year_ago[index]
-                    
+
                 else:
                     return all_prev_fights_3R, all_prev_fights_5R, year_ago[index]
-                
+
             return all_prev_fights_3R, all_prev_fights_5R, year_ago[index]
 
     def __get_wins_losses(self, df, fighter_id):
@@ -241,17 +275,17 @@ class WinLossStats:
         col_names = df.columns
         fighter_wins = pd.DataFrame(columns=col_names)
         fighter_losses = pd.DataFrame(columns=col_names)
-        
+
         if df.empty:
             return fighter_wins, fighter_losses
-        
+
         fighter_wins[col_names] = df[(df['winner_id'] == fighter_id)]
         fighter_losses[col_names] = df[(df['winner_id'] != fighter_id)]
 
         assert len(fighter_wins) + len(fighter_losses) == len(df)
 
         return fighter_wins, fighter_losses
-        
+
     def __isDecision(self, outcome_methods):
         """
         Checks if the fight outcome method involves a decision.
@@ -280,7 +314,7 @@ class WinLossStats:
 
         if fights_df.empty:
             return round_outcome_fights
-        
+
         round_outcome_fights[col_names] = fights_df[(fights_df['outcome_round'] == round_num) & (~self.__isDecision(fights_df['outcome_method']))]
         return round_outcome_fights
 
@@ -298,7 +332,7 @@ class WinLossStats:
         Returns:
             list: A list containing calculated win/loss statistics based on the specified criteria.
         """
-        
+
         res = []
         for i in range(0, len(colnames), 2):
 
@@ -308,7 +342,7 @@ class WinLossStats:
 
             if round_num[0] == 'R':
                 round_num = int(round_num[1:])
-            
+
             if outcome == 'wins':
                 outcome = 1
             else:
@@ -323,19 +357,19 @@ class WinLossStats:
                     res.append(len(fights_lost))
                     res.append(len(fights_lost[(pd.to_datetime(fights_lost['date']) > year_ago)]))
                 continue
-                
+
 
             if round_num == 'decision':
                 if outcome:
                     res.append(len(fights_won[self.__isDecision(fights_won['outcome_method'])]))
                     res.append(len(fights_won[self.__isDecision(fights_won['outcome_method']) & (pd.to_datetime(fights_won['date']) > year_ago)]))
-                    
+
                 else:
                     res.append(len(fights_lost[self.__isDecision(fights_lost['outcome_method'])]))
                     res.append(len(fights_lost[self.__isDecision(fights_lost['outcome_method']) & (pd.to_datetime(fights_lost['date']) > year_ago)]))
 
                 continue
-                
+
             elif outcome:
                 round_outcome_fights = self.__compute_win_loss_round_details_alltime(fights_won, round_num)
 
@@ -344,7 +378,7 @@ class WinLossStats:
 
                 continue
             else:
-                round_outcome_fights = self.__compute_win_loss_round_details_alltime(fights_lost, round_num) 
+                round_outcome_fights = self.__compute_win_loss_round_details_alltime(fights_lost, round_num)
 
                 res.append(len(round_outcome_fights))
                 res.append(len(round_outcome_fights[(pd.to_datetime(round_outcome_fights['date']) > year_ago)]))
@@ -392,7 +426,7 @@ class WinLossStats:
             pd.Series: A series containing calculated win/loss round features for both fighters.
         """
         res = []
-        
+
         res += self.__get_win_loss_round_feats(df, fighter_a_id, index, colnames[:48]) # has all of fighter_a's cols
         res += self.__get_win_loss_round_feats(df, fighter_b_id, index, colnames[48:]) # has all of fighter_b's cols
 
@@ -448,7 +482,7 @@ class WinLossStats:
                 else fight_outcome_methods[1] if method == 'submission' \
                 else fight_outcome_methods[2] if method == 'decision' \
                 else fight_outcome_methods[3]
-            
+
             if prev_fights.empty:
                 res.append(0)
                 continue
@@ -464,20 +498,20 @@ class WinLossStats:
                 else fight_division[7] if weight_class == 'heavyweight' \
                 else fight_division[8] if weight_class == 'catchweight' \
                 else fight_division[9]
-            
+
             if not prev_fights.empty:
                 res.append(len(prev_fights))
             else:
                 res.append(0)
         return pd.Series(res)
-    
+
     def __get_fighter_division(self, df):
         """
         Filters the data by division
 
         Args:
             df (pd.DataFrame): The dataframe containing the fighter data
-        
+
         Returns:
             pd.DataFrame: The dataframe containing the fighter data filtered by division
         """
@@ -551,7 +585,7 @@ class WinLossStats:
 
             return prev_fights, prev_fights_last_year
         return pd.DataFrame(), pd.DataFrame()
-    
+
     def __create_col_names_win_loss(self):
         """
         Creates the column names for the win/loss features
@@ -575,3 +609,41 @@ class WinLossStats:
                             col_name = f"{fighter.replace(' ', '_')}_{outcome}_{method}_{weight_class.replace(' ', '_')}_{time_period}"
                             col_names.append(col_name)
         return col_names
+
+    def __compute_win_loss_elevation(self, df, fighter_a_id, fighter_b_id, elevation, index):
+        all_prev_fights = df.loc[:index-1]
+        if not all_prev_fights.empty:
+            fighter_a_id_vals = all_prev_fights.fighter_a_id.values
+            fighter_b_id_vals = all_prev_fights.fighter_b_id.values
+            fighter_a_wins_above_elevation = fighter_a_losses_above_elevation = fighter_a_wins_below_elevation = fighter_a_losses_below_elevation = 0
+            fighter_b_wins_above_elevation = fighter_b_losses_above_elevation = fighter_b_wins_below_elevation = fighter_b_losses_below_elevation = 0
+
+            fighter_a_fights = all_prev_fights[((fighter_a_id_vals == fighter_a_id) | (fighter_b_id_vals == fighter_a_id))]
+            fighter_b_fights = all_prev_fights[((fighter_a_id_vals == fighter_b_id) | (fighter_b_id_vals == fighter_b_id))]
+
+            elevation_vals = fighter_a_fights.elevation.values
+            winner_id_vals = all_prev_fights.winner_id.values
+
+            if not fighter_a_fights.empty:
+                elevation_vals = fighter_a_fights.elevation.values
+                winner_id_vals = fighter_a_fights.winner_id.values
+                fighter_a_wins_above_elevation = fighter_a_fights[((winner_id_vals == fighter_a_id) & (elevation_vals >= elevation))].shape[0]
+                fighter_a_losses_above_elevation = fighter_a_fights[((winner_id_vals != fighter_a_id) & (elevation_vals >= elevation))].shape[0]
+                fighter_a_wins_below_elevation = fighter_a_fights[((winner_id_vals == fighter_a_id) & (elevation_vals < elevation))].shape[0]
+                fighter_a_losses_below_elevation = fighter_a_fights[((winner_id_vals != fighter_a_id) & (elevation_vals < elevation))].shape[0]
+
+            if not fighter_b_fights.empty:
+                elevation_vals = fighter_b_fights.elevation.values
+                winner_id_vals = fighter_b_fights.winner_id.values
+                fighter_b_wins_above_elevation = fighter_b_fights[((winner_id_vals == fighter_b_id) & (elevation_vals >= elevation))].shape[0]
+                fighter_b_losses_above_elevation = fighter_b_fights[((winner_id_vals != fighter_b_id) & (elevation_vals >= elevation))].shape[0]
+                fighter_b_wins_below_elevation = fighter_b_fights[((winner_id_vals == fighter_b_id) & (elevation_vals < elevation))].shape[0]
+                fighter_b_losses_below_elevation = fighter_b_fights[((winner_id_vals != fighter_b_id) & (elevation_vals < elevation))].shape[0]
+
+            return pd.Series([fighter_a_wins_above_elevation, fighter_a_losses_above_elevation,
+                            fighter_a_wins_below_elevation, fighter_a_losses_below_elevation,
+                    fighter_b_wins_above_elevation, fighter_b_losses_above_elevation,
+                    fighter_b_wins_below_elevation, fighter_b_losses_below_elevation])
+
+        return pd.Series([0, 0, 0, 0, 0, 0, 0, 0])
+
