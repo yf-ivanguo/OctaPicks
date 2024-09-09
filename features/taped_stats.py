@@ -1,5 +1,6 @@
 import pandas as pd
-from datetime import datetime 
+from datetime import datetime
+import swifter
 
 class TapedStats:
     def __init__(self):
@@ -16,7 +17,7 @@ class TapedStats:
         Returns:
             pd.DataFrame: A dataframe for the additional columns for the taped stats features and thier differentials.
         """
-        
+
         # Generate column names for significant strikes and differentials
         col_names = self.create_col_names_taped()
         # print(len(col_names))
@@ -30,7 +31,6 @@ class TapedStats:
         result_df = pd.concat([input_df, result_features], axis=1)
 
         result_df = self.calculate_taped_stats_differentials(result_df)
-
 
         return result_df
 
@@ -46,7 +46,7 @@ class TapedStats:
         """
 
         input_df = df.copy()
-        
+
         # Calculate differentials for height, reach, and age
         input_df['fighter-a_height-diff'] = input_df['fighter-a_height'] - input_df['fighter-b_height']
         input_df['fighter-b_height-diff'] = -input_df['fighter-a_height-diff']
@@ -70,9 +70,8 @@ class TapedStats:
     def get_taped_stats(self, df, static_stats_df, fighter_id, index):
 
         res = []
-        
-        fighter_stats = static_stats_df.loc[static_stats_df['ID'] == fighter_id]
 
+        fighter_stats = static_stats_df.loc[static_stats_df['ID'] == fighter_id]
 
         fighter_stats = fighter_stats.iloc[0]
 
@@ -88,33 +87,31 @@ class TapedStats:
             elif i == 2:
                 res.append(self.get_age(fighter_stats[i]))
                 continue
-            
-        res.append(self.get_ave_fight_time(df, fighter_id, index))
+
+        res.append(self.get_avg_fight_time(df, fighter_id, index))
 
         return res
 
 
-    def get_ave_fight_time(self, df, fighter_id, index):
+    def get_avg_fight_time(self, df, fighter_id, index):
         all_prev_fights = df.loc[:index-1]
         if not all_prev_fights.empty:
             # Filter fights involving the specified fighter
             fighter_a_id_vals = all_prev_fights.fighter_a_id.values
             fighter_b_id_vals = all_prev_fights.fighter_b_id.values
-            
+
             prev_fights = all_prev_fights[((fighter_a_id_vals == fighter_id) | (fighter_b_id_vals == fighter_id))]
-            print(prev_fights)
-            print(len(prev_fights))
-            fight_times = prev_fights.apply(lambda row: self.get_round_time(row['outcome_round'], row['outcome_time']), axis=1)
-            
-            total_fight_time = fight_times.sum()
+            round_time = (prev_fights['outcome_round'] - 1).sum() * 60
+            min_time = prev_fights['outcome_time'].apply(lambda x: self.convert_time_to_seconds(x)).sum()
+            total_fight_time = round_time + min_time
+
             fight_count = prev_fights.shape[0]
             if fight_count > 0:
                 return total_fight_time / fight_count
-            
             return 0
         else:
             return 0
-        
+
     def get_round_time(self, outcome_round, outcome_time):
         """
         Calculates the total fight time in a specific round.
@@ -138,7 +135,9 @@ class TapedStats:
 
         total_time += outcome_time  # Add the time of the last (outcome) round
 
-        return total_time / 60  # Convert to minutes
+        total_time /= 60  # Convert to minutes
+
+        return total_time
 
     def convert_time_to_seconds(self, time_str):
         """
@@ -151,12 +150,9 @@ class TapedStats:
             int: The time in total seconds.
         """
 
-        if ':' in time_str:
-            minutes, seconds = time_str.split(':')
-            return int(minutes) * 60 + int(seconds)
-        else:
-            return int(time_str)
-        
+        minutes, seconds = map(int, time_str.split(':'))
+        total_seconds = minutes * 60 + seconds
+        return total_seconds
 
     def create_col_names_taped(self):
         """
@@ -168,7 +164,7 @@ class TapedStats:
         col_names = []
         fighters = ['fighter-a', 'fighter-b']
         stats = ['height', 'reach', 'age', 'avg-fight-time']
-        
+
         for fighter in fighters:
             for stat in stats:
                 col_name = f"{fighter.replace(' ', '_')}_{stat.replace(' ', '_')}"

@@ -14,22 +14,22 @@ class Elo():
     """
     Public Function
     """
-    def compute_elo(self, df):
+    def compute_elo_features(self, df):
         target_df = df
 
         # Compute Glicko ratings for every match
         for index, row in target_df.iterrows():
-            fighter_a_updated_rating, fighter_a_updated_rd, fighter_a_updated_vol = self.__compute_elo_ratings(df, row['fighter_a_id'], index)
-            fighter_b_updated_rating, fighter_b_updated_rd, fighter_b_updated_vol = self.__compute_elo_ratings(df, row['fighter_b_id'], index)
+            fighter_a_updated_rating, fighter_a_updated_rd, fighter_a_updated_vol = self.__compute_elo_ratings(target_df, row['fighter_a_id'], index)
+            fighter_b_updated_rating, fighter_b_updated_rd, fighter_b_updated_vol = self.__compute_elo_ratings(target_df, row['fighter_b_id'], index)
 
-            df.at[index, 'fighter_a_elo_rating'] = fighter_a_updated_rating
-            df.at[index, 'fighter_a_elo_rd'] = fighter_a_updated_rd
-            df.at[index, 'fighter_a_elo_vol'] = fighter_a_updated_vol
-            df.at[index, 'fighter_b_elo_rating'] = fighter_b_updated_rating
-            df.at[index, 'fighter_b_elo_rd'] = fighter_b_updated_rd
-            df.at[index, 'fighter_b_elo_vol'] = fighter_b_updated_vol
-        
-        return df
+            target_df.at[index, 'fighter_a_elo_rating'] = fighter_a_updated_rating
+            target_df.at[index, 'fighter_a_elo_rd'] = fighter_a_updated_rd
+            target_df.at[index, 'fighter_a_elo_vol'] = fighter_a_updated_vol
+            target_df.at[index, 'fighter_b_elo_rating'] = fighter_b_updated_rating
+            target_df.at[index, 'fighter_b_elo_rd'] = fighter_b_updated_rd
+            target_df.at[index, 'fighter_b_elo_vol'] = fighter_b_updated_vol
+
+        return target_df
 
     """
     Private Functions
@@ -99,7 +99,7 @@ class Elo():
         elo_volPrime = self.__volPrime(player_elo_rd, player_vol, v_val, delta_val)
         elo_rdPrime = self.__rdPrime(player_elo_rd, v_val, elo_volPrime)
         elo_ratingPrime = self.__ratingPrime(player_elo_rating, elo_rdPrime, g_val, res, e_val)
-        
+
         player_new_vol = elo_volPrime
         player_new_rd = self.GLICKO_SCALE_FACTOR * elo_rdPrime
         player_new_rating = self.GLICKO_SCALE_FACTOR * elo_ratingPrime + 1500

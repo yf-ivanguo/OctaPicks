@@ -2,17 +2,16 @@ import pandas as pd
 import numpy as np
 import swifter
 
-
 class FrequencyStats():
     """
     This class is used to create the total rounds fought features for each fighter in the dataset.
     """
 
-    def __init__(self, df):
+    def __init__(self) -> None:
         """
         Initializes the TotalRounds class
         """
-        self.df = df
+        pass
 
     def create_frequency_feats(self, df, include_progress=False):
         """
@@ -35,7 +34,7 @@ class FrequencyStats():
         result_features[col_names[2:]] = target_df.swifter.progress_bar(include_progress).apply(lambda row: self.__compute_weeks_inactive(df, row['fighter_a_id'], row['fighter_b_id'], row.name), axis=1)
 
         return pd.concat([target_df, result_features], axis=1)
-    
+
     def create_total_rounds_fought_feats(self, df, include_progress=False):
             """
             Creates the total rounds fought features for each fighter in the dataset
@@ -86,7 +85,7 @@ class FrequencyStats():
             return pd.Series([len(fighter_a_fights), len(fighter_b_fights)])
 
         return pd.Series([0, 0])
-    
+
     def __compute_weeks_inactive(self, df, fighter_a_id, fighter_b_id, index):
         """
         Computes the number of weeks a fighter has been inactive
@@ -111,11 +110,11 @@ class FrequencyStats():
 
             fighter_a_weeks_inactive = self.__get_weeks_inactive(df.loc[index], fighter_a_fights)
             fighter_b_weeks_inactive = self.__get_weeks_inactive(df.loc[index], fighter_b_fights)
-                
+
             return pd.Series([fighter_a_weeks_inactive, fighter_b_weeks_inactive])
-        
+
         return pd.Series([0, 0])
-    
+
     def __get_weeks_inactive(self, current_fight, fighter_prev_fights):
         """
         Computes the number of weeks since a fighter's last fight
@@ -130,10 +129,10 @@ class FrequencyStats():
 
         if fighter_prev_fights.empty:
             return 0
-        
+
         last_fight = fighter_prev_fights.iloc[-1]
         return (current_fight.date - last_fight.date).days // 7
-    
+
     def __compute_total_rounds_fought(self, df, fighter_a_id, fighter_b_id, index):
         """
         Computes the total rounds fought features for a single example in the dataset
@@ -169,6 +168,6 @@ class FrequencyStats():
             fighter_b_rounds_fought_last_year = fighter_b_fights_last_year['outcome_round'].sum()
 
             return pd.Series([fighter_a_rounds_fought_last_year, fighter_a_rounds_fought_alltime, fighter_b_rounds_fought_last_year, fighter_b_rounds_fought_alltime])
-            
+
         return pd.Series([0, 0, 0, 0])
 
