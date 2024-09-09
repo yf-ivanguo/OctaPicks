@@ -1,0 +1,11 @@
+.venv
+/features/__pycache__/__init__.cpython-311.pyc
+/features/__pycache__/clean_data.cpython-311.pyc
+/features/__pycache__/elo_features.cpython-311.pyc
+/features/__pycache__/features.cpython-311.pyc
+/features/__pycache__/fight_stats_features.cpython-311.pyc
+/features/__pycache__/frequency_stats_features.cpython-311.pyc
+/features/__pycache__/significant_strike_features.cpython-311.pyc
+/features/__pycache__/spatial_features.cpython-311.pyc
+/features/__pycache__/taped_stats.cpython-311.pyc
+/features/__pycache__/win_loss_stats_features.cpython-311.pyc
