@@ -8,9 +8,9 @@ class FeatureCreationTests():
     def __init__(self) -> None:
         self.fights_df = pd.read_csv('tests/test_fights.csv', encoding='latin-1')
         self.fighter_df = pd.read_csv('tests/test_fighters.csv', encoding='latin-1')
+        self.expected_df = pd.read_csv('tests/taped_stats_expected_vals_fights.csv', encoding='latin-1')  # The CSV with filled expected values
         self.taped_stats = TapedStats()
-        self.expected_df = pd.read_csv('tests/fights_with_empty_expected_values.csv', encoding='latin-1')  # The CSV with filled expected values
-        
+
     def test_example(self):
         """
         This tests the functionality of the X function.
@@ -35,11 +35,11 @@ class FeatureCreationTests():
         # Ensure the same columns are being compared in both DataFrames
         result_df = result_df[columns_to_compare]
         expected_df = self.expected_df[columns_to_compare]
-        
+
         # Compare the generated results with the expected values
         pd.testing.assert_frame_equal(result_df, expected_df, check_dtype=False)
 
-        print("test_create_taped_stats_feats passed")
+        print("Taped stats feature tests passed")
 
 # Example usage
 if __name__ == "__main__":

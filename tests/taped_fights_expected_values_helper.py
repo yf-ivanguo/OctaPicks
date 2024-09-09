@@ -29,7 +29,7 @@ def create_fights_csv_with_empty_expected_values(input_fights_csv_path, input_fi
         'Reach': 'fighter_a_reach',
         'DOB': 'fighter_a_dob'
     })
-    
+
     # Merge fighter data for fighter B
     merged_df = pd.merge(merged_df, fighters_df, left_on='fighter_b_id', right_on='ID', suffixes=('', '_fighter_b'))
     merged_df = merged_df.rename(columns={
@@ -41,7 +41,7 @@ def create_fights_csv_with_empty_expected_values(input_fights_csv_path, input_fi
     # Convert heights and reaches to centimeters
     merged_df['fighter_a_height'] = merged_df['fighter_a_height'].apply(lambda x: int(x.split("'")[0]) * 30.48 + int(x.split("'")[1].replace('"', '')) * 2.54)
     merged_df['fighter_b_height'] = merged_df['fighter_b_height'].apply(lambda x: int(x.split("'")[0]) * 30.48 + int(x.split("'")[1].replace('"', '')) * 2.54)
-    
+
     merged_df['fighter_a_reach'] = merged_df['fighter_a_reach'].apply(lambda x: int(x.replace('"', '')) * 2.54)
     merged_df['fighter_b_reach'] = merged_df['fighter_b_reach'].apply(lambda x: int(x.replace('"', '')) * 2.54)
 
@@ -59,8 +59,8 @@ def create_fights_csv_with_empty_expected_values(input_fights_csv_path, input_fi
 
     # Calculate average fight time for each fighter up until the current fight
     def calculate_avg_fight_time(fighter_id, current_date):
-        past_fights = merged_df[(merged_df['date'] < current_date) & 
-                                ((merged_df['fighter_a_id'] == fighter_id) | 
+        past_fights = merged_df[(merged_df['date'] < current_date) &
+                                ((merged_df['fighter_a_id'] == fighter_id) |
                                  (merged_df['fighter_b_id'] == fighter_id))]
         if past_fights.empty:
             return 0
@@ -86,7 +86,7 @@ def create_fights_csv_with_empty_expected_values(input_fights_csv_path, input_fi
         'fighter-a_age-diff', 'fighter-b_age-diff',
         'fighter-a_avg-fight-time', 'fighter-b_avg-fight-time'
     ]
-    
+
     output_df = merged_df[relevant_columns]
 
     # Save the dataframe to a new CSV file
@@ -97,7 +97,7 @@ def create_fights_csv_with_empty_expected_values(input_fights_csv_path, input_fi
 # Example usage
 input_fights_csv_path = 'tests/test_fights.csv'  # Replace with the actual path to your test_fights.csv
 input_fighters_csv_path = 'tests/test_fighters.csv'  # Replace with the actual path to your test_fighters.csv
-output_csv_path = 'tests/fights_with_empty_expected_values.csv'  # Replace with the desired output path
+output_csv_path = 'tests/taped_stats_expected_vals_fights.csv'  # Replace with the desired output path
 
 # Create the CSV file with raw data and empty expected value columns
 create_fights_csv_with_empty_expected_values(input_fights_csv_path, input_fighters_csv_path, output_csv_path)
