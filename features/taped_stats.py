@@ -18,10 +18,9 @@ class TapedStats:
             pd.DataFrame: A dataframe for the additional columns for the taped stats features and thier differentials.
         """
 
-        # Generate column names for significant strikes and differentials
         col_names = self.create_col_names_taped()
         # print(len(col_names))
-        # df['date'] = pd.to_datetime(df['date'])
+        df['date'] = pd.to_datetime(df['date'])
         # Copy the input dataframe and calculate significant strike features
         input_df = df.copy()
         result_features = pd.DataFrame(columns=col_names)
@@ -67,33 +66,31 @@ class TapedStats:
 
         return pd.Series(res)
 
-    def get_taped_stats(self, df, static_stats_df, fighter_id, index):
-
+    def get_taped_stats(self, df: pd.DataFrame, static_stats_df: pd.DataFrame, fighter_id: pd.DataFrame, index):
         res = []
 
+        # Retrieve the fighter's stats
         fighter_stats = static_stats_df.loc[static_stats_df['ID'] == fighter_id]
-
         fighter_stats = fighter_stats.iloc[0]
-
         fighter_stats = fighter_stats[['Height', 'Reach', 'DOB']]
 
-        for i in range(0, 3):
+        # Retrieve the date of the fight from the df DataFrame
+        fight_date = df.loc[index, 'date']  # Assuming 'date' column exists and represents the fight date
+
+        for i in range(3):
             if i == 0:
                 res.append(self.convert_to_cm(fighter_stats[i], 'height'))
-                continue
             elif i == 1:
                 res.append(self.convert_to_cm(fighter_stats[i], 'reach'))
-                continue
             elif i == 2:
-                res.append(self.get_age(fighter_stats[i]))
-                continue
+                res.append(self.get_age(fighter_stats[i], fight_date))  # Pass fight_date to get_age
 
-        res.append(self.get_avg_fight_time(df, fighter_id, index))
+        # Append the average fight time
+        res.append(self.get_ave_fight_time(df, fighter_id, index))
 
         return res
 
-
-    def get_avg_fight_time(self, df, fighter_id, index):
+    def get_ave_fight_time(self, df, fighter_id, index):
         all_prev_fights = df.loc[:index-1]
         if not all_prev_fights.empty:
             # Filter fights involving the specified fighter
@@ -171,12 +168,25 @@ class TapedStats:
                 col_names.append(col_name)
         return col_names
 
-    def get_age(self, dob_str):
+    def get_age(self, dob_str, fight_date):
+        """
+        Calculates the age of the fighter at the time of the fight.
+
+        Args:
+            dob_str (str): The date of birth of the fighter as a string.
+            fight_date (datetime or str): The date of the fight.
+
+        Returns:
+            int: The age of the fighter at the time of the fight.
+        """
         if dob_str == "--":
             return 0
+
         dob = pd.to_datetime(dob_str)
-        today = datetime.today()
-        age = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
+        fight_date = pd.to_datetime(fight_date)
+
+        age = fight_date.year - dob.year - ((fight_date.month, fight_date.day) < (dob.month, dob.day))
+
         return age
 
 
